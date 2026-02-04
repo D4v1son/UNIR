@@ -1,0 +1,221 @@
+{
+  "main": {
+    "id": "6fdbda252b3c9be2",
+    "type": "split",
+    "children": [
+      {
+        "id": "559eb6b9c4c917da",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "718cfa19afbffee8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Tema1_MetodosIAgenerativa"
+            }
+          }
+        ]
+      },
+      {
+        "id": "1131f48f226a8a86",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d58fce135ebd2b0b",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "FundamentosIAGenerativa_PER15732/temario/10862626_full_6678_Tema_1._Metodos_y_metodologias_de_la_IA_generativa_esl-ES.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "10862626_full_6678_Tema_1._Metodos_y_metodologias_de_la_IA_generativa_esl-ES"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e0c268f0eb6ad598",
+    "type": "split",
+    "children": [
+      {
+        "id": "15b20d253862eab5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "29f72046f9bf0fdc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "4d4fdf0235ccd443",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "a6ed70ac2aaed696",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "6b9cea7ec0ad8da8",
+    "type": "split",
+    "children": [
+      {
+        "id": "6d92c29894693872",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e809eba8ea7c9b30",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CursoCertificacionAWS_PER15727/temario/10610329_full_6678_Modulo_1._Introduccion_a_la_nube_de_AWS_esl-ES.pdf",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de 10610329_full_6678_Modulo_1._Introduccion_a_la_nube_de_AWS_esl-ES"
+            }
+          },
+          {
+            "id": "8e3b9924536668c5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "CursoCertificacionAWS_PER15727/temario/10610329_full_6678_Modulo_1._Introduccion_a_la_nube_de_AWS_esl-ES.pdf",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de 10610329_full_6678_Modulo_1._Introduccion_a_la_nube_de_AWS_esl-ES"
+            }
+          },
+          {
+            "id": "4415e5218acb5e4d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "44a905383ef61ca7",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "befcd8528729fca6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "CursoCertificacionAWS_PER15727/temario/10610329_full_6678_Modulo_1._Introduccion_a_la_nube_de_AWS_esl-ES.pdf",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de 10610329_full_6678_Modulo_1._Introduccion_a_la_nube_de_AWS_esl-ES"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
+    }
+  },
+  "active": "718cfa19afbffee8",
+  "lastOpenFiles": [
+    "Python_PER15725/temario/8341852_full_6678_Tema_8._Visualización_de_datos_esl-ES.pdf",
+    "Python_PER15725/temario/8341737_full_6678_Tema_7._Análisis_de_datos_esl-ES.pdf",
+    "Python_PER15725/temario/8341628_full_6678_Tema_6._Aspectos_avanzados_esl-ES.pdf",
+    "Python_PER15725/temario/8341350_full_6678_Tema_5._Organización_del_código_esl-ES.pdf",
+    "Python_PER15725/temario/8341199_full_6678_Tema_4._Funciones_esl-ES.pdf",
+    "Python_PER15725/temario/8341025_full_6678_Tema_3._Programación_básica_esl-ES.pdf",
+    "Python_PER15725/temario/8340881_full_6678_Tema_2._Primeros_conceptos_en_Python_esl-ES.pdf",
+    "Python_PER15725/temario/8340830_full_6678_Tema_1._Introducción_esl-ES.pdf",
+    "Python_PER15725/temario",
+    "Python_PER15725",
+    "ProgramacionEnR_PER15730/temario/tema8.pdf",
+    "FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
+    "Bienvenido.md"
+  ]
+}

@@ -1,0 +1,148 @@
+
+/*
+    TEXT
+*/
+
+p{
+    text-align: justify;
+}
+
+ul{
+    text-align: justify;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+strong, em{
+    color: lightsalmon;
+}
+
+.markdown-preview-view h1,
+.markdown-preview-view h2{
+    color: lightcoral;
+}
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6{
+    margin-left: 5%;
+    color: lightcoral;
+}
+
+.cite{
+    text-align: right;
+    color: aqua;
+}
+
+
+/*
+    LINKS
+*/
+
+:root, body, .view-content {
+    --link-color: coral;
+    --link-color-hover: orange;
+}
+.internal-link,
+.external-link{
+    text-decoration: none !important;
+    color: coral;
+}
+.external-link:hover{
+    color: orange;
+}
+
+/*
+    GENERAL APPAREANCE
+*/
+
+/* Pon id="border_round" para crear bordes redondos alrededor del tag div o p */
+.border_round{
+    border: 1px solid lightcoral;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: justify;
+}
+
+.border_round b{
+    color: lightcoral;
+}
+
+.border_round i{
+    color: lightcoral;
+}
+
+.border_round table{
+    border: 2px groove lightcoral;
+    border-collapse: collapse;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.border_round td{
+    border: 1px solid lightcoral;
+    border-collapse: collapse;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    text-align: center;
+    vertical-align: middle;
+    font-size: medium;
+    padding: 10px;
+}
+
+/* Cell appareance format */
+.border_round #cell_auto_adjust td{
+    width: auto;
+    height: auto;
+}
+.border_round #cell_square td{
+    width: 5vw;
+    height: 5vw;
+
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* Cell text format */
+.border_round .cell_align_left{
+    text-align: left;
+}
+
+/*Just a line*/
+.horizontal_dashed_line {
+    position: absolute;
+    border-bottom: 2px dashed rgba(240, 128, 128, 0.675);
+    right: 30%;
+    left: 30%;
+}
+
+/* Formato de las casillas para marcar */
+.markdown-preview-view ul > li.task-list-item.is-checked {
+    text-decoration: none;
+    color: rgb(238, 169, 169);
+    --checkbox-color: lightcoral;
+    
+    /* Esta es la línea original */
+    /* text-decoration: line-through; */
+}
+
+/* Centrar tablas en la página */
+.markdown-preview-view table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
