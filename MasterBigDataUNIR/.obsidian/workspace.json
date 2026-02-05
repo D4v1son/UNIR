@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
+                "file": "CursoCertificacionAWS_PER15727/Modulo1_IntroduccionALaNubeDeAWS.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Tema1_MetodosIAgenerativa"
+              "title": "Modulo1_IntroduccionALaNubeDeAWS"
             }
           }
         ]
@@ -33,10 +33,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "FundamentosIAGenerativa_PER15732/temario/10862626_full_6678_Tema_1._Metodos_y_metodologias_de_la_IA_generativa_esl-ES.pdf"
+                "file": "FundamentosIAGenerativa_PER15732/temario/Tema_1_Metodos_y_metodologias_de_la_IA_generativa.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "10862626_full_6678_Tema_1._Metodos_y_metodologias_de_la_IA_generativa_esl-ES"
+              "title": "Tema_1_Metodos_y_metodologias_de_la_IA_generativa"
             }
           }
         ]
@@ -96,8 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "6b9cea7ec0ad8da8",
@@ -204,18 +203,21 @@
   },
   "active": "718cfa19afbffee8",
   "lastOpenFiles": [
-    "Python_PER15725/temario/8341852_full_6678_Tema_8._Visualización_de_datos_esl-ES.pdf",
-    "Python_PER15725/temario/8341737_full_6678_Tema_7._Análisis_de_datos_esl-ES.pdf",
-    "Python_PER15725/temario/8341628_full_6678_Tema_6._Aspectos_avanzados_esl-ES.pdf",
-    "Python_PER15725/temario/8341350_full_6678_Tema_5._Organización_del_código_esl-ES.pdf",
-    "Python_PER15725/temario/8341199_full_6678_Tema_4._Funciones_esl-ES.pdf",
-    "Python_PER15725/temario/8341025_full_6678_Tema_3._Programación_básica_esl-ES.pdf",
-    "Python_PER15725/temario/8340881_full_6678_Tema_2._Primeros_conceptos_en_Python_esl-ES.pdf",
-    "Python_PER15725/temario/8340830_full_6678_Tema_1._Introducción_esl-ES.pdf",
-    "Python_PER15725/temario",
-    "Python_PER15725",
-    "ProgramacionEnR_PER15730/temario/tema8.pdf",
     "FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
+    "FundamentosIAGenerativa_PER15732/temario/Tema_1_Metodos_y_metodologias_de_la_IA_generativa.pdf",
+    "CursoCertificacionAWS_PER15727/temario/Modulo_1_Introduccion_a_la_nube_de_AWS.pdf",
+    "CursoCertificacionAWS_PER15727/Modulo1_IntroduccionALaNubeDeAWS.md",
+    "CursoCertificacionAWS_PER15727/imgs/perspectivas_caf.png",
+    "CursoCertificacionAWS_PER15727/imgs/categoria_servicios_aws_2.png",
+    "CursoCertificacionAWS_PER15727/imgs/categoria_servicios_aws_1.png",
+    "CursoCertificacionAWS_PER15727/imgs",
+    "Python_PER15725/temario/Tema_8_Visualización_de_datos.pdf",
+    "Python_PER15725/temario/Tema_7_Análisis_de_datos.pdf",
+    "Python_PER15725/temario/Tema_6_Aspectos_avanzados.pdf",
+    "Python_PER15725/temario/Tema_5_Organización_del_código.pdf",
+    "Python_PER15725/temario/Tema_4_Funciones.pdf",
+    "Python_PER15725/temario/Tema_3_Programación_básica.pdf",
+    "Python_PER15725/temario/Tema_2_Primeros_conceptos_en_Python.pdf",
     "Bienvenido.md"
   ]
 }
