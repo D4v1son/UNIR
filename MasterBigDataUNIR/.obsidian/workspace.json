@@ -4,41 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "559eb6b9c4c917da",
+        "id": "e5a6c181115ccacc",
         "type": "tabs",
-        "dimension": 50.68100358422939,
         "children": [
           {
-            "id": "718cfa19afbffee8",
+            "id": "3d084b8c648a531a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
+                "file": "Python_PER15725/Tema1_Introduccion.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Tema1_MetodosIAgenerativa"
+              "title": "Tema1_Introduccion"
             }
           }
         ]
       },
       {
-        "id": "1131f48f226a8a86",
+        "id": "dd08344affd605ce",
         "type": "tabs",
-        "dimension": 49.31899641577061,
         "children": [
           {
-            "id": "d58fce135ebd2b0b",
+            "id": "2a5d95e226ddd864",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "CursoCertificacionAZ_900_PER15726/temario/Modulo_1_Conceptos_basicos_de_la_nube.pdf"
+                "file": "Python_PER15725/temario/Tema_1_Introducción.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Modulo_1_Conceptos_basicos_de_la_nube"
+              "title": "Tema_1_Introducción"
             }
           }
         ]
@@ -98,7 +96,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "6b9cea7ec0ad8da8",
@@ -203,15 +202,19 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "718cfa19afbffee8",
+  "active": "3d084b8c648a531a",
   "lastOpenFiles": [
+    "Python_PER15725/temario/Tema_1_Introducción.pdf",
+    "Python_PER15725/Tema1_Introduccion.md",
+    "Python_PER15725/imgs",
+    "Python_PER15725/imgs/veriones_python.png",
+    "CursoCertificacionAZ_900_PER15726/temario/Modulo_1_Conceptos_basicos_de_la_nube.pdf",
+    "FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
     "CursoCertificacionAWS_PER15727/Modulo1_IntroduccionALaNubeDeAWS.md",
     "CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
-    "CursoCertificacionAZ_900_PER15726/temario/Modulo_1_Conceptos_basicos_de_la_nube.pdf",
     "CursoCertificacionAZ_900_PER15726/imgs/comparativa_tipos_nubes.png",
     "CursoCertificacionAZ_900_PER15726/imgs",
     "FundamentosIAGenerativa_PER15732/temario/Tema_1_Metodos_y_metodologias_de_la_IA_generativa.pdf",
-    "FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
     "CursoCertificacionAWS_PER15727/temario/Modulo_1_Introduccion_a_la_nube_de_AWS.pdf",
     "CursoCertificacionAWS_PER15727/imgs/perspectivas_caf.png",
     "CursoCertificacionAWS_PER15727/imgs/categoria_servicios_aws_2.png",
@@ -220,8 +223,6 @@
     "Python_PER15725/temario/Tema_8_Visualización_de_datos.pdf",
     "Python_PER15725/temario/Tema_7_Análisis_de_datos.pdf",
     "Python_PER15725/temario/Tema_6_Aspectos_avanzados.pdf",
-    "Python_PER15725/temario/Tema_5_Organización_del_código.pdf",
-    "Python_PER15725/temario/Tema_4_Funciones.pdf",
     "Bienvenido.md"
   ]
 }
