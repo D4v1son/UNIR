@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e5a6c181115ccacc",
+        "id": "dd08344affd605ce",
         "type": "tabs",
         "children": [
           {
-            "id": "3d084b8c648a531a",
+            "id": "2a5d95e226ddd864",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python_PER15725/Tema1_Introduccion.md",
+                "file": "ProgramacionEnR_PER15730/Tema1_Introduccion.md",
                 "mode": "preview",
                 "source": true
               },
@@ -24,19 +24,19 @@
         ]
       },
       {
-        "id": "dd08344affd605ce",
+        "id": "cfc79ae5d61653ca",
         "type": "tabs",
         "children": [
           {
-            "id": "2a5d95e226ddd864",
+            "id": "7771857066231c54",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Python_PER15725/temario/Tema_1_Introducción.pdf"
+                "file": "ProgramacionEnR_PER15730/temario/tema1.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Tema_1_Introducción"
+              "title": "tema1"
             }
           }
         ]
@@ -202,10 +202,12 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "3d084b8c648a531a",
+  "active": "2a5d95e226ddd864",
   "lastOpenFiles": [
-    "Python_PER15725/temario/Tema_1_Introducción.pdf",
+    "ProgramacionEnR_PER15730/temario/tema1.pdf",
+    "ProgramacionEnR_PER15730/Tema1_Introduccion.md",
     "Python_PER15725/Tema1_Introduccion.md",
+    "Python_PER15725/temario/Tema_1_Introducción.pdf",
     "Python_PER15725/imgs",
     "Python_PER15725/imgs/veriones_python.png",
     "CursoCertificacionAZ_900_PER15726/temario/Modulo_1_Conceptos_basicos_de_la_nube.pdf",
@@ -222,7 +224,6 @@
     "CursoCertificacionAWS_PER15727/imgs",
     "Python_PER15725/temario/Tema_8_Visualización_de_datos.pdf",
     "Python_PER15725/temario/Tema_7_Análisis_de_datos.pdf",
-    "Python_PER15725/temario/Tema_6_Aspectos_avanzados.pdf",
     "Bienvenido.md"
   ]
 }
