@@ -8,35 +8,35 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2a5d95e226ddd864",
+            "id": "79bee7823fd49400",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ProgramacionEnR_PER15730/Tema1_Introduccion.md",
-                "mode": "preview",
+                "file": "FundamentosIAGenerativa_PER15732/Clase_9_2_26.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Tema1_Introduccion"
+              "title": "Clase_9_2_26"
             }
           }
         ]
       },
       {
-        "id": "cfc79ae5d61653ca",
+        "id": "8bfa8dc912f3ec8d",
         "type": "tabs",
         "children": [
           {
-            "id": "7771857066231c54",
+            "id": "4f367ded7ce18d3b",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "ProgramacionEnR_PER15730/temario/tema1.pdf"
+                "file": "FundamentosIAGenerativa_PER15732/temario/Tema_1_Metodos_y_metodologias_de_la_IA_generativa.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "tema1"
+              "title": "Tema_1_Metodos_y_metodologias_de_la_IA_generativa"
             }
           }
         ]
@@ -96,8 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "6b9cea7ec0ad8da8",
@@ -202,28 +201,34 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "2a5d95e226ddd864",
+  "active": "79bee7823fd49400",
   "lastOpenFiles": [
-    "ProgramacionEnR_PER15730/temario/tema1.pdf",
-    "ProgramacionEnR_PER15730/Tema1_Introduccion.md",
+    "herramientas_ia_generativa_2.png",
+    "FundamentosIAGenerativa_PER15732/imgs/herramientas_ia_generativa.png",
+    "FundamentosIAGenerativa_PER15732/temario/Tema_1_Metodos_y_metodologias_de_la_IA_generativa.pdf",
+    "FundamentosIAGenerativa_PER15732/Clase_9_2_26.md",
+    "FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
+    "FundamentosIAGenerativa_PER15732/imgs/the_world_of_ai.png",
+    "FundamentosIAGenerativa_PER15732/imgs/ia_vs_motoresDeBusqueda.png",
+    "FundamentosIAGenerativa_PER15732/imgs",
     "Python_PER15725/Tema1_Introduccion.md",
     "Python_PER15725/temario/Tema_1_Introducción.pdf",
+    "ProgramacionEnR_PER15730/temario/tema2.pdf",
+    "ProgramacionEnR_PER15730/Tema2_EmpezandoConR.md",
+    "ProgramacionEnR_PER15730/Tema1_Introduccion.md",
+    "ProgramacionEnR_PER15730/temario/tema1.pdf",
     "Python_PER15725/imgs",
     "Python_PER15725/imgs/veriones_python.png",
     "CursoCertificacionAZ_900_PER15726/temario/Modulo_1_Conceptos_basicos_de_la_nube.pdf",
-    "FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
     "CursoCertificacionAWS_PER15727/Modulo1_IntroduccionALaNubeDeAWS.md",
     "CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
     "CursoCertificacionAZ_900_PER15726/imgs/comparativa_tipos_nubes.png",
     "CursoCertificacionAZ_900_PER15726/imgs",
-    "FundamentosIAGenerativa_PER15732/temario/Tema_1_Metodos_y_metodologias_de_la_IA_generativa.pdf",
     "CursoCertificacionAWS_PER15727/temario/Modulo_1_Introduccion_a_la_nube_de_AWS.pdf",
     "CursoCertificacionAWS_PER15727/imgs/perspectivas_caf.png",
     "CursoCertificacionAWS_PER15727/imgs/categoria_servicios_aws_2.png",
     "CursoCertificacionAWS_PER15727/imgs/categoria_servicios_aws_1.png",
     "CursoCertificacionAWS_PER15727/imgs",
-    "Python_PER15725/temario/Tema_8_Visualización_de_datos.pdf",
-    "Python_PER15725/temario/Tema_7_Análisis_de_datos.pdf",
     "Bienvenido.md"
   ]
 }
