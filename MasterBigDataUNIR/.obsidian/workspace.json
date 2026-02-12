@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
-                "mode": "preview",
+                "file": "CursoCertificacionAWS_PER15727/Modulo1_IntroduccionALaNubeDeAWS.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Modelo1_ConceptosBasicosDeLaNube"
+              "title": "Modulo1_IntroduccionALaNubeDeAWS"
             }
           }
         ]
@@ -33,10 +33,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "CursoCertificacionAZ_900_PER15726/temario/Modulo_1_Conceptos_basicos_de_la_nube.pdf"
+                "file": "CursoCertificacionAWS_PER15727/temario/Modulo_1_Introduccion_a_la_nube_de_AWS.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Modulo_1_Conceptos_basicos_de_la_nube"
+              "title": "Modulo_1_Introduccion_a_la_nube_de_AWS"
             }
           }
         ]
@@ -96,8 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "6b9cea7ec0ad8da8",
@@ -204,9 +203,17 @@
   },
   "active": "79bee7823fd49400",
   "lastOpenFiles": [
-    "CursoCertificacionAZ_900_PER15726/imgs/modelos_responsabilidad_compartida.png",
+    "CursoCertificacionAWS_PER15727/imgs/cost_explorer.png",
+    "CursoCertificacionAWS_PER15727/temario/Modulo_1_Introduccion_a_la_nube_de_AWS.pdf",
+    "CursoCertificacionAWS_PER15727/Modulo1_IntroduccionALaNubeDeAWS.md",
+    "CursoCertificacionAWS_PER15727/imgs/costes_tc.png",
+    "CursoCertificacionAWS_PER15727/imgs/servicios_sin_cargos.png",
+    "CursoCertificacionAWS_PER15727/imgs/capa_gratuita_aws.png",
+    "CursoCertificacionAWS_PER15727/imgs/descuento_reserva_instancia.png",
+    "CursoCertificacionAWS_PER15727/imgs/pago_aws.png",
     "CursoCertificacionAZ_900_PER15726/temario/Modulo_1_Conceptos_basicos_de_la_nube.pdf",
     "CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
+    "CursoCertificacionAZ_900_PER15726/imgs/modelos_responsabilidad_compartida.png",
     "CursoCertificacionAZ_900_PER15726/imgs/comparativa_tipos_servicio.png",
     "Python_PER15725/temario/Tema_1_Introducción.pdf",
     "Python_PER15725/Tema1_Introduccion.md",
@@ -222,16 +229,8 @@
     "FundamentosIAGenerativa_PER15732/imgs/herramientas_ia_generativa.png",
     "FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
     "FundamentosIAGenerativa_PER15732/imgs/the_world_of_ai.png",
-    "FundamentosIAGenerativa_PER15732/imgs/ia_vs_motoresDeBusqueda.png",
     "FundamentosIAGenerativa_PER15732/imgs",
-    "ProgramacionEnR_PER15730/temario/tema2.pdf",
     "ProgramacionEnR_PER15730/Tema2_EmpezandoConR.md",
-    "Python_PER15725/imgs/veriones_python.png",
-    "CursoCertificacionAWS_PER15727/Modulo1_IntroduccionALaNubeDeAWS.md",
-    "CursoCertificacionAZ_900_PER15726/imgs/comparativa_tipos_nubes.png",
-    "CursoCertificacionAWS_PER15727/imgs/perspectivas_caf.png",
-    "CursoCertificacionAWS_PER15727/imgs/categoria_servicios_aws_2.png",
-    "CursoCertificacionAWS_PER15727/imgs/categoria_servicios_aws_1.png",
     "Bienvenido.md"
   ]
 }
