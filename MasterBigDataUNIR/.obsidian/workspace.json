@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CursoCertificacionAWS_PER15727/Modulo1_IntroduccionALaNubeDeAWS.md",
+                "file": "Python_PER15725/Tema1_Introduccion.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Modulo1_IntroduccionALaNubeDeAWS"
+              "title": "Tema1_Introduccion"
             }
           }
         ]
@@ -33,10 +33,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "CursoCertificacionAWS_PER15727/temario/Modulo_1_Introduccion_a_la_nube_de_AWS.pdf"
+                "file": "Python_PER15725/temario/Tema_2_Primeros_conceptos_en_Python.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Modulo_1_Introduccion_a_la_nube_de_AWS"
+              "title": "Tema_2_Primeros_conceptos_en_Python"
             }
           }
         ]
@@ -203,34 +203,35 @@
   },
   "active": "79bee7823fd49400",
   "lastOpenFiles": [
-    "CursoCertificacionAWS_PER15727/imgs/cost_explorer.png",
+    "Python_PER15725/scripts/myFirstPyScript.py",
+    "Python_PER15725/temario/Tema_2_Primeros_conceptos_en_Python.pdf",
+    "Python_PER15725/temario/Tema_1_Introducción.pdf",
+    "ProgramacionEnR_PER15730/temario/tema2.pdf",
+    "Python_PER15725/Tema1_Introduccion.md",
+    "ProgramacionEnR_PER15730/Tema2_EmpezandoConR.md",
     "CursoCertificacionAWS_PER15727/temario/Modulo_1_Introduccion_a_la_nube_de_AWS.pdf",
+    "ProgramacionEnR_PER15730/Tema1_Introduccion.md",
+    "ProgramacionEnR_PER15730/recursos/Clase-1.knit.md",
+    "ProgramacionEnR_PER15730/recursos/Clase-1.Rmd",
+    "ProgramacionEnR_PER15730/recursos/clase1_ej4.png",
+    "ProgramacionEnR_PER15730/recursos/clase1_ej3.png",
+    "ProgramacionEnR_PER15730/recursos/clase1_ej2.png",
+    "ProgramacionEnR_PER15730/recursos/clase1_ej1.png",
+    "ProgramacionEnR_PER15730/recursos/Clase-1.html",
+    "ProgramacionEnR_PER15730/recursos/Clase 1.Rmd",
+    "ProgramacionEnR_PER15730/recursos",
+    "ProgramacionEnR_PER15730/Nueva carpeta",
+    "ProgramacionEnR_PER15730/Clase 1.Rmd",
     "CursoCertificacionAWS_PER15727/Modulo1_IntroduccionALaNubeDeAWS.md",
+    "CursoCertificacionAWS_PER15727/imgs/cost_explorer.png",
     "CursoCertificacionAWS_PER15727/imgs/costes_tc.png",
     "CursoCertificacionAWS_PER15727/imgs/servicios_sin_cargos.png",
     "CursoCertificacionAWS_PER15727/imgs/capa_gratuita_aws.png",
     "CursoCertificacionAWS_PER15727/imgs/descuento_reserva_instancia.png",
     "CursoCertificacionAWS_PER15727/imgs/pago_aws.png",
-    "CursoCertificacionAZ_900_PER15726/temario/Modulo_1_Conceptos_basicos_de_la_nube.pdf",
     "CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
-    "CursoCertificacionAZ_900_PER15726/imgs/modelos_responsabilidad_compartida.png",
-    "CursoCertificacionAZ_900_PER15726/imgs/comparativa_tipos_servicio.png",
-    "Python_PER15725/temario/Tema_1_Introducción.pdf",
-    "Python_PER15725/Tema1_Introduccion.md",
-    "Python_PER15725/scripts/example_1.ipynb",
-    "Python_PER15725/scripts/Untitled.ipynb",
-    "Python_PER15725/scripts",
-    "Python_PER15725/Untitled Folder",
-    "ProgramacionEnR_PER15730/temario/tema1.pdf",
-    "ProgramacionEnR_PER15730/Tema1_Introduccion.md",
-    "FundamentosIAGenerativa_PER15732/temario/Tema_1_Metodos_y_metodologias_de_la_IA_generativa.pdf",
     "FundamentosIAGenerativa_PER15732/Clase_9_2_26.md",
-    "FundamentosIAGenerativa_PER15732/imgs/herramientas_ia_generativa_2.png",
-    "FundamentosIAGenerativa_PER15732/imgs/herramientas_ia_generativa.png",
     "FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
-    "FundamentosIAGenerativa_PER15732/imgs/the_world_of_ai.png",
-    "FundamentosIAGenerativa_PER15732/imgs",
-    "ProgramacionEnR_PER15730/Tema2_EmpezandoConR.md",
     "Bienvenido.md"
   ]
 }

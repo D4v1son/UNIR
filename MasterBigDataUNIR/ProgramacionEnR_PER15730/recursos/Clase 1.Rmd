@@ -1,0 +1,158 @@
+---
+title: "Clase 1"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Explicaciones previas
+
+Este es un documento con extensión `Rmd`, que se debe abrir con Rstudio y compilar con [CTRL+SHIFT+K] (Knit en el menú) y que produce un archivo HTML que se puede colgar en internet. En este tipo de archivos `Rmd` se junta:
+
+- texto editado con algunas "marcas" del lenguaje `Markdown` (son esos símbolos que, una vez compilados, producen letra más grande, **palabras en negrita** o *cursiva*, los guiones que se convierten en listas, etc.)
+- bloques de código R, que se ejecutan al compilarlo, y producen tanto cajas de texto con el propio código R, como cajas de texto con los resultados del R, e incluso se insertan imágenes producidas por el código R.
+- símbolos de lenguaje $\LaTeX$, si necesitas escribir alguna fórmula matemática como $\text{MSE} = \frac{1}{n} \sum_{i=1}^n (y_i - \hat{y_i})^2$, sin un editor de ecuaciones.
+
+## Tipos de datos en R
+
+| Tipos de Datos  | Información | Definición |
+| ------------- | ------------- | -------------
+| Numeric    | Datos contenidos en el conjuntos de los números reales    | num <- 5.14
+| Integer    | Datos contenidos en el conjuntos de los números enteros    | int <- 5L
+| Character	 | Datos que soportan cadenas de caracteres	                | chr <- "hello world"
+| Complex   	|Datos que soportan números complejos	                    |comp <- 5+2i
+| Logical	   |Datos que sólo soportan valores lógicos de verdadero (T) o falso (F)	|a <- 1; b <- 2; a < b
+| Factor   	|Este no es estrictamente un tipo de dato, pero vale la pena describirlo aquí. Una variable factor es una variable categórica. Los vectores de caracteres a menudo se almacenan como factores para explotar funciones para tratar datos categóricos. Por ejemplo, en análisis de regresión	 |Aplique as.factor() a un vector de caracteres o numéricos.
+
+## Tipos de estructuras de datos
+
+| Objetos       | Tipos         | ¿Soporta varios tipos de datos en el mismo objeto? |
+| ------------- | ------------- | -------------
+| Vector    | Numérico, carácter, complejo o lógico	    | No
+| Factor    | Numérico o lógico    | No
+| Arreglo	 | Numérico, carácter, complejo o lógico		                | No
+| Matriz   	| Numérico, carácter, complejo o lógico	                    | No
+| Data frame	   | Numérico, carácter, complejo o lógico	|Sí
+| ts   	| Numérico, carácter, complejo o lógico		 | Sí
+| Lista     | Numérico, carácter, complejo, lógico, función, expresión, …  | Sí
+
+## Rmarkdown
+
+| Escribir        | para obtener … |
+| -------------  | -------------
+| # Título 1, ## Título 2, ### Título 3    	    | Los distintos niveles de encabezados
+| * Cursiva *        | *Cursiva*
+| ** Negrita **                | **Negrita**
+| [Enlace] (https://campusonline.unir.net/mod/url/view.php?id=401474)    | [Enlace](https://campusonline.unir.net/mod/url/view.php?id=401474)
+| ![Imagen] (imagen.png)	   	| Imagen
+| * Lista * Lista   + Sub-lista   			 | Lista
+| - - -       | Línea horizontal
+
+# EJERCICIOS
+
+### Ejercicio 1
+Escribe un programa que solicite los catetos de un triángulo rectángulo y muestre su hipotenusa.
+
+$c^2=a^2+b^2$
+
+```{r}
+a = as.numeric(readline("Introduzca el valor del cateto a: "))
+b = as.numeric(readline("Introduzca el valor del cateto b: "))
+
+sqrt(a^2+b^2)
+```
+
+### Ejercicio 2
+Escribe un programa para calcular el área del triángulo rectángulo dadas su base y altura.
+
+$A=(a*b)/2$
+
+```{r}
+a = as.numeric(readline("Introduzca la base: "))
+b = as.numeric(readline("Introduzca la altura: "))
+
+cat("El área del triángulo es: ", (a*b)/2, " m^2")
+```
+
+### Ejercicio 3
+Escribir un programa que pida la temperatura y si esta es en Fahrenheit o Celsius y presentar en pantalla su transformación en la otra medida.
+
+$C=(F-32)*5/9$
+$F=(C*9/5)+32$
+
+```{r}
+
+```
+
+### Ejercicio 4
+Escribir un programa que pregunte al usuario por el número de horas trabajadas y el coste por hora. Después debe mostrar por pantalla la paga que le corresponde, además debe preguntar si existen horas extras que tienen un valor diferente y con estos valores se calcule la paga correspondiente.
+
+Ctrl + Shift + C para comentar un bloque de código.
+
+
+```{r}
+temperatura = as.numeric(readline("Ingrese la temperatura: "))
+medida = as.character(readline("Ingrese F o C: "))
+
+if (medida == "F" | medida == "f"){
+  farenheit = (temperatura * 1.8) + 32
+  cat("Los grados son: ", farenheit, "Fº")
+} else {
+  celsius = (temperatura - 32)/1.8
+  cat("Los grados son: ", celsius, "Cº")
+}
+
+```
+
+### Ejercicio 5
+Escribir un programa que pida al usuario su peso (en kg) y estatura (en metros), calcule el índice de masa corporal y lo almacene en una variable, y muestre por pantalla la frase Tu índice de masa corporal es , donde es el índice de masa corporal calculado redondeado con dos decimales.
+
+$IMC = Peso (Kg) / Altura (m^2)$
+
+
+```{r}
+peso_kg <- as.numeric(readline("Introduce el peso en kg: "))
+altura_m <- as.numeric(readline("Introduce la altura en m: "))
+
+imc <- peso_kg / (altura_m^2)
+
+cat("Tu índice de masa corporal es: ", round(imc, 2))
+
+```
+
+### Ejercicio 6
+Escribir un programa que pregunte al usuario una cantidad a invertir, el interés anual y el número de años, y muestre por pantalla el capital obtenido en la inversión.
+
+
+
+```{r}
+inversion <- as.numeric(readline("Introduzca la cantidad que desea invertir: "))
+interes <- as.numeric(readline("Introduzca el interés anual de la inversión: "))
+plazo <- as.integer(readline("Ingrese los años: "))
+
+interes_anual <- interes/100
+capital <- inversion*(1+interes_anual)^plazo
+
+capital
+```
+
+### Ejercicio 7
+Escribir un programa en el que se digiten varios números y luego los números se presenten en pantalla ordenados.
+
+
+
+```{r}
+a1 <- as.numeric(readline("Introduzca el primer número: "))
+a2 <- as.numeric(readline("Introduzca el segundo número: "))
+a3 <- as.numeric(readline("Introduzca el tercer número: "))
+
+numeros <- c(a1, a2, a3) # con esta función se crea un vector
+
+numeros_ordenados <- sort(numeros)
+
+cat("Los números ordenados son: ", numeros_ordenados)
+```
+
