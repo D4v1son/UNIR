@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python_PER15725/Tema1_Introduccion.md",
+                "file": "Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Tema1_Introduccion"
+              "title": "Tema2_tipos_de_datos_y_estructuras"
             }
           }
         ]
@@ -31,12 +31,14 @@
             "id": "4f367ded7ce18d3b",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Python_PER15725/temario/Tema_2_Primeros_conceptos_en_Python.pdf"
+                "file": "Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
+                "mode": "preview",
+                "source": true
               },
-              "icon": "lucide-file-text",
-              "title": "Tema_2_Primeros_conceptos_en_Python"
+              "icon": "lucide-file",
+              "title": "Tema2_tipos_de_datos_y_estructuras"
             }
           }
         ]
@@ -96,7 +98,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "6b9cea7ec0ad8da8",
@@ -203,11 +206,22 @@
   },
   "active": "79bee7823fd49400",
   "lastOpenFiles": [
-    "Python_PER15725/scripts/myFirstPyScript.py",
-    "Python_PER15725/temario/Tema_2_Primeros_conceptos_en_Python.pdf",
     "Python_PER15725/temario/Tema_1_Introducción.pdf",
-    "ProgramacionEnR_PER15730/temario/tema2.pdf",
+    "Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
     "Python_PER15725/Tema1_Introduccion.md",
+    "CursoCertificacionAZ_900_PER15726/Modulo2_ServiciosPrincipalesDeAzure.md",
+    "CursoCertificacionAZ_900_PER15726/temario/Modulo_2_Servicios_principales_de_Azure.pdf",
+    "CursoCertificacionAZ_900_PER15726/imgs/grupos_de_recursos.png",
+    "CursoCertificacionAZ_900_PER15726/imgs/suscripciones.png",
+    "CursoCertificacionAZ_900_PER15726/imgs/concepto_de_recurso.png",
+    "CursoCertificacionAZ_900_PER15726/imgs/zonas_de_disponibilidad.png",
+    "CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
+    "CursoCertificacionAZ_900_PER15726/imgs/pares_de_regiones.png",
+    "CursoCertificacionAZ_900_PER15726/imgs/infraestructura_global_azure.png",
+    "CursoCertificacionAZ_900_PER15726/temario/Modulo_1_Conceptos_basicos_de_la_nube.pdf",
+    "Python_PER15725/temario/Tema_2_Primeros_conceptos_en_Python.pdf",
+    "Python_PER15725/scripts/myFirstPyScript.py",
+    "ProgramacionEnR_PER15730/temario/tema2.pdf",
     "ProgramacionEnR_PER15730/Tema2_EmpezandoConR.md",
     "CursoCertificacionAWS_PER15727/temario/Modulo_1_Introduccion_a_la_nube_de_AWS.pdf",
     "ProgramacionEnR_PER15730/Tema1_Introduccion.md",
@@ -219,17 +233,7 @@
     "ProgramacionEnR_PER15730/recursos/clase1_ej1.png",
     "ProgramacionEnR_PER15730/recursos/Clase-1.html",
     "ProgramacionEnR_PER15730/recursos/Clase 1.Rmd",
-    "ProgramacionEnR_PER15730/recursos",
-    "ProgramacionEnR_PER15730/Nueva carpeta",
-    "ProgramacionEnR_PER15730/Clase 1.Rmd",
     "CursoCertificacionAWS_PER15727/Modulo1_IntroduccionALaNubeDeAWS.md",
-    "CursoCertificacionAWS_PER15727/imgs/cost_explorer.png",
-    "CursoCertificacionAWS_PER15727/imgs/costes_tc.png",
-    "CursoCertificacionAWS_PER15727/imgs/servicios_sin_cargos.png",
-    "CursoCertificacionAWS_PER15727/imgs/capa_gratuita_aws.png",
-    "CursoCertificacionAWS_PER15727/imgs/descuento_reserva_instancia.png",
-    "CursoCertificacionAWS_PER15727/imgs/pago_aws.png",
-    "CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
     "FundamentosIAGenerativa_PER15732/Clase_9_2_26.md",
     "FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
     "Bienvenido.md"
