@@ -6,6 +6,7 @@
       {
         "id": "dd08344affd605ce",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
             "id": "79bee7823fd49400",
@@ -26,6 +27,7 @@
       {
         "id": "8bfa8dc912f3ec8d",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
             "id": "4f367ded7ce18d3b",
@@ -206,9 +208,9 @@
   },
   "active": "79bee7823fd49400",
   "lastOpenFiles": [
-    "Python_PER15725/temario/Tema_1_Introducción.pdf",
-    "Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
     "Python_PER15725/Tema1_Introduccion.md",
+    "Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
+    "Python_PER15725/temario/Tema_1_Introducción.pdf",
     "CursoCertificacionAZ_900_PER15726/Modulo2_ServiciosPrincipalesDeAzure.md",
     "CursoCertificacionAZ_900_PER15726/temario/Modulo_2_Servicios_principales_de_Azure.pdf",
     "CursoCertificacionAZ_900_PER15726/imgs/grupos_de_recursos.png",
