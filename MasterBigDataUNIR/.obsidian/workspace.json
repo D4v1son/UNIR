@@ -12,14 +12,12 @@
             "id": "79bee7823fd49400",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
-                "mode": "source",
-                "source": true
+                "file": "BasesDeDatos/temario/tema1.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Tema2_tipos_de_datos_y_estructuras"
+              "icon": "lucide-file-text",
+              "title": "tema1"
             }
           }
         ]
@@ -35,15 +33,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
-                "mode": "preview",
+                "file": "AprenderPorMiCuenta.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Tema2_tipos_de_datos_y_estructuras"
+              "title": "AprenderPorMiCuenta"
+            }
+          },
+          {
+            "id": "5c879f229fadc83d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Deberes.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Deberes"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -100,8 +113,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "6b9cea7ec0ad8da8",
@@ -206,38 +218,50 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "79bee7823fd49400",
+  "active": "5c879f229fadc83d",
   "lastOpenFiles": [
-    "Python_PER15725/Tema1_Introduccion.md",
-    "Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
-    "Python_PER15725/temario/Tema_1_Introducción.pdf",
-    "CursoCertificacionAZ_900_PER15726/Modulo2_ServiciosPrincipalesDeAzure.md",
-    "CursoCertificacionAZ_900_PER15726/temario/Modulo_2_Servicios_principales_de_Azure.pdf",
-    "CursoCertificacionAZ_900_PER15726/imgs/grupos_de_recursos.png",
-    "CursoCertificacionAZ_900_PER15726/imgs/suscripciones.png",
-    "CursoCertificacionAZ_900_PER15726/imgs/concepto_de_recurso.png",
-    "CursoCertificacionAZ_900_PER15726/imgs/zonas_de_disponibilidad.png",
-    "CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
-    "CursoCertificacionAZ_900_PER15726/imgs/pares_de_regiones.png",
-    "CursoCertificacionAZ_900_PER15726/imgs/infraestructura_global_azure.png",
-    "CursoCertificacionAZ_900_PER15726/temario/Modulo_1_Conceptos_basicos_de_la_nube.pdf",
-    "Python_PER15725/temario/Tema_2_Primeros_conceptos_en_Python.pdf",
-    "Python_PER15725/scripts/myFirstPyScript.py",
-    "ProgramacionEnR_PER15730/temario/tema2.pdf",
-    "ProgramacionEnR_PER15730/Tema2_EmpezandoConR.md",
-    "CursoCertificacionAWS_PER15727/temario/Modulo_1_Introduccion_a_la_nube_de_AWS.pdf",
-    "ProgramacionEnR_PER15730/Tema1_Introduccion.md",
+    "AprenderPorMiCuenta.md",
+    "Deberes.md",
+    "BasesDeDatos/BLOQUE_1.md",
+    "BasesDeDatos/temario/tema1.pdf",
+    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Tipos Ficheros.zip",
+    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Tema 1 - Métodos de Captura - v01.pdf",
+    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Tema 0 - Presentación - v02_Visual.pdf",
+    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Taller_Docker_Básico.pdf",
+    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Guia_CSV_vf.pdf",
+    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Guia Calidad de Datos Abiertos.pdf",
+    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Analisis_Exploratorio_de_Datos_2021_v6.pdf",
+    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura",
+    "BasesDeDatos/documentacion/Documentación-20260317.zip",
+    "CertificacionesUNNIR/Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
+    "CertificacionesUNIR/Python_PER15725/imgs/veriones_python.png",
+    "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/imgs/the_world_of_ai.png",
+    "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/imgs/ia_vs_motoresDeBusqueda.png",
+    "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/imgs/herramientas_ia_generativa_2.png",
+    "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/imgs/herramientas_ia_generativa.png",
+    "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/imgs/zonas_de_disponibilidad.png",
+    "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/imgs/suscripciones.png",
+    "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/imgs/pares_de_regiones.png",
+    "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/imgs/modelos_responsabilidad_compartida.png",
+    "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/imgs/concepto_de_recurso.png",
+    "CertificacionesUNIR/Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
+    "CertificacionesUNIR/Python_PER15725/Tema1_Introduccion.md",
+    "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema1_Introduccion.md",
+    "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema2_EmpezandoConR.md",
+    "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
+    "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Clase_9_2_26.md",
+    "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/Modulo2_ServiciosPrincipalesDeAzure.md",
+    "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
+    "CertificacionesUNIR/CursoCertificacionAWS_PER15727/Modulo1_IntroduccionALaNubeDeAWS.md",
+    "CertificacionesUNNIR/Python_PER15725/Tema1_Introduccion.md",
+    "CertificacionesUNNIR/CursoCertificacionAZ_900_PER15726/Modulo2_ServiciosPrincipalesDeAzure.md",
+    "CertificacionesUNNIR/CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
+    "CertificacionesUNNIR/ProgramacionEnR_PER15730/Tema2_EmpezandoConR.md",
+    "CertificacionesUNNIR/ProgramacionEnR_PER15730/Tema1_Introduccion.md",
     "ProgramacionEnR_PER15730/recursos/Clase-1.knit.md",
-    "ProgramacionEnR_PER15730/recursos/Clase-1.Rmd",
-    "ProgramacionEnR_PER15730/recursos/clase1_ej4.png",
-    "ProgramacionEnR_PER15730/recursos/clase1_ej3.png",
-    "ProgramacionEnR_PER15730/recursos/clase1_ej2.png",
-    "ProgramacionEnR_PER15730/recursos/clase1_ej1.png",
-    "ProgramacionEnR_PER15730/recursos/Clase-1.html",
-    "ProgramacionEnR_PER15730/recursos/Clase 1.Rmd",
-    "CursoCertificacionAWS_PER15727/Modulo1_IntroduccionALaNubeDeAWS.md",
-    "FundamentosIAGenerativa_PER15732/Clase_9_2_26.md",
-    "FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
+    "CertificacionesUNNIR/CursoCertificacionAWS_PER15727/Modulo1_IntroduccionALaNubeDeAWS.md",
+    "CertificacionesUNNIR/FundamentosIAGenerativa_PER15732/Clase_9_2_26.md",
+    "CertificacionesUNNIR/FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
     "Bienvenido.md"
   ]
 }
