@@ -4,31 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "dd08344affd605ce",
-        "type": "tabs",
-        "dimension": 50,
-        "children": [
-          {
-            "id": "79bee7823fd49400",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "BasesDeDatos/temario/tema1.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "tema1"
-            }
-          }
-        ]
-      },
-      {
         "id": "8bfa8dc912f3ec8d",
         "type": "tabs",
-        "dimension": 50,
         "children": [
           {
-            "id": "4f367ded7ce18d3b",
+            "id": "5c879f229fadc83d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -40,23 +20,26 @@
               "icon": "lucide-file",
               "title": "AprenderPorMiCuenta"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "3858d8e1c5dd5210",
+        "type": "tabs",
+        "children": [
           {
-            "id": "5c879f229fadc83d",
+            "id": "166344ade032e247",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Deberes.md",
-                "mode": "source",
-                "source": true
+                "file": "AnalisisInterpretacionDatos/temario/tema1.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Deberes"
+              "icon": "lucide-file-text",
+              "title": "tema1"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -220,19 +203,22 @@
   },
   "active": "5c879f229fadc83d",
   "lastOpenFiles": [
+    "AnalisisInterpretacionDatos/BLOQUE_1.md",
+    "AnalisisInterpretacionDatos/temario/tema1.pdf",
+    "TecnicasInteligenciaArtificial/BLOQUE_1.md",
+    "TecnicasInteligenciaArtificial/documentacion/Clase01. Introducción.pdf",
+    "AnalisisInterpretacionDatos/temario/tema10.pdf",
+    "AnalisisInterpretacionDatos/temario/tema10.pdf.opdownload",
+    "AnalisisInterpretacionDatos/temario/tema9.pdf",
+    "AnalisisInterpretacionDatos/temario/tema9.pdf.opdownload",
+    "AnalisisInterpretacionDatos/temario/tema8.pdf",
+    "AnalisisInterpretacionDatos/temario/tema8.pdf.opdownload",
+    "AnalisisInterpretacionDatos/temario/tema7.pdf",
+    "AnalisisInterpretacionDatos/temario/tema7.pdf.opdownload",
     "AprenderPorMiCuenta.md",
     "Deberes.md",
+    "IngenieriaProcesadoDatos/BLOQUE_1.md",
     "BasesDeDatos/BLOQUE_1.md",
-    "BasesDeDatos/temario/tema1.pdf",
-    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Tipos Ficheros.zip",
-    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Tema 1 - Métodos de Captura - v01.pdf",
-    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Tema 0 - Presentación - v02_Visual.pdf",
-    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Taller_Docker_Básico.pdf",
-    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Guia_CSV_vf.pdf",
-    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Guia Calidad de Datos Abiertos.pdf",
-    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Analisis_Exploratorio_de_Datos_2021_v6.pdf",
-    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura",
-    "BasesDeDatos/documentacion/Documentación-20260317.zip",
     "CertificacionesUNNIR/Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
     "CertificacionesUNIR/Python_PER15725/imgs/veriones_python.png",
     "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/imgs/the_world_of_ai.png",
@@ -261,7 +247,6 @@
     "ProgramacionEnR_PER15730/recursos/Clase-1.knit.md",
     "CertificacionesUNNIR/CursoCertificacionAWS_PER15727/Modulo1_IntroduccionALaNubeDeAWS.md",
     "CertificacionesUNNIR/FundamentosIAGenerativa_PER15732/Clase_9_2_26.md",
-    "CertificacionesUNNIR/FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
-    "Bienvenido.md"
+    "CertificacionesUNNIR/FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md"
   ]
 }
