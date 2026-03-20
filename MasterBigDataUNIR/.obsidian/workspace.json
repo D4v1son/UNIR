@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AprenderPorMiCuenta.md",
+                "file": "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "AprenderPorMiCuenta"
+              "title": "PreguntasDeTests"
             }
           }
         ]
@@ -31,12 +31,14 @@
             "id": "166344ade032e247",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "AnalisisInterpretacionDatos/temario/tema1.pdf"
+                "file": "Deberes.md",
+                "mode": "preview",
+                "source": true
               },
-              "icon": "lucide-file-text",
-              "title": "tema1"
+              "icon": "lucide-file",
+              "title": "Deberes"
             }
           }
         ]
@@ -203,20 +205,25 @@
   },
   "active": "5c879f229fadc83d",
   "lastOpenFiles": [
-    "AnalisisInterpretacionDatos/BLOQUE_1.md",
-    "AnalisisInterpretacionDatos/temario/tema1.pdf",
-    "TecnicasInteligenciaArtificial/BLOQUE_1.md",
-    "TecnicasInteligenciaArtificial/documentacion/Clase01. Introducción.pdf",
-    "AnalisisInterpretacionDatos/temario/tema10.pdf",
-    "AnalisisInterpretacionDatos/temario/tema10.pdf.opdownload",
-    "AnalisisInterpretacionDatos/temario/tema9.pdf",
-    "AnalisisInterpretacionDatos/temario/tema9.pdf.opdownload",
-    "AnalisisInterpretacionDatos/temario/tema8.pdf",
-    "AnalisisInterpretacionDatos/temario/tema8.pdf.opdownload",
-    "AnalisisInterpretacionDatos/temario/tema7.pdf",
-    "AnalisisInterpretacionDatos/temario/tema7.pdf.opdownload",
-    "AprenderPorMiCuenta.md",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/Herramientas.md",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
     "Deberes.md",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/temario/tema8.pdf",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/temario/tema8.pdf.opdownload",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/temario/tema7.pdf",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/temario/tema7.pdf.opdownload",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/temario/tema6.pdf",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/temario/tema6.pdf.opdownload",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/temario/tema5.pdf",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/temario/tema5.pdf.opdownload",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/temario/tema4.pdf",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/temario/tema4.pdf.opdownload",
+    "VisualizacionInteractiva/Herramientas.md",
+    "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema2_FundamentosIngenieriaPrompts.md",
+    "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
+    "AprenderPorMiCuenta.md",
+    "AnalisisInterpretacionDatos/BLOQUE_1.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_1.md",
     "IngenieriaProcesadoDatos/BLOQUE_1.md",
     "BasesDeDatos/BLOQUE_1.md",
     "CertificacionesUNNIR/Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
@@ -234,7 +241,6 @@
     "CertificacionesUNIR/Python_PER15725/Tema1_Introduccion.md",
     "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema1_Introduccion.md",
     "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema2_EmpezandoConR.md",
-    "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
     "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Clase_9_2_26.md",
     "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/Modulo2_ServiciosPrincipalesDeAzure.md",
     "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
@@ -244,9 +250,6 @@
     "CertificacionesUNNIR/CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
     "CertificacionesUNNIR/ProgramacionEnR_PER15730/Tema2_EmpezandoConR.md",
     "CertificacionesUNNIR/ProgramacionEnR_PER15730/Tema1_Introduccion.md",
-    "ProgramacionEnR_PER15730/recursos/Clase-1.knit.md",
-    "CertificacionesUNNIR/CursoCertificacionAWS_PER15727/Modulo1_IntroduccionALaNubeDeAWS.md",
-    "CertificacionesUNNIR/FundamentosIAGenerativa_PER15732/Clase_9_2_26.md",
-    "CertificacionesUNNIR/FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md"
+    "ProgramacionEnR_PER15730/recursos/Clase-1.knit.md"
   ]
 }
