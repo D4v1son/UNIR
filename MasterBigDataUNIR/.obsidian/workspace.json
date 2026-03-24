@@ -11,12 +11,14 @@
             "id": "5c879f229fadc83d",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "VisualizacionInteractiva/documentacion/1.Introducción a la visualización de datos.pdf"
+                "file": "Deberes.md",
+                "mode": "preview",
+                "source": true
               },
-              "icon": "lucide-file-text",
-              "title": "1.Introducción a la visualización de datos"
+              "icon": "lucide-file",
+              "title": "Deberes"
             }
           }
         ]
@@ -29,14 +31,12 @@
             "id": "6adddb46478371e9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "VisualizacionInteractiva/BLOQUE_1.md",
-                "mode": "preview",
-                "source": true
+                "file": "IngenieriaProcesadoDatos/temario/tema2.pdf"
               },
-              "icon": "lucide-file",
-              "title": "BLOQUE_1"
+              "icon": "lucide-file-text",
+              "title": "tema2"
             }
           }
         ]
@@ -96,8 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "6b9cea7ec0ad8da8",
@@ -202,26 +201,26 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "6adddb46478371e9",
+  "active": "5c879f229fadc83d",
   "lastOpenFiles": [
+    "IngenieriaProcesadoDatos/BLOQUE_1.md",
+    "IngenieriaProcesadoDatos/temario/tema2.pdf",
+    "Deberes.md",
+    "IngenieriaProcesadoDatos/documentacion/Tema 0 - Presentación.pdf",
+    "IngenieriaProcesadoDatos/documentacion/Tema 1 - Introducción a las Tecnologías Big Data.pdf",
+    "IngenieriaProcesadoDatos/documentacion/Tema 2 - HDFS.pdf",
+    "IngenieriaProcesadoDatos/documentacion",
+    "IngenieriaProcesadoDatos/Nueva carpeta",
+    "IngenieriaProcesadoDatos/temario/tema1.pdf",
     "VisualizacionInteractiva/documentacion/1.Introducción a la visualización de datos.pdf",
     "VisualizacionInteractiva/BLOQUE_1.md",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
-    "Deberes.md",
-    "IngenieriaProcesadoDatos/BLOQUE_1.md",
-    "IngenieriaProcesadoDatos/temario/tema1.pdf",
     "AprenderPorMiCuenta.md",
     "BasesDeDatos/BLOQUE_1.md",
     "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Tema 1 - Métodos de Captura - v01.pdf",
     "BasesDeDatos/temario/tema1.pdf",
-    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Tema 0 - Presentación - v02_Visual.pdf",
-    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Taller_Docker_Básico.pdf",
-    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Guia_CSV_vf.pdf",
-    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Guia Calidad de Datos Abiertos.pdf",
-    "BasesDeDatos/documentacion/Sesión 01 - Métodos de captura/Analisis_Exploratorio_de_Datos_2021_v6.pdf",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/Herramientas.md",
-    "PSU_IA/DesarrolloOptimizacionDespliegueIA/temario/tema8.pdf",
     "VisualizacionInteractiva/Herramientas.md",
     "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema2_FundamentosIngenieriaPrompts.md",
     "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
