@@ -11,32 +11,14 @@
             "id": "5c879f229fadc83d",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "AnalisisInterpretacionDatos/documentacion/Guia Calidad de Datos Abiertos_0.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Guia Calidad de Datos Abiertos_0"
-            }
-          }
-        ]
-      },
-      {
-        "id": "a8c006a8e92ef996",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "6adddb46478371e9",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "Deberes.md",
-                "mode": "source",
+                "file": "TecnicasInteligenciaArtificial/BLOQUE_1.md",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Deberes"
+              "title": "BLOQUE_1"
             }
           }
         ]
@@ -96,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "6b9cea7ec0ad8da8",
@@ -201,20 +184,24 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "6adddb46478371e9",
+  "active": "5c879f229fadc83d",
   "lastOpenFiles": [
+    "Sin título.base",
+    "Deberes.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_1.md",
     "AnalisisInterpretacionDatos/BLOQUE_1.md",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
+    "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema2_FundamentosIngenieriaPrompts.md",
+    "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/temario/Tema_2_Fundamentos_de_la_ingenieria_de_prompts.pdf",
     "AnalisisInterpretacionDatos/documentacion/Guia Calidad de Datos Abiertos_0.pdf",
     "AnalisisInterpretacionDatos/temario/tema2.pdf",
     "AnalisisInterpretacionDatos/temario/tema1.pdf",
-    "Deberes.md",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/02 - Uso de Jupyter Notebooks y Fuentes de datos/datasets/heart-attack",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/02 - Uso de Jupyter Notebooks y Fuentes de datos/datasets",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/02 - Uso de Jupyter Notebooks y Fuentes de datos/funciones.ipynb",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/02 - Uso de Jupyter Notebooks y Fuentes de datos/02 - Jupyter Notebooks - Fuentes de datos.ipynb",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/02 - Uso de Jupyter Notebooks y Fuentes de datos",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/01 - Uso de Jupyter Notebooks y Markdown/datasets/heart-attack",
-    "TecnicasInteligenciaArtificial/documentacion/Clase02/01 - Uso de Jupyter Notebooks y Markdown/datasets",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/tips.png",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/slicing_ndarray.png",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/slicing_array.png",
@@ -227,13 +214,10 @@
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/ndarray_axis_3d.png",
     "IngenieriaProcesadoDatos/BLOQUE_1.md",
     "VisualizacionInteractiva/BLOQUE_1.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_1.md",
     "AprenderPorMiCuenta.md",
     "BasesDeDatos/BLOQUE_1.md",
-    "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/Herramientas.md",
     "VisualizacionInteractiva/Herramientas.md",
-    "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema2_FundamentosIngenieriaPrompts.md",
     "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
     "CertificacionesUNNIR/Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
     "CertificacionesUNIR/Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
