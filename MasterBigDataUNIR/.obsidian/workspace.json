@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TecnicasInteligenciaArtificial/BLOQUE_1.md",
-                "mode": "preview",
+                "file": "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema3_EstructuraDeDatos.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "BLOQUE_1"
+              "title": "Tema3_EstructuraDeDatos"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "6b9cea7ec0ad8da8",
@@ -186,9 +185,15 @@
   },
   "active": "5c879f229fadc83d",
   "lastOpenFiles": [
-    "Sin título.base",
-    "Deberes.md",
+    "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema2_EmpezandoConR.md",
+    "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema1_Introduccion.md",
+    "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema3_EstructuraDeDatos.md",
+    "AprenderPorMiCuenta.md",
+    "2026-04-03.md",
+    "Deberes",
+    "Deberes/Deberes.md",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
+    "Sin título.base",
     "AnalisisInterpretacionDatos/BLOQUE_1.md",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
     "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema2_FundamentosIngenieriaPrompts.md",
@@ -200,8 +205,6 @@
     "TecnicasInteligenciaArtificial/documentacion/Clase02/02 - Uso de Jupyter Notebooks y Fuentes de datos/datasets",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/02 - Uso de Jupyter Notebooks y Fuentes de datos/funciones.ipynb",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/02 - Uso de Jupyter Notebooks y Fuentes de datos/02 - Jupyter Notebooks - Fuentes de datos.ipynb",
-    "TecnicasInteligenciaArtificial/documentacion/Clase02/02 - Uso de Jupyter Notebooks y Fuentes de datos",
-    "TecnicasInteligenciaArtificial/documentacion/Clase02/01 - Uso de Jupyter Notebooks y Markdown/datasets/heart-attack",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/tips.png",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/slicing_ndarray.png",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/slicing_array.png",
@@ -214,7 +217,6 @@
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/ndarray_axis_3d.png",
     "IngenieriaProcesadoDatos/BLOQUE_1.md",
     "VisualizacionInteractiva/BLOQUE_1.md",
-    "AprenderPorMiCuenta.md",
     "BasesDeDatos/BLOQUE_1.md",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/Herramientas.md",
     "VisualizacionInteractiva/Herramientas.md",
@@ -222,15 +224,12 @@
     "CertificacionesUNNIR/Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
     "CertificacionesUNIR/Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
     "CertificacionesUNIR/Python_PER15725/Tema1_Introduccion.md",
-    "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema1_Introduccion.md",
-    "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema2_EmpezandoConR.md",
     "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Clase_9_2_26.md",
     "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/Modulo2_ServiciosPrincipalesDeAzure.md",
     "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
     "CertificacionesUNIR/CursoCertificacionAWS_PER15727/Modulo1_IntroduccionALaNubeDeAWS.md",
     "CertificacionesUNNIR/Python_PER15725/Tema1_Introduccion.md",
     "CertificacionesUNNIR/CursoCertificacionAZ_900_PER15726/Modulo2_ServiciosPrincipalesDeAzure.md",
-    "CertificacionesUNNIR/CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
-    "CertificacionesUNNIR/ProgramacionEnR_PER15730/Tema2_EmpezandoConR.md"
+    "CertificacionesUNNIR/CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md"
   ]
 }
