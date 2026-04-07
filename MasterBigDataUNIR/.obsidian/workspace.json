@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema3_EstructuraDeDatos.md",
-                "mode": "source",
+                "file": "ENTREGAS/Visualización de Evolución en el Tiempo.md",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Tema3_EstructuraDeDatos"
+              "title": "Visualización de Evolución en el Tiempo"
+            }
+          },
+          {
+            "id": "9374021195bd1e59",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ENTREGAS/Pipeline HDFS y Spark.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Pipeline HDFS y Spark"
             }
           }
         ]
@@ -53,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:studies",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -183,29 +197,44 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "5c879f229fadc83d",
+  "active": "29f72046f9bf0fdc",
   "lastOpenFiles": [
+    "ENTREGAS/Visualización de Evolución en el Tiempo.md",
+    "NOTAS_DIARIAS/2026-05-11.md",
+    "TEMPLATES/template_dailynote.md",
+    "NOTAS_DIARIAS/2026-04-07.md",
+    "ENTREGAS/Análisis Libre de un Catálogo de Datos.md",
+    "ENTREGAS/AAAentregasdb.base",
+    "TEMPLATES/template_entrega.md",
+    "Deberes.md",
+    "NOTAS_DIARIAS",
     "Sin título.md",
-    "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema3_EstructuraDeDatos.md",
-    "CertificacionesUNIR/ProgramacionEnR_PER15730/temario/tema3.pdf",
-    "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema2_EmpezandoConR.md",
-    "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema1_Introduccion.md",
-    "AprenderPorMiCuenta.md",
-    "2026-04-03.md",
-    "Deberes",
-    "Deberes/Deberes.md",
+    "VisualizacionInteractiva/BLOQUE_1.md",
+    "ENTREGAS/Visualización Adaptada.md",
+    "ENTREGAS/Laboratorio.md",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
-    "Sin título.base",
+    "IngenieriaProcesadoDatos/BLOQUE_1.md",
+    "ENTREGAS/Trabajo con Redes Neuronales y Deep Learning.md",
+    "ENTREGAS/Árboles de Decisión, Reglas y Ensamble Learning.md",
+    "ENTREGAS/Análisis Exploratorio con Google Big Query.md",
+    "ENTREGAS/Spark Streaming y Kafka.md",
+    "ENTREGAS/Pipeline HDFS y Spark.md",
+    "ENTREGAS/Limpieza de Datos.md",
+    "BasesDeDatos/BLOQUE_1.md",
+    "ENTREGAS/Modelos de Datos NoSQL.md",
+    "ENTREGAS/Definición de un Problema Estadístico.md",
+    "ENTREGAS/Estadística Descriptiva.md",
+    "ENTREGAS/Estadística Inferencial.md",
+    "ENTREGAS/Uso de MongoDB.md",
     "AnalisisInterpretacionDatos/BLOQUE_1.md",
-    "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
-    "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema2_FundamentosIngenieriaPrompts.md",
+    "TEMPLATES",
+    "CertificacionesUNIR/ProgramacionEnR_PER15730/temario/tema3.pdf",
+    "ENTREGAS",
+    "Sin título.base",
     "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/temario/Tema_2_Fundamentos_de_la_ingenieria_de_prompts.pdf",
     "AnalisisInterpretacionDatos/documentacion/Guia Calidad de Datos Abiertos_0.pdf",
     "AnalisisInterpretacionDatos/temario/tema2.pdf",
     "AnalisisInterpretacionDatos/temario/tema1.pdf",
-    "TecnicasInteligenciaArtificial/documentacion/Clase02/02 - Uso de Jupyter Notebooks y Fuentes de datos/datasets/heart-attack",
-    "TecnicasInteligenciaArtificial/documentacion/Clase02/02 - Uso de Jupyter Notebooks y Fuentes de datos/datasets",
-    "TecnicasInteligenciaArtificial/documentacion/Clase02/02 - Uso de Jupyter Notebooks y Fuentes de datos/funciones.ipynb",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/tips.png",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/slicing_ndarray.png",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/slicing_array.png",
@@ -215,21 +244,6 @@
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/pandas_logo.png",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/numpy_logo.jpg",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/ndarray_struct.png",
-    "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/ndarray_axis_3d.png",
-    "IngenieriaProcesadoDatos/BLOQUE_1.md",
-    "VisualizacionInteractiva/BLOQUE_1.md",
-    "BasesDeDatos/BLOQUE_1.md",
-    "PSU_IA/DesarrolloOptimizacionDespliegueIA/Herramientas.md",
-    "VisualizacionInteractiva/Herramientas.md",
-    "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
-    "CertificacionesUNNIR/Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
-    "CertificacionesUNIR/Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
-    "CertificacionesUNIR/Python_PER15725/Tema1_Introduccion.md",
-    "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Clase_9_2_26.md",
-    "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/Modulo2_ServiciosPrincipalesDeAzure.md",
-    "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
-    "CertificacionesUNIR/CursoCertificacionAWS_PER15727/Modulo1_IntroduccionALaNubeDeAWS.md",
-    "CertificacionesUNNIR/Python_PER15725/Tema1_Introduccion.md",
-    "CertificacionesUNNIR/CursoCertificacionAZ_900_PER15726/Modulo2_ServiciosPrincipalesDeAzure.md"
+    "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/ndarray_axis_3d.png"
   ]
 }

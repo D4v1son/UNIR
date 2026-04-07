@@ -1,0 +1,23 @@
+views:
+  - type: table
+    name: Tabla
+    filters:
+      and:
+        - file.folder == "ENTREGAS"
+        - file.path != "ENTREGAS/AAAentregasdb.base"
+    order:
+      - file.name
+      - tags
+      - entregado
+      - laboratorio
+      - grupal
+      - inicio
+      - entrega
+    sort:
+      - property: entrega
+        direction: ASC
+  - type: list
+    name: Vista
+    cardSize: 50
+    indentProperties: true
+    markers: none
