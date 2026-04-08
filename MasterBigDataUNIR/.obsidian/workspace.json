@@ -4,35 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8bfa8dc912f3ec8d",
+        "id": "f197c8a92d5f223b",
         "type": "tabs",
         "children": [
           {
-            "id": "5c879f229fadc83d",
+            "id": "b90b17f544f74d4e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ENTREGAS/Visualización de Evolución en el Tiempo.md",
+                "file": "IngenieriaProcesadoDatos/BLOQUE_1.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Visualización de Evolución en el Tiempo"
-            }
-          },
-          {
-            "id": "9374021195bd1e59",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ENTREGAS/Pipeline HDFS y Spark.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Pipeline HDFS y Spark"
+              "title": "BLOQUE_1"
             }
           }
         ]
@@ -67,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:studies",
+                "query": "tag:IPMD",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -197,44 +183,43 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "29f72046f9bf0fdc",
+  "active": "b90b17f544f74d4e",
   "lastOpenFiles": [
+    "ENTREGAS/AAAentregasdb.base",
+    "IngenieriaProcesadoDatos/BLOQUE_1.md",
+    "AnalisisInterpretacionDatos/BLOQUE_1.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_1.md",
+    "TecnicasInteligenciaArtificial/documentacion/Clase03/Clase03. Árboles de decisión I.pdf",
+    "TecnicasInteligenciaArtificial/documentacion/Clase03/Tema_3_ArbolesDecision .ipynb",
+    "TecnicasInteligenciaArtificial/documentacion/Clase03/train.csv",
+    "TecnicasInteligenciaArtificial/documentacion/Clase01/Clase01. Presentación.pdf",
+    "TecnicasInteligenciaArtificial/documentacion/Clase01/Clase01. Introducción.pdf",
+    "TecnicasInteligenciaArtificial/documentacion/Clase01",
+    "TecnicasInteligenciaArtificial/documentacion/Nueva carpeta",
+    "TecnicasInteligenciaArtificial/documentacion/Clase03",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/temario/tema2.pdf",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/Herramientas.md",
+    "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/Modulo2_ServiciosPrincipalesDeAzure.md",
+    "ENTREGAS/Limpieza de Datos.md",
+    "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
+    "ENTREGAS/Pipeline HDFS y Spark.md",
     "ENTREGAS/Visualización de Evolución en el Tiempo.md",
     "NOTAS_DIARIAS/2026-05-11.md",
     "TEMPLATES/template_dailynote.md",
     "NOTAS_DIARIAS/2026-04-07.md",
     "ENTREGAS/Análisis Libre de un Catálogo de Datos.md",
-    "ENTREGAS/AAAentregasdb.base",
     "TEMPLATES/template_entrega.md",
     "Deberes.md",
-    "NOTAS_DIARIAS",
     "Sin título.md",
     "VisualizacionInteractiva/BLOQUE_1.md",
     "ENTREGAS/Visualización Adaptada.md",
     "ENTREGAS/Laboratorio.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_1.md",
-    "IngenieriaProcesadoDatos/BLOQUE_1.md",
     "ENTREGAS/Trabajo con Redes Neuronales y Deep Learning.md",
     "ENTREGAS/Árboles de Decisión, Reglas y Ensamble Learning.md",
     "ENTREGAS/Análisis Exploratorio con Google Big Query.md",
     "ENTREGAS/Spark Streaming y Kafka.md",
-    "ENTREGAS/Pipeline HDFS y Spark.md",
-    "ENTREGAS/Limpieza de Datos.md",
-    "BasesDeDatos/BLOQUE_1.md",
-    "ENTREGAS/Modelos de Datos NoSQL.md",
-    "ENTREGAS/Definición de un Problema Estadístico.md",
-    "ENTREGAS/Estadística Descriptiva.md",
-    "ENTREGAS/Estadística Inferencial.md",
-    "ENTREGAS/Uso de MongoDB.md",
-    "AnalisisInterpretacionDatos/BLOQUE_1.md",
-    "TEMPLATES",
-    "CertificacionesUNIR/ProgramacionEnR_PER15730/temario/tema3.pdf",
-    "ENTREGAS",
-    "Sin título.base",
-    "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/temario/Tema_2_Fundamentos_de_la_ingenieria_de_prompts.pdf",
-    "AnalisisInterpretacionDatos/documentacion/Guia Calidad de Datos Abiertos_0.pdf",
-    "AnalisisInterpretacionDatos/temario/tema2.pdf",
-    "AnalisisInterpretacionDatos/temario/tema1.pdf",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/tips.png",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/slicing_ndarray.png",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/slicing_array.png",
