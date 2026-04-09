@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IngenieriaProcesadoDatos/BLOQUE_1.md",
+                "file": "VisualizacionInteractiva/BLOQUE_2.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "BLOQUE_1"
+              "title": "BLOQUE_2"
             }
           }
         ]
@@ -185,21 +185,24 @@
   },
   "active": "b90b17f544f74d4e",
   "lastOpenFiles": [
-    "ENTREGAS/AAAentregasdb.base",
+    "VisualizacionInteractiva/documentacion/Clase03/0E6E9000",
+    "VisualizacionInteractiva/documentacion/Clase03/~$Ejemplo tema 3 desempleo.xlsx",
+    "VisualizacionInteractiva/documentacion/Clase01/0. Presentación de la asignatura.pdf",
+    "VisualizacionInteractiva/documentacion/Clase01/1.Introducción a la visualización de datos.pdf",
+    "VisualizacionInteractiva/documentacion/Clase02/2.Historia de la visualización de datos.pdf",
+    "VisualizacionInteractiva/documentacion/Clase02/Ejemplo tema 2. Life expectancy vs Income.csv",
+    "VisualizacionInteractiva/documentacion/Clase01",
+    "VisualizacionInteractiva/documentacion/Nueva carpeta",
+    "VisualizacionInteractiva/documentacion/Clase02",
+    "VisualizacionInteractiva/documentacion/Clase03/Ejemplo tema 3 desempleo.xlsx",
+    "VisualizacionInteractiva/documentacion/Clase03/Ejemplo tema 3 Design Tools Survey by uxtools.co.xlsx",
+    "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema3_EstructuraDeDatos.md",
+    "VisualizacionInteractiva/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/BLOQUE_1.md",
     "AnalisisInterpretacionDatos/BLOQUE_1.md",
     "TecnicasInteligenciaArtificial/BLOQUE_2.md",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
-    "TecnicasInteligenciaArtificial/documentacion/Clase03/Clase03. Árboles de decisión I.pdf",
-    "TecnicasInteligenciaArtificial/documentacion/Clase03/Tema_3_ArbolesDecision .ipynb",
-    "TecnicasInteligenciaArtificial/documentacion/Clase03/train.csv",
-    "TecnicasInteligenciaArtificial/documentacion/Clase01/Clase01. Presentación.pdf",
-    "TecnicasInteligenciaArtificial/documentacion/Clase01/Clase01. Introducción.pdf",
-    "TecnicasInteligenciaArtificial/documentacion/Clase01",
-    "TecnicasInteligenciaArtificial/documentacion/Nueva carpeta",
-    "TecnicasInteligenciaArtificial/documentacion/Clase03",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
-    "PSU_IA/DesarrolloOptimizacionDespliegueIA/temario/tema2.pdf",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/Herramientas.md",
     "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/Modulo2_ServiciosPrincipalesDeAzure.md",
     "ENTREGAS/Limpieza de Datos.md",
@@ -218,8 +221,6 @@
     "ENTREGAS/Laboratorio.md",
     "ENTREGAS/Trabajo con Redes Neuronales y Deep Learning.md",
     "ENTREGAS/Árboles de Decisión, Reglas y Ensamble Learning.md",
-    "ENTREGAS/Análisis Exploratorio con Google Big Query.md",
-    "ENTREGAS/Spark Streaming y Kafka.md",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/tips.png",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/slicing_ndarray.png",
     "TecnicasInteligenciaArtificial/documentacion/Clase02/00 - Introducción a Python/images/slicing_array.png",
