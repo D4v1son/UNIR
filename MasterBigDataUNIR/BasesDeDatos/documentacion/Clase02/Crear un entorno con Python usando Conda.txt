@@ -1,0 +1,61 @@
+Crear un entorno con Python usando conda, sigue estos pasos desde la terminal o el prompt de Anaconda:
+
+1. Comprueba las versiones disponibles de Python (opcional)
+
+   conda search "^python$"
+   
+2. Crea el entorno indicando la versión deseada de Python (por ejemplo, 3.10):
+
+   conda create --name mi_entorno python=3.9
+   
+3. Activa el entorno:
+
+   conda activate mi_entorno
+   
+4. Verifica la versión instalada:
+
+   python --version
+   
+5. Instala los paquetes que necesites dentro del entorno, por ejemplo:
+
+   conda install numpy pandas scikit-learn
+   
+Si prefieres usar un archivo `environment.yml`, crea un fichero con este contenido:
+
+name: mi_entorno
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - scikit-learn
+
+Y luego ejecútalo con:
+
+conda env create -f environment.yml
+
+
+Para arrancar Jupyter Lab desde la terminal de conda, sigue este procedimiento:
+
+1. Activa el entorno donde tienes instalado Jupyter Lab:
+
+   conda activate mi_entorno
+   
+2. Si no lo tienes instalado todavía, hazlo dentro de ese entorno:
+
+   conda install jupyterlab
+   
+   o con `pip` si lo prefieres:
+
+   pip install jupyterlab
+   
+3. Inicia Jupyter Lab:
+
+   jupyter lab
+   
+4. Se abrirá automáticamente en el navegador (por defecto en `http://localhost:8888/lab`).
+   Si no se abre, puedes copiar la URL que aparece en la terminal y pegarla manualmente en el navegador.
+
+Opcionalmente, si quieres especificar el puerto o desactivar la apertura automática:
+
+jupyter lab --port 8890 --no-browser
+

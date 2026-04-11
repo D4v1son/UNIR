@@ -1,0 +1,143 @@
+Guion 1. MongoDB con Docker, uso básico correcto
+
+MongoDB no es SQL. No fuerces joins ni normalización artificial. Diseña documentos pensando en el patrón de acceso.
+
+1. Crear y arrancar un contenedor de MongoDB
+
+Imagen oficial, sin capas raras (descarga opcional).
+
+docker pull mongo 
+
+
+Arranque con nombre explícito y puerto estándar:
+
+docker run -d --name mongo-node -p 27017:27017 mongo
+
+
+Comprueba estado:
+
+docker logs mongo-node
+
+
+Si el proceso mongod está escuchando, continúa.
+
+2. Acceder a MongoDB
+
+Acceso directo al contenedor:
+
+docker exec -it mongo-node mongosh
+
+
+Prompt esperado:
+
+test>
+
+3. Crear o seleccionar base de datos
+
+En MongoDB la base se crea al insertar datos, no antes.
+
+use demo
+
+
+No existe hasta que escribas.
+
+4. Crear colección e insertar documentos
+
+Inserción explícita:
+
+db.users.insertOne({
+  email: "user1@mail.com",
+  name: "User One",
+  created_at: new Date()
+})
+
+
+MongoDB genera _id automáticamente si no lo defines.
+
+5. Consultar documentos
+
+Consulta completa:
+
+db.users.find()
+
+
+Consulta por campo:
+
+db.users.find({ email: "user1@mail.com" })
+
+
+Esto funciona sin índice, pero no escalará.
+
+6. Índices
+
+Índice correcto, explícito y consciente:
+
+db.users.createIndex({ email: 1 })
+
+
+Sin índice, MongoDB hace collection scan. No lo ignores.
+
+7. Actualizar documentos
+
+Actualización parcial:
+
+db.users.updateOne(
+  { email: "user1@mail.com" },
+  { $set: { name: "User One Updated" } }
+)
+
+
+Sin operador $set, sobrescribes el documento completo.
+
+8. Borrar documentos
+
+Uno:
+
+db.users.deleteOne({ email: "user1@mail.com" })
+
+
+Todos los que coincidan:
+
+db.users.deleteMany({ name: "User One" })
+
+9. Inspección básica
+
+Bases de datos:
+
+show dbs
+
+
+Colecciones:
+
+show collections
+
+10. Salir y detener contenedor
+
+Salir del shell:
+
+exit
+
+
+Parar contenedor:
+
+docker stop mongo-node
+docker rm mongo-node
+
+MongoDB con persistencia
+
+Volumen Docker:
+
+docker volume create mongo_data
+
+
+Arranque persistente:
+
+docker run -d --name mongo-node -p 27017:27017 -v mongo_data:/data/db mongo
+
+
+Ruta crítica:
+
+/data/db
+
+
+Sin esto, los datos desaparecen.
