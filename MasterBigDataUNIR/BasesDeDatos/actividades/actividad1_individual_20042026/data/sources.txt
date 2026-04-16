@@ -1,0 +1,3 @@
+alojamiento --> https://datos.comunidad.madrid/dataset/alojamientos_turisticos
+puntos interés --> https://datos.gob.es/en/catalogo/l01280796-puntos-de-interes-turistico-de-la-ciudad-de-madrid-que-visitar-en-madrid-www-esmadrid-com1
+listings Airbnb --> https://insideairbnb.com/get-the-data/
