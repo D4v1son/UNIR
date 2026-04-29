@@ -1,0 +1,103 @@
+Ejercicios Avanzados de JavaScript en MongoDB
+
+db.library.insertMany( [
+  { item: "journal", status: "A", size: { h: 14, w: 21, uom: "cm" }, instock: [ { warehouse: "A", qty: 5 } ] },
+  { item: "notebook", status: "A",  size: { h: 8.5, w: 11, uom: "in" }, instock: [ { warehouse: "C", qty: 5 } ] },
+  { item: "paper", status: "D", size: { h: 8.5, w: 11, uom: "in" }, instock: [ { warehouse: "A", qty: 60 } ] },
+  { item: "planner", status: "D", size: { h: 22.85, w: 30, uom: "cm" }, instock: [ { warehouse: "A", qty: 40 } ] },
+  { item: "postcard", status: "A", size: { h: 10, w: 15.25, uom: "cm" }, instock: [ { warehouse: "B", qty: 15 }, { warehouse: "C", qty: 35 } ] }
+]);
+
+Ejercicio 1: Filtrar y Transformar Resultados con JavaScript
+
+// Este script encuentra todos los documentos y luego los filtra y transforma usando JavaScript.
+const items = db.library.find().toArray();
+
+const transformedItems = items.filter(item => item.instock.some(stock => stock.qty > 20)).map(item => { return {      item: item.item,      totalQty: item.instock.reduce((sum, stock) => sum + stock.qty, 0)    };  });
+
+printjson(transformedItems);
+
+Ejercicio 2: Actualizar Documentos Basado en Condiciones Complejas
+
+// Este script actualizará la cantidad de todos los documentos cuyo total en stock sea inferior a 100.
+db.library.find().forEach(function (doc) { 
+  const totalQty = doc.instock.reduce((sum, stock) => sum + stock.qty, 0); 
+  if (totalQty < 100) { 
+    db.library.updateOne({ _id: doc._id }, { $set: { "instock.$[].qty": totalQty + 100 } }); 
+  } 
+});
+
+Ejercicio 3: Bucle para Insertar Documentos con Datos Relacionados
+
+// Inserta 5 documentos nuevos, cada uno con una referencia al anterior.
+let lastInsertedId = null;
+for (let i = 0; i < 5; i++) {
+  const result = db.library.insertOne({ item: `connectedItem${i}`, previousItemId: lastInsertedId });
+  lastInsertedId = result.insertedId;
+}
+
+Ejercicio 4: Crear una Colección de Datos Normalizados a Partir de una Anidada
+
+// Normaliza una colección que tiene documentos anidados en un arreglo, creando un documento nuevo para cada subdocumento.
+db.library.find({ instock: { $exists: true } }).forEach(function (doc) {
+  doc.instock.forEach(function (stock) {
+    db.normalizedStock.insertOne({
+      item: doc.item,
+      warehouse: stock.warehouse,
+      qty: stock.qty
+    });
+  });
+});
+
+Ejercicio 5: Generar Informes con Lógica de Negocio
+
+// Genera un informe de inventario con lógica de negocio compleja.
+const inventoryReport = db.library.aggregate([
+  { $unwind: "$instock" },
+  { $group: {
+    _id: "$item",
+    totalQty: { $sum: "$instock.qty" },
+    warehouses: { $addToSet: "$instock.warehouse" }
+  }}
+]).toArray().map(function (report) {
+  report.isLowStock = report.totalQty < 50;
+  report.needsReorder = report.warehouses.length < 2;
+  return report;
+});
+
+printjson(inventoryReport);
+
+Ejercicios que Muestran Limitaciones
+Limitación 1: Procesamiento de Gran Volumen de Datos
+
+// Intento de procesar un volumen masivo de datos puede ser lento en la consola.
+const items = db.library.find().limit(1000000).toArray();
+// Este proceso podría ser muy lento o incluso fallar debido a limitaciones de memoria.
+
+Limitación 2: Complejidad de Agregaciones Múltiples
+
+// Realizar múltiples pasos de agregación complejos puede ser difícil de mantener y optimizar.
+db.library.aggregate([
+  // Una serie de etapas de agregación que pueden ser muy complejas para depurar y mantener.
+]);
+
+Limitación 3: Uso de Funciones JavaScript en la Agregación
+
+// Uso de funciones JavaScript en las etapas de agregación no es recomendado por razones de rendimiento.
+db.library.aggregate([
+  {
+    $project: {
+      item: 1,
+      instock: 1,
+      totalQty: {
+        $function: {
+          body: function (instock) {
+            return instock.reduce((sum, stock) => sum + stock.qty, 0);
+          },
+          args: ["$instock"],
+          lang: "js"
+        }
+      }
+    }
+  }
+]);

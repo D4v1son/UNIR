@@ -1,0 +1,55 @@
+
+Modelo 1 — Descripción del precio del alojamiento turístico en Madrid
+Problema estadístico (la "línea" que pide la actividad):
+
+"Análisis descriptivo de los factores asociados al precio de los alojamientos Airbnb en los distritos de Madrid"
+
+
+Base de datos: listings.csv — 25.000 alojamientos, variables:
+
+price → variable principal (€/noche)
+room_type → tipo de habitación (Entire home, Private room…)
+neighbourhood_group → distrito de Madrid
+availability_365, minimum_nights, number_of_reviews
+Esquema de cálculos numéricos (lo que pide la actividad):
+
+Parámetros descriptivos de price: media, mediana, desviación típica, Q1/Q3, mín/máx
+Detección de outliers con rango intercuartílico (IQR)
+Comparativa de precios medios por distrito y por tipo de habitación
+Correlación entre price y number_of_reviews, availability_365
+Ventaja: dataset grande (25k), representativo, variables clarasLimitación: el precio tiene valores extremos (máx. 25.654€) que distorsionan la media; el precio no considera estacionalidad
+ 
+ 
+Modelo 2 — Profesionalización y cumplimiento normativo
+
+Pregunta: ¿Qué proporción de la oferta está en manos de hosts profesionales y cuántos listings podrían incumplir la normativa de 2026?
+Variables: calculated_host_listings_count, licence (Exempt vs registrada), minimum_nights, precio, tamaño estimado
+Cálculos: distribución de listings por host, media de listings por host, porcentaje de hosts con >5 propiedades, frecuencia de licencias "Exempt", correlación precio–nº de propiedades del host
+Conexión con el problema real: cuantifica el fenómeno de profesionalización (punto 2) y el limbo de los "Exempt" (punto 4)
+ 
+ 
+
+División por criterios de la rúbrica
+Persona 1 — Criterio 1: Definición del problema y referencias (20%)
+
+Redactar el planteamiento del problema estadístico (la "línea")
+Justificar por qué los datos Airbnb Madrid son relevantes para el sector turístico
+Buscar y citar 2-3 referencias en formato APA (artículos, informes sobre turismo/Airbnb en Madrid)
+Redactar la introducción del informe
+P3 — Criterio 3: Análisis descriptivo numérico (20%)
+
+Pablo Álvarez: calcular media, mediana, desviación típica, Q1/Q3, IQR, detección de outliers en price
+Pablo Álvarez: comparativa de precios por distrito y por tipo de habitación
+David: distribución de listings por host, % hosts con >5 propiedades, frecuencia de licencias "Exempt"
+David: Correlaciones: precio–reseñas, precio–disponibilidad, precio–nº propiedades del host
+Persona 4 — Criterio 4: Análisis descriptivo gráfico (20%)
+
+Joaquin: histograma de precios, boxplot por tipo de habitación, mapa de calor por distrito
+Blanca: gráfico de barras de distribución de licencias, gráfico de concentración de listings por host
+Blanca: Asegurarse de que los gráficos tienen título, ejes etiquetados y leyenda
+Persona 5 — Criterio 5: Discusión y conclusiones (20%)
+
+Interpretar los resultados numéricos y gráficos de ambos modelos
+Responder explícitamente al problema estadístico planteado
+Redactar ventajas y limitaciones de cada modelo
+Escribir las conclusiones finales del informe.
