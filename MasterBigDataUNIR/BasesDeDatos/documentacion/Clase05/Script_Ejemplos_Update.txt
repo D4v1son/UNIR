@@ -1,0 +1,107 @@
+# Update en MongoDB
+
+# Cargar datos
+db.calificaciones.insertMany( [
+   { "_id" : 1, "examenes" : [ 8.5, 7.5, 8.8, 5.6 ], "media" : 7.5, "grado" : "C", "lastUpdate" : ISODate("2023-12-01T20:15:30.013Z") },
+   { "_id" : 2, "examenes" : [ 8.4, 7.5, 8.3, 0.0 ], "media" : 9.0, "grado" : "C", "lastUpdate" : ISODate("2023-12-01T20:18:30.013Z") },
+   { "_id" : 3, "examenes" : [ 7.0, 7.5, 8.2, 6.5 ], "media" : 0, "grado" : "F", "lastUpdate" : ISODate("2023-01-01T00:00:00Z") },
+   { "_id" : 4, "examenes" : [ 6.5, 8.5, 7.2, 3.5 ], "media" : 0, "grado" : "F", "lastUpdate" : ISODate("2023-01-01T00:00:00Z") },
+   { "_id" : 5, "examenes" : [ 5.5 ], "media" : 0, "grado" : "F", "lastUpdate" : ISODate("2023-01-01T00:00:00Z") },
+   { "_id" : 6, "examenes" : [ 5.5 ], "media" : 0, "grado" : "F", "lastUpdate" : ISODate("2023-01-01T00:00:00Z") },
+   { "_id" : 7, "examenes" : [ 5.5 ], "media" : 0, "grado" : "F", "lastUpdate" : ISODate("2023-01-01T00:00:00Z") },
+   { "_id" : 8, "examenes" : [ 5.5 ], "media" : 0, "grado" : "F", "lastUpdate" : ISODate("2023-01-01T00:00:00Z") },
+   { "_id" : 9, "examenes" : [ 5.5 ], "media" : 0, "grado" : "F", "lastUpdate" : ISODate("2023-01-01T00:00:00Z") },
+   { "_id" : 10, "examenes" : [ 5.5 ], "media" : 0, "grado" : "F", "lastUpdate" : ISODate("2023-01-01T00:00:00Z") },
+   { "_id" : 11, "examenes" : [ 5.5 ], "media" : 0, "grado" : "F", "lastUpdate" : ISODate("2023-01-01T00:00:00Z") }
+] )
+
+# Actualizar un registro concreto _id: 5
+db.calificaciones.updateOne( { _id: 5}, { $set: { "examenes": [ 5.5, 6.8, 6.7, 7.9 ], "grado": "A", "media": 6.75 } } )
+
+# Comprobar que la actualización sea correcta
+db.calificaciones.find({_id: 5})
+
+#Actualización en varias etapas - caso 1
+db.calificaciones.updateOne(
+   { _id: 6 },
+   [
+	 { $set: { "examenes": [ 8.3, 7.5, 6.6, 9.8 ], "grado": "A", "media": 6.75 } },
+     { $set: { media: { $trunc: [  { $avg: "$examenes" }, 0 ] }, lastUpdate: "$$NOW" } }
+   ]
+)
+
+#Actualización en varias etapas - caso 2
+db.calificaciones.updateOne(
+   { _id: 7 },
+   [
+     { $set: { "examenes": [ 7.5, 7.3, 7.8, 7.5 ]} },
+     { $set: { media: { $trunc: [  { $avg: "$examenes" }, 0 ] }, lastUpdate: "$$NOW" } },
+     { $set: { grado: { $switch: {
+                           branches: [
+ 							   { case: { $gte: [ "$examenes", 9 ] }, then: "A" },
+							   { case: { $gte: [ "$examenes", 8 ] }, then: "B" },
+							   { case: { $gte: [ "$examenes", 7 ] }, then: "C" },
+							   { case: { $gte: [ "$examenes", 6 ] }, then: "D" }
+                           ],
+                           default: "F"
+     } } } }
+   ]
+)
+
+#Actualización en varias etapas - caso 3
+try {
+   db.calificaciones.updateOne(
+      { "media" : { $eq: 0 } },
+      { $set: { "ordinaria" : true } }
+   );
+} catch (e) {
+   print(e);
+}
+
+#Comprobar cuántos documentos se actualizaron
+db.calificaciones.find({ordinaria: {$exists: true}})
+
+#Actualización en varias etapas - caso 4
+try {
+   db.calificaciones.updateMany(
+      { "media" : { $eq: 0 } },
+      { $set: { "ordinaria" : true } }
+   );
+} catch (e) {
+   print(e);
+}
+
+#Comprobar cuántos documentos se actualizaron
+db.calificaciones.find({ordinaria: {$exists: true}})
+
+#Actualizar si la condición no se cumple
+try {
+   db.calificaciones.updateOne(
+      { "media" : { $eq: 1 } },
+      { $set: { "extra-ordinaria" : true } }
+   );
+} catch (e) {
+   print(e);
+}
+
+#Insertar si la condición no se cumple
+try {
+   db.calificaciones.updateOne(
+      { "media" : { $eq: 1 } },
+      { $set: { "extra-ordinaria" : true } },
+	  { upsert: true }
+   );
+} catch (e) {
+   print(e);
+}
+
+#Comprobar cuántos documentos se actualizaron
+db.calificaciones.find({"extra-ordinaria": {$exists: true}})
+
+
+# Borrar documentos
+db.calificaciones.remove( { media: { $lt: 0 } } )
+
+# Borrar la colección
+db.calificaciones.drop()
+

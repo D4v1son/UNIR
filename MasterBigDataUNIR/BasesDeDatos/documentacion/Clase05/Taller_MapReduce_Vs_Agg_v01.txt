@@ -1,0 +1,232 @@
+### EJERCICIO 1
+
+Paso 1
+use miscelanea
+
+Paso 2: 
+#No es necesario crear la colección.
+db.createCollection("norders", { capped : true, size : 5242880, max : 5000 } )
+
+Paso 3
+show collections
+
+Paso 4
+db.norders.find()
+
+Paso 5
+#Agregar los datos correspondientes, revisar presentación Tema 4
+db.norders.insertMany([
+   { _id: 1, cust_id: "Ant O. Knee", ord_date: new Date("2020-03-01"), price: 25, items: [ { sku: "oranges", qty: 5, price: 2.5 }, { sku: "apples", qty: 5, price: 2.5 } ], status: "A" },
+   { _id: 2, cust_id: "Ant O. Knee", ord_date: new Date("2020-03-08"), price: 70, items: [ { sku: "oranges", qty: 8, price: 2.5 }, { sku: "chocolates", qty: 5, price: 10 } ], status: "A" },
+   { _id: 3, cust_id: "Busby Bee", ord_date: new Date("2020-03-08"), price: 50, items: [ { sku: "oranges", qty: 10, price: 2.5 }, { sku: "pears", qty: 10, price: 2.5 } ], status: "A" },
+   { _id: 4, cust_id: "Busby Bee", ord_date: new Date("2020-03-18"), price: 25, items: [ { sku: "oranges", qty: 10, price: 2.5 } ], status: "A" },
+   { _id: 5, cust_id: "Busby Bee", ord_date: new Date("2020-03-19"), price: 50, items: [ { sku: "chocolates", qty: 5, price: 10 } ], status: "A"},
+   { _id: 6, cust_id: "Cam Elot", ord_date: new Date("2020-03-19"), price: 35, items: [ { sku: "carrots", qty: 10, price: 1.0 }, { sku: "apples", qty: 10, price: 2.5 } ], status: "A" },
+   { _id: 7, cust_id: "Cam Elot", ord_date: new Date("2020-03-20"), price: 25, items: [ { sku: "oranges", qty: 10, price: 2.5 } ], status: "A" },
+   { _id: 8, cust_id: "Don Quis", ord_date: new Date("2020-03-20"), price: 75, items: [ { sku: "chocolates", qty: 5, price: 10 }, { sku: "apples", qty: 10, price: 2.5 } ], status: "A" },
+   { _id: 9, cust_id: "Don Quis", ord_date: new Date("2020-03-20"), price: 55, items: [ { sku: "carrots", qty: 5, price: 1.0 }, { sku: "apples", qty: 10, price: 2.5 }, { sku: "oranges", qty: 10, price: 2.5 } ], status: "A" },
+   { _id: 10, cust_id: "Don Quis", ord_date: new Date("2020-03-23"), price: 25, items: [ { sku: "oranges", qty: 10, price: 2.5 } ], status: "A" }
+])
+
+Paso 6
+var mapFunction1 = function() {
+   emit(this.cust_id, this.price);
+};
+
+Paso 7
+var reduceFunction1 = function(keyCustId, valuesPrices) {
+   return Array.sum(valuesPrices);
+};
+
+
+Paso 8
+db.norders.mapReduce(
+   mapFunction1,
+   reduceFunction1,
+   { out:"example_1_map_reduce"}
+)
+
+Paso 9
+db.norders.aggregate([
+   { $group: { _id: "$cust_id", value: { $sum: "$price" } } },
+   { $out: "example_1_aggregation" }
+])
+
+
+### EJERCICIO 2
+Paso 1
+var mapFunction2 = function() {
+    for (var idx = 0; idx < this.items.length; idx++) {
+       var key = this.items[idx].sku;
+       var value = { count: 1, qty: this.items[idx].qty };
+
+       emit(key, value);
+    }
+};
+
+Paso 2
+var reduceFunction2 = function(keySKU, countObjVals) {
+   reducedVal = { count: 0, qty: 0 };
+   for (var idx = 0; idx < countObjVals.length; idx++) {
+       reducedVal.count += countObjVals[idx].count;
+       reducedVal.qty += countObjVals[idx].qty;
+   }
+   return reducedVal;
+};
+
+Paso 3
+var finalizeFunction2 = function (key, reducedVal) {
+  reducedVal.avg = reducedVal.qty/reducedVal.count;
+  return reducedVal;
+};
+
+Paso 4
+db.norders.mapReduce(
+   mapFunction2,
+   reduceFunction2,
+   {
+     out: { merge: "example_2_map_reduce" },
+     query: { ord_date: { $gte: new Date("2020-03-01") } },
+     finalize: finalizeFunction2
+   }
+ );
+
+Paso 5
+db.example_2_map_reduce.find().sort( { _id: 1 } )
+
+Paso 6
+db.norders.aggregate( [
+   { $match: { ord_date: { $gte: new Date("2020-03-01") } } },
+   { $unwind: "$items" },
+   { $group: { _id: "$items.sku", qty: { $sum: "$items.qty" }, orders_ids: { $addToSet: "$_id" } }  },
+   { $project: { value: { count: { $size: "$orders_ids" }, qty: "$qty", avg: { $divide: [ "$qty", { $size: "$orders_ids" } ] } } } },
+   { $merge: { into: "example_2_aggregate", on: "_id", whenMatched: "replace",  whenNotMatched: "insert" } }
+] )
+
+Paso 7
+db.example_2_aggregate.find().sort( { _id: 1 } )
+
+### EJERCICIO 3
+
+Paso 1 #Agrega datos a las colecciones
+db.usersessions.insertMany([
+   { userid: "a", start: ISODate('2020-03-03 14:17:00'), length: 95 },
+   { userid: "b", start: ISODate('2020-03-03 14:23:00'), length: 110 },
+   { userid: "c", start: ISODate('2020-03-03 15:02:00'), length: 120 },
+   { userid: "d", start: ISODate('2020-03-03 16:45:00'), length: 45 },
+   { userid: "a", start: ISODate('2020-03-04 11:05:00'), length: 105 },
+   { userid: "b", start: ISODate('2020-03-04 13:14:00'), length: 120 },
+   { userid: "c", start: ISODate('2020-03-04 17:00:00'), length: 130 },
+   { userid: "d", start: ISODate('2020-03-04 15:37:00'), length: 65 }
+])
+
+db.usersessions.insertMany([
+   { userid: "a", ts: ISODate('2020-03-05 14:17:00'), length: 130 },
+   { userid: "b", ts: ISODate('2020-03-05 14:23:00'), length: 40 },
+   { userid: "c", ts: ISODate('2020-03-05 15:02:00'), length: 110 },
+   { userid: "d", ts: ISODate('2020-03-05 16:45:00'), length: 100 }
+])
+
+Paso 2
+var mapFunction = function() {
+    var key = this.userid;
+    var value = { total_time: this.length, count: 1, avg_time: 0 };
+    emit( key, value );
+};
+
+Paso 3
+var reduceFunction = function(key, values) {
+   var reducedObject = { total_time: 0, count:0, avg_time:0 };
+   values.forEach(function(value) {
+      reducedObject.total_time += value.total_time;
+      reducedObject.count += value.count;
+   });
+   return reducedObject;
+};
+
+Paso 4
+var finalizeFunction = function(key, reducedValue) {
+   if (reducedValue.count > 0)
+      reducedValue.avg_time = reducedValue.total_time / reducedValue.count;
+   return reducedValue;
+};
+
+Paso 5
+db.usersessions.mapReduce(
+   mapFunction,
+   reduceFunction,
+   {
+     out: "session_stats",
+     finalize: finalizeFunction
+   }
+)
+
+Paso 6
+db.session_stats.find().sort( { _id: 1 } )
+
+Paso 7
+db.usersessions.mapReduce(
+   mapFunction,
+   reduceFunction,
+   {
+     query: { ts: { $gte: ISODate('2020-03-05 00:00:00') } },
+     out: { reduce: "session_stats" },
+     finalize: finalizeFunction
+   }
+)
+
+Paso 8
+db.session_stats.find().sort( { _id: 1 } )
+
+Paso 9
+db.usersessions.drop();
+
+Paso 10
+db.usersessions.insertMany([
+   { userid: "a", start: ISODate('2020-03-03 14:17:00'), length: 95 },
+   { userid: "b", start: ISODate('2020-03-03 14:23:00'), length: 110 },
+   { userid: "c", start: ISODate('2020-03-03 15:02:00'), length: 120 },
+   { userid: "d", start: ISODate('2020-03-03 16:45:00'), length: 45 },
+   { userid: "a", start: ISODate('2020-03-04 11:05:00'), length: 105 },
+   { userid: "b", start: ISODate('2020-03-04 13:14:00'), length: 120 },
+   { userid: "c", start: ISODate('2020-03-04 17:00:00'), length: 130 },
+   { userid: "d", start: ISODate('2020-03-04 15:37:00'), length: 65 }
+])
+
+Paso 11
+db.usersessions.aggregate([
+   { $group: {_id: "$userid", total_time: {$sum: "$length" }, count: {$sum: 1 }, avg_time: {$avg: "$length" }}},
+   { $project: { value: { total_time: "$total_time", count: "$count", avg_time: "$avg_time" } } },
+   { $merge: {
+      into: "session_stats_agg",
+      whenMatched: [ { $set: {
+         "value.total_time": { $add: [ "$value.total_time", "$$new.value.total_time" ] },
+         "value.count": { $add: [ "$value.count", "$$new.value.count" ] },
+         "value.avg": {$divide: [ {$add: ["$value.total_time", "$$new.value.total_time" ] },  
+		     {$add: [ "$value.count", "$$new.value.count" ] } ] }
+      } } ],
+      whenNotMatched: "insert"
+   }}
+])
+
+Paso 12
+db.session_stats_agg.find().sort( { _id: 1 } )
+
+Paso 13
+db.usersessions.estimatedDocumentCount()
+db.usersessions.count()
+db.usersessions.distinct("userid")
+
+Paso 14
+#Diferenciar entre Vistas y Vistas Materializadas
+
+db.createView(
+   "norders_view",
+   "norders",
+   [ { $match: { price: 25 } } ]
+)
+
+En el ejemplo: 
+- norders_view es el nombre de la nueva vista. 
+- norders es la colección en la que se basa la vista. 
+- $match es una expresión de agregación que coincide con los norders cuyo precio es 25 en la colección de norders_view.
