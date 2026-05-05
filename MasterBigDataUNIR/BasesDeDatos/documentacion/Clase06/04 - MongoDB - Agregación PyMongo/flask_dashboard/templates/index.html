@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="mb-4">Dashboard</h1>
+<div class="row g-3 mb-4">
+  <div class="col-md-3">
+    <div class="card metric shadow-sm">
+      <div class="card-body">
+        <p class="text-muted mb-1">Clientes</p>
+        <h3 class="mb-1">{{ counts.clientes }}</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card metric shadow-sm">
+      <div class="card-body">
+        <p class="text-muted mb-1">Compras</p>
+        <h3 class="mb-1">{{ counts.compras }}</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card metric shadow-sm">
+      <div class="card-body">
+        <p class="text-muted mb-1">Ventas totales</p>
+        <h3 class="mb-1">${{ '%.2f'|format(counts.ventas_total) }}</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card metric shadow-sm">
+      <div class="card-body">
+        <p class="text-muted mb-1">Ticket promedio</p>
+        <h3 class="mb-1">${{ '%.2f'|format(counts.avg_ticket) }}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row g-4 mb-4">
+  <div class="col-lg-6">
+    <div class="card shadow-sm h-100">
+      <div class="card-header">Top ciudades por clientes</div>
+      <div class="card-body">
+        <canvas id="chartCiudades" height="220"></canvas>
+        {% if not ciudades %}<p class="text-muted mt-2">Sin datos</p>{% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card shadow-sm h-100">
+      <div class="card-header">Top métodos de pago</div>
+      <div class="card-body">
+        <canvas id="chartMetodos" height="220"></canvas>
+        {% if not metodos %}<p class="text-muted mt-2">Sin datos</p>{% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row g-4 mb-4">
+  <div class="col-lg-6">
+    <div class="card shadow-sm h-100">
+      <div class="card-header">Ventas por mes</div>
+      <div class="card-body">
+        <canvas id="chartMes" height="220"></canvas>
+        {% if not mensual %}<p class="text-muted mt-2">Sin datos</p>{% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card shadow-sm h-100">
+      <div class="card-header">Compras por estatus</div>
+      <div class="card-body">
+        <canvas id="chartEstatus" height="220"></canvas>
+        {% if not estatus %}<p class="text-muted mt-2">Sin datos</p>{% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card shadow-sm mt-4">
+  <div class="card-header">Compras recientes</div>
+  <div class="table-responsive">
+    <table class="table table-sm align-middle mb-0">
+      <thead class="table-light">
+        <tr>
+          <th>Cliente</th>
+          <th>Fecha</th>
+          <th>Método</th>
+          <th>Estatus</th>
+          <th class="text-end">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for c in compras %}
+          <tr>
+            <td>{{ c.cliente_id }}</td>
+            {% set f = c.fecha %}
+            <td>
+              {% if f is mapping %}
+                {{ f['$date'][:10] if '$date' in f else '' }}
+              {% elif f %}
+                {{ f.strftime('%Y-%m-%d') }}
+              {% else %}
+                {{ '' }}
+              {% endif %}
+            </td>
+            <td>{{ c.metodo_pago }}</td>
+            <td><span class="badge bg-info text-dark">{{ c.estatus }}</span></td>
+            <td class="text-end">${{ '%.2f'|format(c.total) }}</td>
+          </tr>
+        {% else %}
+          <tr><td colspan="5">Sin compras</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  const colores = ["#0d6efd", "#20c997", "#ffc107", "#e83e8c", "#6f42c1", "#fd7e14", "#198754", "#0dcaf0"];
+
+  const ciudadesData = {{ ciudades|tojson|safe }};
+  const metodosData = {{ metodos|tojson|safe }};
+  const estatusData = {{ estatus|tojson|safe }};
+  const mensualData = {{ mensual|tojson|safe }};
+
+  function renderBar(id, labels, data, label) {
+    const ctx = document.getElementById(id);
+    if (!ctx || !labels.length) return;
+    new Chart(ctx, {
+      type: 'bar',
+      data: { labels, datasets: [{ label, data, backgroundColor: colores }] },
+      options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+    });
+  }
+
+  function renderPie(id, labels, data) {
+    const ctx = document.getElementById(id);
+    if (!ctx || !labels.length) return;
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: { labels, datasets: [{ data, backgroundColor: colores }] },
+      options: { cutout: '60%' }
+    });
+  }
+
+  // Ciudades (bar)
+  renderBar(
+    'chartCiudades',
+    ciudadesData.map(c => c._id || 'Sin ciudad'),
+    ciudadesData.map(c => c.clientes),
+    'Clientes'
+  );
+
+  // Métodos de pago (doughnut)
+  renderPie(
+    'chartMetodos',
+    metodosData.map(m => m._id || 'N/A'),
+    metodosData.map(m => m.compras)
+  );
+
+  // Ventas por mes (line)
+  const mesLabels = mensualData.map(m => m._id);
+  const mesMonto = mensualData.map(m => m.monto);
+  if (mesLabels.length) {
+    new Chart(document.getElementById('chartMes'), {
+      type: 'line',
+      data: { labels: mesLabels, datasets: [{ label: 'Monto', data: mesMonto, borderColor: '#0d6efd', tension: 0.25, fill: false }] },
+      options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+    });
+  }
+
+  // Compras por estatus (horizontal bar)
+  renderBar(
+    'chartEstatus',
+    estatusData.map(e => e._id || 'N/A'),
+    estatusData.map(e => e.compras),
+    'Compras'
+  );
+</script>
+{% endblock %}

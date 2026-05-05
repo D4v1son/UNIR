@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="mb-4">EDA (pandas profiling)</h1>
+<div class="card shadow-sm mb-3">
+  <div class="card-body">
+    <form class="row gy-2 gx-3 align-items-end" method="get">
+      <div class="col-auto">
+        <label class="form-label">Colección</label>
+        <select name="dataset" class="form-select">
+          <option value="clientes" {% if dataset == 'clientes' %}selected{% endif %}>clientes</option>
+          <option value="compras" {% if dataset == 'compras' %}selected{% endif %}>compras</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <label class="form-label">Límite de filas</label>
+        <input type="number" name="limit" class="form-control" value="{{ limit }}" min="100" max="5000" step="100">
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-primary" type="submit">Generar informe</button>
+      </div>
+      <div class="col-auto text-muted small">Usa `minimal=True` para agilizar el perfil.</div>
+    </form>
+  </div>
+</div>
+
+{% if error %}
+  <div class="alert alert-warning">{{ error }}</div>
+{% endif %}
+
+{% if profile_html %}
+  <div class="card shadow-sm">
+    <div class="card-body p-0">
+      <div style="min-height:70vh;">
+        {{ profile_html|safe }}
+      </div>
+    </div>
+  </div>
+{% endif %}
+{% endblock %}

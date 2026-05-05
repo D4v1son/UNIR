@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="mb-4">Clientes</h1>
+<div class="card shadow-sm">
+  <div class="table-responsive">
+    <table class="table table-striped table-hover align-middle mb-0">
+      <thead class="table-light">
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Ciudad</th>
+          <th>Estatus</th>
+          <th>Puntos</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for c in clientes %}
+          <tr>
+            <td>{{ c._id }}</td>
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.email }}</td>
+            <td>{{ c.direccion.ciudad if c.direccion else '' }}</td>
+            <td><span class="badge bg-secondary">{{ c.estatus }}</span></td>
+            <td>{{ c.puntos_fidelidad or 0 }}</td>
+          </tr>
+        {% else %}
+          <tr><td colspan="6">Sin clientes</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

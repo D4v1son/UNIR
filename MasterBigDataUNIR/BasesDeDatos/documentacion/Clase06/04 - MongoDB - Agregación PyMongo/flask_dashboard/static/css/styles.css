@@ -1,0 +1,10 @@
+.card { border: none; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #f6f7fb; }
+h1 { font-weight: 700; }
+.navbar-brand { font-weight: 800; letter-spacing: 0.3px; }
+table td, table th { vertical-align: middle; }
+.card.metric { background: linear-gradient(135deg, #0d6efd, #4dabf7); color: #fff; }
+.card.metric p { color: rgba(255,255,255,0.9); }
+.card.metric h3 { font-weight: 800; }
+.card-header { background-color: #fff; font-weight: 600; }
+.badge { text-transform: capitalize; }
