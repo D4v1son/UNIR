@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
+                "file": "AnalisisInterpretacionDatos/BLOQUE_1.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "PreguntasDeTests"
+              "title": "BLOQUE_1"
             }
           }
         ]
@@ -183,19 +183,22 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "b90b17f544f74d4e",
+  "active": "29f72046f9bf0fdc",
   "lastOpenFiles": [
+    "AnalisisInterpretacionDatos/documentacion/bloque2/Clase06052026_correlaciones.ipynb",
+    "AnalisisInterpretacionDatos/documentacion/bloque2/Untitled.ipynb",
+    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
+    "AnalisisInterpretacionDatos/documentacion/bloque2/estadistica_descriptiva_2.ipynb",
+    "AnalisisInterpretacionDatos/documentacion/bloque2/titanic.csv",
+    "AnalisisInterpretacionDatos/documentacion/bloque2",
+    "AnalisisInterpretacionDatos/documentacion/Nueva carpeta",
+    "AnalisisInterpretacionDatos/documentacion/bloque1/weather.csv",
+    "AnalisisInterpretacionDatos/documentacion/bloque1/Tema1_2.pdf",
+    "AnalisisInterpretacionDatos/documentacion/bloque1/Tema1.pdf",
+    "AnalisisInterpretacionDatos/documentacion/bloque1/Presentacion.pdf",
+    "AnalisisInterpretacionDatos/documentacion/bloque1/outliers.pbix",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
     "IngenieriaProcesadoDatos/BLOQUE_2.md",
-    "BasesDeDatos/actividades/actividad2_individual_18052026/act-2-companies.json",
-    "BasesDeDatos/actividades/actividad2_individual_18052026/act-2-books.json",
-    "BasesDeDatos/actividades/actividad2_individual_18052026/visa01_lab.zip",
-    "BasesDeDatos/actividades/actividad2_individual_18052026/visa01_lab.docx",
-    "BasesDeDatos/actividades/actividad2_individual_18052026/Actividad 2/visa01_lab.zip",
-    "BasesDeDatos/actividades/actividad2_individual_18052026/Actividad 2/visa01_lab.docx",
-    "BasesDeDatos/actividades/actividad2_individual_18052026/Actividad 2",
-    "BasesDeDatos/actividades/actividad2_individual_18052026/Actividad 2.zip",
-    "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/flask_dashboard/__pycache__/services.cpython-39.pyc",
-    "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/flask_dashboard/__pycache__/services.cpython-311.pyc",
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/flask_dashboard/README.md",
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/map_salamanca.png",
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/map_retiro.png",
@@ -204,8 +207,6 @@
     "IngenieriaProcesadoDatos/documentacion/transformer.png",
     "IngenieriaProcesadoDatos/documentacion/matriz_preprocesado.png",
     "AnalisisInterpretacionDatos/BLOQUE_1.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
-    "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/Herramientas.md",
     "VisualizacionInteractiva/BLOQUE_2.md",
     "BasesDeDatos/BLOQUE_1.md",
