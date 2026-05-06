@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IngenieriaProcesadoDatos/BLOQUE_2.md",
+                "file": "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "BLOQUE_2"
+              "title": "PreguntasDeTests"
             }
           }
         ]
@@ -185,6 +185,7 @@
   },
   "active": "b90b17f544f74d4e",
   "lastOpenFiles": [
+    "IngenieriaProcesadoDatos/BLOQUE_2.md",
     "BasesDeDatos/actividades/actividad2_individual_18052026/act-2-companies.json",
     "BasesDeDatos/actividades/actividad2_individual_18052026/act-2-books.json",
     "BasesDeDatos/actividades/actividad2_individual_18052026/visa01_lab.zip",
@@ -195,13 +196,11 @@
     "BasesDeDatos/actividades/actividad2_individual_18052026/Actividad 2.zip",
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/flask_dashboard/__pycache__/services.cpython-39.pyc",
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/flask_dashboard/__pycache__/services.cpython-311.pyc",
-    "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/flask_dashboard/__pycache__/services.cpython-312.pyc",
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/flask_dashboard/README.md",
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/map_salamanca.png",
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/map_retiro.png",
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/img_map_02.png",
     "IngenieriaProcesadoDatos/documentacion/estimador_diagrama.png",
-    "IngenieriaProcesadoDatos/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/documentacion/transformer.png",
     "IngenieriaProcesadoDatos/documentacion/matriz_preprocesado.png",
     "AnalisisInterpretacionDatos/BLOQUE_1.md",
