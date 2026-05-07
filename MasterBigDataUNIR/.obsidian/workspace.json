@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AnalisisInterpretacionDatos/BLOQUE_1.md",
-                "mode": "source",
+                "file": "TecnicasInteligenciaArtificial/BLOQUE_2.md",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "BLOQUE_1"
+              "title": "BLOQUE_2"
             }
           }
         ]
@@ -183,20 +183,21 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "29f72046f9bf0fdc",
+  "active": "b90b17f544f74d4e",
   "lastOpenFiles": [
+    "VisualizacionInteractiva/BLOQUE_2.md",
+    "ENTREGAS/AAAentregasdb.base",
+    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
+    "VisualizacionInteractiva/actividades/actividad1_individual_11052026/~$t1_infovis_v01.docx",
+    "AnalisisInterpretacionDatos/BLOQUE_1.md",
     "AnalisisInterpretacionDatos/documentacion/bloque2/Clase06052026_correlaciones.ipynb",
     "AnalisisInterpretacionDatos/documentacion/bloque2/Untitled.ipynb",
-    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
     "AnalisisInterpretacionDatos/documentacion/bloque2/estadistica_descriptiva_2.ipynb",
     "AnalisisInterpretacionDatos/documentacion/bloque2/titanic.csv",
     "AnalisisInterpretacionDatos/documentacion/bloque2",
     "AnalisisInterpretacionDatos/documentacion/Nueva carpeta",
     "AnalisisInterpretacionDatos/documentacion/bloque1/weather.csv",
     "AnalisisInterpretacionDatos/documentacion/bloque1/Tema1_2.pdf",
-    "AnalisisInterpretacionDatos/documentacion/bloque1/Tema1.pdf",
-    "AnalisisInterpretacionDatos/documentacion/bloque1/Presentacion.pdf",
-    "AnalisisInterpretacionDatos/documentacion/bloque1/outliers.pbix",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
     "IngenieriaProcesadoDatos/BLOQUE_2.md",
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/flask_dashboard/README.md",
@@ -206,9 +207,7 @@
     "IngenieriaProcesadoDatos/documentacion/estimador_diagrama.png",
     "IngenieriaProcesadoDatos/documentacion/transformer.png",
     "IngenieriaProcesadoDatos/documentacion/matriz_preprocesado.png",
-    "AnalisisInterpretacionDatos/BLOQUE_1.md",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/Herramientas.md",
-    "VisualizacionInteractiva/BLOQUE_2.md",
     "BasesDeDatos/BLOQUE_1.md",
     "VisualizacionInteractiva/documentacion/Clase04/organizacion_perceptual.png",
     "VisualizacionInteractiva/documentacion/Clase04/percepcion_visual.png",
