@@ -1,0 +1,17 @@
+Soy recién graduado en la Universidad Jaume I, donde he cursado el Grado en Diseño y Desarrollo de Videojuegos. Tras completar mis estudios universitarios, busco una oportunidad profesional en la que pueda poner en práctica mis conocimientos y seguir desarrollando mis habilidades.
+
+Desde muy pequeño los videojuegos han sido una de mis grandes pasiones. Recuerdo las tardes de mi infancia frente al televisor, maravillado como si estuviera presenciando el mejor truco de magia del mundo. Esa ilusión, unida a mi interés por la tecnología y las artes, fue lo que me impulsó a orientar mi carrera académica hacia este sector.
+
+A lo largo de mis años como estudiante he adquirido tanto competencias técnicas como personales. Mi determinación y adaptabilidad han sido clave para llevar a cabo los distintos proyectos del grado. Además, tengo experiencia con motores de desarrollo como Unity y Godot, así como una sólida base en programación (C, C++, C#, Python, entre otros). Aunque me considero un desarrollador versátil, siento una especial motivación por el Game Design, área en la que quiero seguir creciendo y aportando valor.
+---
+Tras mi experiencia en la Universidad Jaime I, descubrí un afán por la ciencia de datos y el uso de la inteligencia artificial. Actualmente me encuentro cursando el Master en Análisis y Visualización de Datos de Datos Masivos (Visual Analytics & Big Data), ampliando mis conocimientos en el procesado masivo de datos y aplicaciones prácticas de inteligencia artificial.
+
+Estoy en busca de un puesto en el que poner a prueba mis habilidades y crecer como desarrollador. Me considero una persona flexible con capacidad de aprendizaje y determinación por un trabajo bien hecho.
+---
+Graduado en Diseño y Desarrollo de Videojuegos por la Universitat Jaume I, donde descubrí el potencial de los datos y la inteligencia artificial para crear experiencias y soluciones más inteligentes.
+
+Actualmente cursando el Máster en Visual Analytics & Big Data, donde profundizo en procesamiento masivo de datos, visualización y aplicaciones prácticas de IA.
+
+Mi background en videojuegos me ha dado una base sólida en programación, pensamiento lógico y resolución de problemas creativos, habilidades que ahora aplico al mundo del dato.
+
+Busco una primera oportunidad en el ámbito de data science o IA donde seguir creciendo y aportar desde el primer día.

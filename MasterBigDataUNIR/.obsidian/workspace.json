@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TecnicasInteligenciaArtificial/BLOQUE_2.md",
-                "mode": "preview",
+                "file": "AnalisisInterpretacionDatos/BLOQUE_1.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "BLOQUE_2"
+              "title": "BLOQUE_1"
             }
           }
         ]
@@ -183,23 +183,27 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "b90b17f544f74d4e",
+  "active": "29f72046f9bf0fdc",
   "lastOpenFiles": [
-    "VisualizacionInteractiva/BLOQUE_2.md",
-    "ENTREGAS/AAAentregasdb.base",
+    "AnalisisInterpretacionDatos/documentacion/bloque2/correlaciones.ipynb",
+    "AnalisisInterpretacionDatos/documentacion/bloque2/R_correlacion.ipynb",
+    "AnalisisInterpretacionDatos/documentacion/bloque2/R_RLMV.ipynb",
+    "AnalisisInterpretacionDatos/documentacion/bloque2/Tema4_1.pdf",
+    "AnalisisInterpretacionDatos/documentacion/bloque2/Tema4_2.pdf",
     "TecnicasInteligenciaArtificial/BLOQUE_2.md",
-    "VisualizacionInteractiva/actividades/actividad1_individual_11052026/~$t1_infovis_v01.docx",
-    "AnalisisInterpretacionDatos/BLOQUE_1.md",
-    "AnalisisInterpretacionDatos/documentacion/bloque2/Clase06052026_correlaciones.ipynb",
-    "AnalisisInterpretacionDatos/documentacion/bloque2/Untitled.ipynb",
-    "AnalisisInterpretacionDatos/documentacion/bloque2/estadistica_descriptiva_2.ipynb",
-    "AnalisisInterpretacionDatos/documentacion/bloque2/titanic.csv",
-    "AnalisisInterpretacionDatos/documentacion/bloque2",
-    "AnalisisInterpretacionDatos/documentacion/Nueva carpeta",
-    "AnalisisInterpretacionDatos/documentacion/bloque1/weather.csv",
-    "AnalisisInterpretacionDatos/documentacion/bloque1/Tema1_2.pdf",
-    "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
+    "TecnicasInteligenciaArtificial/documentacion/Clase08",
+    "TecnicasInteligenciaArtificial/documentacion/Nueva carpeta",
     "IngenieriaProcesadoDatos/BLOQUE_2.md",
+    "BasesDeDatos/documentacion/Clase07/~$tividad en clase - Indices.docx",
+    "BasesDeDatos/documentacion/Clase07/Tema 5 - MongoDB - Gestión - Repaso.pdf",
+    "BasesDeDatos/documentacion/Clase07/Taller 01 - Bases de Datos MongoDB - Indices_v01.pdf",
+    "BasesDeDatos/documentacion/Clase07/Actividad en clase - Usuarios en MongoDB.docx",
+    "IngenieriaProcesadoDatos/documentacion/pipelines.png",
+    "IngenieriaProcesadoDatos/BLOQUE_1.md",
+    "VisualizacionInteractiva/BLOQUE_3.md",
+    "VisualizacionInteractiva/BLOQUE_2.md",
+    "AnalisisInterpretacionDatos/BLOQUE_1.md",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/flask_dashboard/README.md",
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/map_salamanca.png",
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/map_retiro.png",
@@ -212,9 +216,7 @@
     "VisualizacionInteractiva/documentacion/Clase04/organizacion_perceptual.png",
     "VisualizacionInteractiva/documentacion/Clase04/percepcion_visual.png",
     "VisualizacionInteractiva/documentacion/Clase04/codificar_y_decodificar.png",
-    "TecnicasInteligenciaArtificial/documentacion/Clase04/curva_roc_auc.png",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
-    "IngenieriaProcesadoDatos/BLOQUE_1.md",
     "VisualizacionInteractiva/BLOQUE_1.md",
     "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
     "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema2_FundamentosIngenieriaPrompts.md",
@@ -228,7 +230,6 @@
     "VisualizacionInteractiva/Herramientas.md",
     "AprenderPorMiCuenta.md",
     "Deberes.md",
-    "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/Modulo2_ServiciosPrincipalesDeAzure.md",
-    "ENTREGAS/Pipeline HDFS y Spark.md"
+    "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/Modulo2_ServiciosPrincipalesDeAzure.md"
   ]
 }
