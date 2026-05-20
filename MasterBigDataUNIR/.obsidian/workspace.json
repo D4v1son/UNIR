@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BasesDeDatos/BLOQUE_1.md",
+                "file": "IngenieriaProcesadoDatos/BLOQUE_2.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "BLOQUE_1"
+              "title": "BLOQUE_2"
             }
           }
         ]
@@ -185,6 +185,9 @@
   },
   "active": "b90b17f544f74d4e",
   "lastOpenFiles": [
+    "IngenieriaProcesadoDatos/documentacion/ejemplos_RDDs.ipynb",
+    "IngenieriaProcesadoDatos/documentacion/ejemplos_DataFrames.ipynb",
+    "BasesDeDatos/BLOQUE_1.md",
     "VisualizacionInteractiva/BLOQUE_3.md",
     "VisualizacionInteractiva/documentacion/Clase08/Ejemplo tema 7 Color.csv",
     "VisualizacionInteractiva/documentacion/Clase08/7. Codificación gráfica de datos (II) - Color.pdf",
@@ -196,7 +199,6 @@
     "AnalisisInterpretacionDatos/documentacion/bloque2/correlaciones.ipynb",
     "AnalisisInterpretacionDatos/documentacion/bloque2/R_correlacion.ipynb",
     "AnalisisInterpretacionDatos/documentacion/bloque2/R_RLMV.ipynb",
-    "AnalisisInterpretacionDatos/documentacion/bloque2/Tema4_1.pdf",
     "TecnicasInteligenciaArtificial/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/documentacion/pipelines.png",
@@ -211,7 +213,6 @@
     "IngenieriaProcesadoDatos/documentacion/transformer.png",
     "IngenieriaProcesadoDatos/documentacion/matriz_preprocesado.png",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/Herramientas.md",
-    "BasesDeDatos/BLOQUE_1.md",
     "VisualizacionInteractiva/documentacion/Clase04/organizacion_perceptual.png",
     "VisualizacionInteractiva/documentacion/Clase04/percepcion_visual.png",
     "VisualizacionInteractiva/documentacion/Clase04/codificar_y_decodificar.png",
