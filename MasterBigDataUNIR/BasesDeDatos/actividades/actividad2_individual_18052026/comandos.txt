@@ -1,0 +1,582 @@
+# ----------
+# CONTENEDOR
+# ----------
+
+# Creo el contenedor en un puerto que no estoy usando
+docker run --name Actividad2DBDB -d -p 27019:27017 mongo
+
+
+# ----------
+# APARTADO 2
+# ----------
+
+# Cargo los ficheros en la base de datos con mongoimport.exe
+# Añadí el comando --port porque no estoy usando el predeterminado, mi container está en el 27019
+
+mongoimport --verbose --port 27019 --db Proyecto --collection books --file C:\Users\david\Documents\UNIR\MasterBigDataUNIR\BasesDeDatos\actividades\actividad2_individual_18052026\act-2-books.json
+
+mongoimport --verbose --port 27019 --db Proyecto --collection companies --file C:\Users\david\Documents\UNIR\MasterBigDataUNIR\BasesDeDatos\actividades\actividad2_individual_18052026\act-2-companies.json
+
+
+# ----------
+# APARTADO 3
+# ----------
+
+# Obtener un documento de cada fichero
+db.books.findOne()
+db.companies.findOne()
+
+# a) Identifica 2 campos categóricos en cada fichero y muestra todos los valores distintos de dichos campos.
+
+# Para books
+# Tanto el estado como la categoría del libro son categorías
+# El estatus se almacena como String y las categorías como Array<String>.
+db.books.distinct("status")
+db.books.distinct("categories")
+
+# Para companies
+# Tanto el código de categoría como el año de fundación son categorías
+# El código se almacena como String y el año como Int
+db.companies.distinct("category_code")
+db.companies.distinct("founded_year")
+
+# b) Sobre la colección más poblada lanza la siguiente consulta reemplazando los campos que consideres más adecuados: 
+
+db.getCollection('COLECCION').find({CAMPO1: {$gte: "A", $lt: "B"}}, { CAMPO2: 1, CAMPO3: 1 })
+db.getCollection('companies').find({number_of_employees: {$gte: 500, $lt: 1000}}, { name: 1, homepage_url: 1 })
+
+# c)Utiliza la consulta anterior para recuperar aquellos documentos que, adicionalmente, cumplan dos condiciones más donde utilices el operador $type y $exists. Devuelve cuatro campos que elijas a excepción de “_id”.
+
+db.getCollection('companies').find(
+  {
+    number_of_employees: {$gte: 500, $lt: 1000},
+    phone_number: { $exists: true },
+    homepage_url: { $type: "string" }
+  },
+  { _id: 0, name: 1, number_of_employees: 1, homepage_url: 1, phone_number: 1 }
+)
+
+# d) Describe brevemente qué ocurre si a la consulta del punto anterior, le añades al final la siguiente instrucción: .toArray()
+
+# Convierte el resultado de la búsqueda (find) en un array de documentos.
+
+# e) Qué ocurre si además le añades la siguiente instrucción: .forEach(function(valor, indice, array){print("CAMPO2: " + valor. CAMPO2 + "CAMPO4: " + valor.CAMPO4[0] + ": " + valor.CAMPO4[1] + " Registro No. " + indice);}). Si reemplazas los campos por aquellos que se ajusten a la consulta, ¿Para qué crees que sería útil esto último?
+
+.forEach(function(valor, indice, array) {
+  print(
+    "Empresa: " + valor.name +
+    " | Empleados: " + valor.number_of_employees +
+    " | Web: " + valor.homepage_url +
+    " | Teléfono: " + valor.phone_number +
+    " | Registro No. " + indice
+  )
+})
+
+Imprime en consola una línea formateada, por cada documento que cumple las condiciones, que contiene los datos buscados. Se podría utilizar para generar informes dinámicos desde consola sin necesidad de usar herramientas externas.
+
+
+# ----------
+# APARTADO 4
+# ----------
+
+# a) ¿Cuál es el tamaño de la colección (en bytes)? 
+
+db.books.dataSize()
+> 517474 B
+
+# b) ¿Cuántos documentos tiene la colección?
+
+db.books.countDocuments()
+> 431
+
+# c) Diseña y ejecuta una consulta donde utilices el operador $lt y $gt
+
+# Libros con más de 300 páginas y menos de 600
+db.books.find(
+  { pageCount: { $gt: 300, $lt: 600 } },
+  { _id: 0, title: 1, pageCount: 1 }
+)
+
+# d) Diseña y ejecuta una consulta donde utilices el operador $AND, $lte y $gte
+
+# Libros con entre 400 y 700 páginas y estado PUBLISH
+db.books.find(
+  {
+    $and: [
+      { pageCount: { $gte: 400 } },
+      { pageCount: { $lte: 700 } },
+      { status: "PUBLISH" }
+    ]
+  },
+  { _id: 0, title: 1, pageCount: 1, status: 1 }
+)
+
+# e) Diseña y ejecuta una consulta con algún tipo de agregación donde calcules un valor máximo, un valor mínimo y un valor medio.
+
+# Estadísticas de páginas de libros con pageCount mayor que 0
+db.books.aggregate([
+  { $match: { pageCount: { $gt: 0 } } },
+  {
+    $group: {
+      _id: null,
+      max_paginas: { $max: "$pageCount" },
+      min_paginas: { $min: "$pageCount" },
+      media_paginas: { $avg: "$pageCount" }
+    }
+  }
+])
+
+# f) Elige una variable categórica y calcula el total de documentos agrupando por dicha variable.
+
+# Total de documentos agrupados por status
+db.books.aggregate([
+  {
+    $group: {
+      _id: "$status",
+      total: { $sum: 1 }
+    }
+  },
+  { $sort: { total: -1 } }
+])
+
+
+# ----------
+# APARTADO 5
+# ----------
+
+# a) ¿Cuál es el tamaño de la colección (en bytes)? 
+
+db.companies.dataSize()
+> 72236994 B
+
+# b) ¿Cuántos documentos tiene la colección?
+
+db.companies.countDocuments()
+> 18801
+
+# c) Diseña y ejecuta una consulta donde puedas utilizar el operador $in y un array de valores [val1, val2, val3, val4…] 
+
+# Empresas que pertenecen a alguna de estas categorías
+db.companies.find(
+  { category_code: { $in: ["software", "web", "mobile", "games_video"] } },
+  { _id: 0, name: 1, category_code: 1 }
+)
+
+# d) Diseña y ejecuta una consulta con la que puedas generar un informe recuperando solo campos de tipo String. Utiliza Aggregate para generar dicho informe como una vista materializada.
+
+db.companies.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      category_code: 1,
+      homepage_url: 1
+    }
+  },
+  {
+    $match: {
+      name: { $type: "string" },
+      category_code: { $type: "string" },
+      homepage_url: { $type: "string" }    }
+  },
+  {
+    $out: "companies_report"
+  }
+])
+
+# e) Diseña y ejecuta una consulta donde puedas utilizar los siguientes operadores de agregación: $match, $out, $project, $skip, $sort, $sortByCount o $unwind Utiliza Aggregations de MongoDBCompass, con la opción “Add Stages” por cada operador utilizado. En la memoria muestra el resultado por etapa.
+
+# $match
+# Compañías de software con más de 100 empleados
+{
+  category_code: { $in: ['software', 'web', 'mobile'] },
+  number_of_employees: { $gte: 100 }
+}
+
+# $unwind
+# Separo los productos de cada documento
+{
+  path: '$products',
+  preserveNullAndEmptyArrays: false
+}
+
+# $project
+# Me quedo con los datos que más me interesan
+{
+  _id: 0,
+  name: 1,
+  homepage_url: 1,
+  category_code: 1,
+  number_of_employees: 1,
+  founded_year: 1,
+  product: '$products'
+}
+
+# $sort
+# Ordeno según el número de empleados de forma descendiente
+{
+  number_of_employees: -1
+}
+
+# $out
+# Guardo el resultado en una nueva colección a modo de informe
+{
+  db: 'Proyecto',
+  coll: 'great_software_products_report',
+}
+
+# f) Crea un índice compuesto, tres índices simples y un índice de texto en esta colección.
+
+# Índice compuesto
+db.companies.createIndex(
+  { category_code: 1, number_of_employees: -1 },
+  { name: "idx_categoria_empleados" }
+)
+
+# Índice simple 1
+db.companies.createIndex(
+  { name: 1 },
+  { name: "idx_nombre" }
+)
+
+# Índice simple 2
+db.companies.createIndex(
+  { founded_year: 1 },
+  { name: "idx_año_fundacion" }
+)
+
+# Índice simple 3
+db.companies.createIndex(
+  { founded_month: 1 },
+  { name: "idx_mes_fundacion" }
+)
+
+# Índice de texto
+db.companies.createIndex(
+  { description: "text", overview: "text" },
+  { name: "idx_texto_descripcion" }
+)
+
+# g) Diseña y ejecuta una consulta donde utilices el índice de texto creado.
+
+# Buscar empresas cuya descripción contenga "social network"
+db.companies.find(
+  { $text: { $search: "social network" } },
+  { 
+    _id: 0,
+    name: 1,
+    description: 1,
+    score: { $meta: "textScore" }
+  }
+).sort({ score: { $meta: "textScore" } })
+
+
+# -----
+# ANEXO
+# -----
+
+# Documento fichero 1
+"""
+{
+  _id: 2,
+  title: 'Android in Action, Second Edition',
+  isbn: '1935182722',
+  pageCount: 592,
+  publishedDate: 2011-01-14T08:00:00.000Z,
+  thumbnailUrl: 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson2.jpg',
+  shortDescription: `Android in Action, Second Edition is a comprehensive tutorial for Android developers. Taking you far beyond "Hello Android," this fast-paced book puts you in the driver's seat as you learn important architectural concepts and implementation strategies. You'll master the SDK, build WebKit apps using HTML 5, and even learn to extend or replace Android's built-in features by building useful and intriguing examples. `,
+  longDescription: `When it comes to mobile apps, Android can do almost anything   and with this book, so can you! Android runs on mobile devices ranging from smart phones to tablets to countless special-purpose gadgets. It's the broadest mobile platform available.    Android in Action, Second Edition is a comprehensive tutorial for Android developers. Taking you far beyond "Hello Android," this fast-paced book puts you in the driver's seat as you learn important architectural concepts and implementation strategies. You'll master the SDK, build WebKit apps using HTML 5, and even learn to extend or replace Android's built-in features by building useful and intriguing examples. `,
+  status: 'PUBLISH',
+  authors: [
+    'W. Frank Ableson',
+    'Robi Sen'
+  ],
+  categories: [
+    'Java'
+  ]
+}
+"""
+
+# Documento fichero 2
+"""
+{
+  _id: ObjectId('52cdef7c4bab8bd675297d8b'),
+  name: 'AdventNet',
+  permalink: 'abc3',
+  crunchbase_url: 'http://www.crunchbase.com/company/adventnet',
+  homepage_url: 'http://adventnet.com',
+  blog_url: '',
+  blog_feed_url: '',
+  twitter_username: 'manageengine',
+  category_code: 'enterprise',
+  number_of_employees: 600,
+  founded_year: 1996,
+  deadpooled_year: 2,
+  tag_list: '',
+  alias_list: 'Zoho ManageEngine ',
+  email_address: 'pr@adventnet.com',
+  phone_number: '925-924-9500',
+  description: 'Server Management Software',
+  created_at: 2007-05-25T19:24:22.000Z,
+  updated_at: 'Wed Oct 31 18:26:09 UTC 2012',
+  overview: '<p>AdventNet is now <a href="/company/zoho-manageengine" title="Zoho ManageEngine" rel="nofollow">Zoho ManageEngine</a>.</p>\n' +
+    '\n' +
+    '<p>Founded in 1996, AdventNet has served a diverse range of enterprise IT, networking and telecom customers.</p>\n' +
+    '\n' +
+    '<p>AdventNet supplies server and network management software.</p>',
+  image: {
+    available_sizes: [
+      [
+        [
+          150,
+          55
+        ],
+        'assets/images/resized/0001/9732/19732v1-max-150x150.png'
+      ],
+      [
+        [
+          150,
+          55
+        ],
+        'assets/images/resized/0001/9732/19732v1-max-250x250.png'
+      ],
+      [
+        [
+          150,
+          55
+        ],
+        'assets/images/resized/0001/9732/19732v1-max-450x450.png'
+      ]
+    ]
+  },
+  products: [],
+  relationships: [
+    {
+      is_past: true,
+      title: 'CEO and Co-Founder',
+      person: {
+        first_name: 'Sridhar',
+        last_name: 'Vembu',
+        permalink: 'sridhar-vembu'
+      }
+    },
+    {
+      is_past: true,
+      title: 'VP of Business Dev',
+      person: {
+        first_name: 'Neil',
+        last_name: 'Butani',
+        permalink: 'neil-butani'
+      }
+    },
+    {
+      is_past: true,
+      title: 'Usabiliy Engineer',
+      person: {
+        first_name: 'Bharath',
+        last_name: 'Balasubramanian',
+        permalink: 'bharath-balasibramanian'
+      }
+    },
+    {
+      is_past: true,
+      title: 'Director of Engineering',
+      person: {
+        first_name: 'Rajendran',
+        last_name: 'Dandapani',
+        permalink: 'rajendran-dandapani'
+      }
+    },
+    {
+      is_past: true,
+      title: 'Market Analyst',
+      person: {
+        first_name: 'Aravind',
+        last_name: 'Natarajan',
+        permalink: 'aravind-natarajan'
+      }
+    },
+    {
+      is_past: true,
+      title: 'Director of Product Management',
+      person: {
+        first_name: 'Hyther',
+        last_name: 'Nizam',
+        permalink: 'hyther-nizam'
+      }
+    },
+    {
+      is_past: true,
+      title: 'Western Regional OEM Sales Manager',
+      person: {
+        first_name: 'Ian',
+        last_name: 'Wenig',
+        permalink: 'ian-wenig'
+      }
+    }
+  ],
+  competitions: [],
+  providerships: [
+    {
+      title: 'DHFH',
+      is_past: true,
+      provider: {
+        name: 'A Small Orange',
+        permalink: 'a-small-orange'
+      }
+    }
+  ],
+  total_money_raised: '$0',
+  funding_rounds: [],
+  investments: [],
+  acquisition: null,
+  acquisitions: [],
+  offices: [
+    {
+      description: 'Headquarters',
+      address1: '4900 Hopyard Rd.',
+      address2: 'Suite 310',
+      zip_code: '94588',
+      city: 'Pleasanton',
+      state_code: 'CA',
+      country_code: 'USA',
+      latitude: 37.692934,
+      longitude: -121.904945
+    }
+  ],
+  milestones: [],
+  video_embeds: [],
+  screenshots: [
+    {
+      available_sizes: [
+        [
+          [
+            150,
+            94
+          ],
+          'assets/images/resized/0004/3400/43400v1-max-150x150.png'
+        ],
+        [
+          [
+            250,
+            156
+          ],
+          'assets/images/resized/0004/3400/43400v1-max-250x250.png'
+        ],
+        [
+          [
+            450,
+            282
+          ],
+          'assets/images/resized/0004/3400/43400v1-max-450x450.png'
+        ]
+      ],
+      attribution: null
+    }
+  ],
+  external_links: [],
+  partners: []
+}
+"""
+
+# Ej3a
+"""
+books.status
+[ 'MEAP', 'PUBLISH' ]
+
+books.categories
+[
+  '',
+  '.NET',
+  'Algorithmic Art',
+  'Business',
+  'Client Server',
+  'Client-Server',
+  'Computer Graph',
+  'Computer Graphics',
+  'In Action',
+  'Internet',
+  'Java',
+  'Microsoft',
+  'Microsoft .NET',
+  'Microsoft/.NET',
+  'Miscella',
+  'Miscellaneous',
+  'Mobile',
+  'Mobile Technology',
+  'Networking',
+  'Next Generation Databases',
+  'Object-Oriented Programming',
+  'Object-Technology Programming',
+  'Open Source',
+  'P',
+  'PHP',
+  'Perl',
+  'PowerBuilder',
+  'Programming',
+  'Python',
+  'S',
+  'SOA',
+  'Software Development',
+  'Software Engineering',
+  'Theory',
+  'Web Development',
+  'XML',
+  'internet',
+  'java'
+]
+
+companies.category_code
+[
+  null,             'advertising',      'analytics',
+  'automotive',     'biotech',          'cleantech',
+  'consulting',     'design',           'ecommerce',
+  'education',      'enterprise',       'fashion',
+  'finance',        'games_video',      'government',
+  'hardware',       'health',           'hospitality',
+  'legal',          'local',            'manufacturing',
+  'medical',        'messaging',        'mobile',
+  'music',          'nanotech',         'network_hosting',
+  'news',           'nonprofit',        'other',
+  'photo_video',    'public_relations', 'real_estate',
+  'search',         'security',         'semiconductor',
+  'social',         'software',         'sports',
+  'transportation', 'travel',           'web'
+]
+
+companies.founding_year
+[
+  null, 1800, 1802, 1833, 1835, 1836, 1839, 1840, 1843, 1844, 1846,
+  1847, 1848, 1851, 1854, 1857, 1861, 1863, 1865, 1867, 1868, 1870,
+  1879, 1880, 1881, 1883, 1885, 1887, 1888, 1889, 1890, 1892, 1894,
+  1896, 1897, 1898, 1899, 1900, 1901, 1902, 1903, 1904, 1906, 1907,
+  1909, 1910, 1912, 1914, 1915, 1918, 1919, 1920, 1921, 1922, 1923,
+  1924, 1925, 1926, 1928, 1930, 1931, 1933, 1934, 1936, 1937, 1938,
+  1939, 1940, 1941, 1943, 1945, 1946, 1947, 1948, 1949, 1950, 1951,
+  1952, 1953, 1954, 1955, 1957, 1958, 1959, 1960, 1961, 1962, 1963,
+  1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974,
+  1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985,
+  1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996,
+  1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007,
+  2008, 2009, 2010, 2011, 2012, 2013
+]
+"""
+
+# Ej3b (solo la primera instancia)
+"""
+{
+  _id: ObjectId('52cdef7c4bab8bd675297d8b'),
+  name: 'AdventNet',
+  homepage_url: 'http://adventnet.com'
+}
+"""
+
+# Ej3c (solo la primera instancia)
+"""
+{
+  name: 'AdventNet',
+  homepage_url: 'http://adventnet.com',
+  number_of_employees: 600,
+  phone_number: '925-924-9500'
+}
+"""

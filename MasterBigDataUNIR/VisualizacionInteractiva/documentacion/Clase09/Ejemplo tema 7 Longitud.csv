@@ -1,0 +1,19 @@
+Gender;Educational Attainment;Average Earnings of Full-Time
+Men;Less than 9th grade;26789
+Women;Less than 9th grade;20499
+Men;9th to 12th grade (no diploma);31434
+Women;9th to 12th grade (no diploma);23351
+Men;High school graduate (includes equivalency);42466
+Women;High school graduate (includes equivalency);29410
+Men;Some college, no degree;48431
+Women;Some college, no degree;35916
+Men;Associate degree;51485
+Women;Associate degree;40463
+Men;Bachelor's degree;76749
+Women;Bachelor's degree;53201
+Men;Master's degree;97038
+Women;Master's degree;63218
+Men;Professional;143615
+Women;Professional;100734
+Men;Doctorate;125393
+Women;Doctorate;91733

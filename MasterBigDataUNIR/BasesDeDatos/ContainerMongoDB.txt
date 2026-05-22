@@ -1,0 +1,21 @@
+# ----------------
+# CREAR CONTENEDOR
+# ----------------
+
+docker run	# Lanza un nuevo container
+--name namec	# Le da un nombre al container
+-d		# Ejecuta el container en segundo plano, se puede seguir usando la Shell (detached)
+-p 27017:27017	# Establece el puerto que usará MongoDB en este container
+mongo:latest	# Instala MongoDB en el container, latest es solo para asegurar la última versión
+
+
+# --------------------------------------
+# EJECUTAR CONTENEDOR CON LA MONGO SHELL
+# --------------------------------------
+
+docker ps -a	# Comprueba los contenedores del sistema
+
+docker exec	# Ejecuta el contenedor
+-it		# Permimte la interacción terminal-container
+namec		# El nombre del container
+mongo		# Para lanzar la Shell de mongo
