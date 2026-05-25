@@ -1,0 +1,1 @@
+https://cassandra.apache.org/doc/latest/cassandra/developing/data-modeling/data-modeling_logical.html

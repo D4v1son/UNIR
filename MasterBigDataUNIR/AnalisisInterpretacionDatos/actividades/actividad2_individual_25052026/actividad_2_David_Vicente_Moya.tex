@@ -1,0 +1,326 @@
+% ============================================================
+%  Artículo Técnico — Análisis e Interpretación de Datos
+%  UNIR — Actividad 2
+%  Motor: MikTeX — compilar con pdflatex (2 pasadas)
+% ============================================================
+\documentclass[11pt, a4paper]{article}
+
+% --- Codificación y lengua ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+
+% --- Fuente Georgia (aproximación con mathptmx + ajuste) ---
+% MikTeX no incluye Georgia nativa; se usa TeX Gyre Termes,
+% equivalente métricamente a Times New Roman / Georgia.
+\usepackage{tgtermes}
+
+% --- Márgenes y geometría ---
+\usepackage[
+  a4paper,
+  top=2.5cm, bottom=2.5cm,
+  left=2.5cm, right=2.5cm
+]{geometry}
+
+% --- Interlineado 1.5 ---
+\usepackage{setspace}
+\onehalfspacing
+
+% --- Matemáticas y tablas ---
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{float}
+
+% --- Gráficos ---
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{tikz}
+
+% --- Colores ---
+\usepackage{xcolor}
+\definecolor{azulunir}{RGB}{0, 84, 166}
+
+% --- Hiperenlaces ---
+\usepackage[
+  colorlinks=true,
+  linkcolor=azulunir,
+  citecolor=azulunir,
+  urlcolor=azulunir
+]{hyperref}
+
+% --- Bibliografía (estilo numérico estándar, sin natbib) ---
+
+% --- Cabecera y pie de página ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\small\textit{Análisis e Interpretación de Datos — UNIR}}
+\fancyhead[R]{\small\thepage}
+
+% --- Título compacto ---
+\usepackage{titling}
+\setlength{\droptitle}{-2em}
+
+% ============================================================
+\begin{document}
+
+% ---- PORTADA / CABECERA DEL ARTÍCULO ----------------------
+\begin{center}
+  {\LARGE\bfseries Impacto del calor extremo sobre la mortalidad en España:\\
+  Un análisis estadístico de las temporadas 2024--2025}
+
+  \vspace{0.8em}
+  {\large Autor: David Vicente Moya}\\[0.3em]
+  {\normalsize Afiliación: Universidad Internacional de La Rioja (UNIR)}\\[0.3em]
+  {\normalsize \today}
+\end{center}
+
+\vspace{0.5em}
+\hrule
+\vspace{0.8em}
+
+% ---- RESUMEN ----------------------------------------------
+\noindent\textbf{Resumen.}\quad
+Este trabajo analiza el impacto del calor extremo sobre la mortalidad en España
+durante las temporadas estivales de 2024 y 2025, a partir de datos semanales del
+Sistema de Monitorización de la Mortalidad Diaria (MoMo) del Instituto de Salud
+Carlos III. Se aplican dos modelos estadísticos:
+un análisis descriptivo de la serie temporal, que caracteriza la evolución del exceso
+de mortalidad y permite comparar ambas temporadas, y una regresión lineal simple que
+cuantifica la relación entre las defunciones atribuibles a la temperatura y el exceso
+de mortalidad en las 36 semanas estivales. Los resultados muestran que el verano de
+2025 fue un 91\,\% más letal que el de 2024 en términos de defunciones atribuibles
+al calor (3.833 frente a 2.008). La regresión lineal obtiene un coeficiente de
+determinación $R^2 = 0{,}58$, lo que indica que la temperatura explica el 58\,\%
+de la varianza del exceso de mortalidad, con un efecto amplificador estimado de
+1{,}07 muertes en exceso por cada defunción directamente atribuida al calor.
+Se discuten las limitaciones de ambos enfoques y se proponen líneas futuras basadas
+en la incorporación de datos meteorológicos y análisis a escala provincial.
+\vspace{0.8em}
+\hrule
+\vspace{1em}
+
+% ============================================================
+\section{Introducción y estado del tema}
+% ============================================================
+
+El cambio climático ha intensificado la frecuencia e intensidad de las olas de
+calor, convirtiendo el exceso de temperatura en uno
+de los principales riesgos medioambientales para la salud pública en España
+\cite{inclusion2021}. La evidencia científica ha establecido una relación
+entre temperatura y mortalidad: por encima de un umbral térmico
+crítico, la mortalidad diaria aumenta de forma aproximadamente lineal con la
+temperatura máxima \cite{gasparrini2017}.
+
+En el contexto español, el verano de 2022 supuso un punto de inflexión con más
+de 11.000 defunciones atribuidas al calor \cite{momo}. Las temporadas
+2024 y 2025 han vuelto a registrar episodios de calor extremo con impacto
+significativo en la mortalidad, lo que justifica su estudio sistemático.
+
+El Sistema de Monitorización de la Mortalidad Diaria (MoMo) proporciona
+datos semanales de mortalidad observada, mortalidad esperada y exceso
+atribuible a temperatura para el conjunto del territorio nacional
+\cite{momo}. Esta fuente constituye la base empírica del presente trabajo.
+
+\textbf{Pregunta de investigación:} ¿En qué medida el calor extremo explica el
+exceso de mortalidad observado en España durante los veranos de 2024 y 2025,
+y qué diferencias se detectan entre ambas temporadas?
+
+% ============================================================
+\section{Metodología y resultados obtenidos}
+% ============================================================
+
+\subsection{Fuente de datos}
+
+Se han utilizado los datos semanales del sistema MoMo del ISCIII correspondientes
+al periodo comprendido entre la semana epidemiológica\footnote{La semana epidemiológica 
+es la unidad estándar de vigilancia sanitaria internacional. Se numeran del 1 al 52, 
+comienzan el lunes y terminan el domingo. Así, \texttt{2024-31} corresponde a la 
+semana del 29~de~julio al 4~de~agosto de 2024.} 20 de 2024 y la semana
+39 de 2025 ($n = 72$ semanas). Las variables disponibles son: defunciones
+notificadas, defunciones observadas, defunciones estimadas,
+exceso de mortalidad sobre todas las causas y defunciones atribuibles a la
+temperatura. La base de datos se adjunta como archivo independiente conforme
+a los requisitos de la actividad.
+
+Como variable de respuesta se emplea el exceso de mortalidad sobre todas las
+causas (diferencia entre defunciones observadas y las estimadas como línea
+base) en lugar de las defunciones brutas. Esta elección se justifica porque
+el exceso aísla el impacto de las altas temperaturas eliminando la mortalidad
+no relacionada, que permanece relativamente constante a lo largo del
+año. Usar las defunciones brutas
+introduciría ruido que dificultaría la identificación del efecto del calor.
+
+Para el análisis se define la \textit{temporada estival} como las semanas
+epidemiológicas 22 a 39 de cada año (aproximadamente de junio a septiembre),
+periodo en el que se concentra el riesgo por calor en España.
+
+\subsection{Modelo 1 - Análisis descriptivo de la serie temporal}
+
+El primer modelo consiste en un análisis descriptivo de la serie temporal
+completa de 72 semanas, con especial atención a las semanas estivales.
+La Figura~\ref{fig:serie} muestra la evolución del exceso de mortalidad
+semanal y las defunciones atribuibles al calor.
+
+% --- FIGURA 1: Serie temporal ---
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{figura1_serie_temporal.pdf}
+\caption{Evolución semanal del exceso de mortalidad y defunciones atribuibles
+a la temperatura. España, semanas 20/2024--39/2025 ($n=72$). Fuente: MoMo, ISCIII.}
+\label{fig:serie}
+\end{figure}
+
+% --- TABLA 1: Estadísticas descriptivas ---
+\begin{table}[H]
+\centering
+\caption{Estadísticos descriptivos por temporada estival (semanas 22--39).}
+\label{tab:descriptiva}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Temporada} & \textbf{$n$ sem.} &
+\textbf{Media exceso} & \textbf{DE exceso} &
+\textbf{Total atrib. calor} \\
+\midrule
+Verano 2024 & 18 & 27{,}8  & 292{,}2 & 2.008 \\
+Verano 2025 & 18 & 341{,}3 & 320{,}5 & 3.833 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+El análisis descriptivo revela diferencias sustanciales entre ambas temporadas
+(Tabla~\ref{tab:descriptiva}). El verano de 2025 registró una media de exceso
+de mortalidad de 341{,}3 defunciones semanales, frente a las 27{,}8 del verano
+de 2024, lo que supone un impacto promedio aproximadamente 12 veces superior.
+
+La desviación estándar aporta información adicional sobre la naturaleza del
+impacto en cada temporada. En 2024, la DE (292{,}2) supera ampliamente a la
+media (27{,}8), lo que refleja un patrón concentrado: semanas con exceso
+intenso alternadas con semanas de exceso negativo. En 2025, en cambio, la
+DE (320{,}5) es comparable a la media (341{,}3), lo que indica un calor más
+sostenido a lo largo de la temporada de verano.
+
+En conjunto, el total acumulado de defunciones atribuibles al calor ascendió
+a 3.833 en el verano de 2025 frente a 2.008 en 2024, un incremento del
+91\,\% con idéntico número de semanas de observación ($n = 18$).
+
+\subsection{Modelo 2 - Regresión lineal simple}
+
+El segundo modelo aplica una regresión lineal simple sobre las 36 semanas
+estivales del periodo de estudio, tomando las defunciones atribuibles a la
+temperatura ($X$) como variable independiente y el exceso de mortalidad
+sobre todas las causas ($Y$) como variable dependiente.
+
+% --- FIGURA 2: Diagrama de dispersión + recta ---
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{figura2_regresion.pdf}
+\caption{Diagrama de dispersión y recta de regresión entre defunciones atribuibles a la temperatura y
+exceso de mortalidad. Semanas estivales 2024–2025 (n = 36). R2 = 0,58.}
+\label{fig:regresion}
+\end{figure}
+
+La pendiente estimada ($b_1 = 1{,}074$) indica que, por cada
+defunción adicional atribuida directamente a la temperatura, el exceso total
+de mortalidad aumenta en aproximadamente 1{,}07 muertes. El valor del
+intercepto próximo a cero ($b_0 = 10{,}4$) es coherente con la
+expectativa de exceso nulo en ausencia de impacto térmico. El coeficiente
+$R^2 = 0{,}58$ señala que el modelo lineal explica el 58\,\% de la varianza
+del exceso de mortalidad en semanas estivales.
+
+% ============================================================
+\section{Conclusiones y líneas futuras}
+% ============================================================
+
+\subsection{Discusión comparada de los modelos}
+
+Ambos modelos apuntan en la misma dirección: el calor extremo tiene un impacto
+estadísticamente apreciable sobre la mortalidad en España, con el verano de
+2025 sensiblemente más severo que el de 2024. Sin embargo, presentan
+discrepancias relevantes que enriquecen el análisis.
+
+El \textbf{modelo descriptivo} revela que varias semanas del verano de 2024
+presentan excesos de mortalidad negativos (observadas $<$ esperadas). Esto 
+sugiere que las personas más vulnerables fallecen durante el pico de calor,
+reduciendo las defunciones en semanas posteriores. Este fenómeno no es captado
+por la regresión lineal.
+
+La \textbf{regresión lineal}, con $R^2 = 0{,}58$, confirma una
+asociación positiva y sustancial, pero el 42\,\% de varianza inexplicada
+apunta a que otros factores modulan el impacto letal de las altas temperaturas. 
+Además, la relación entre temperatura y mortalidad no es estrictamente
+lineal, sino que sigue una curva, lo que limita la validez
+del modelo para valores extremos.
+
+\subsection{Conclusiones principales}
+
+\begin{itemize}
+  \item El verano de 2025 registró 3.833 defunciones atribuibles al calor,
+        un 91\,\% más que las 2.008 del verano de 2024.
+  \item La regresión lineal estima que por cada muerte directamente atribuida
+        al calor el exceso total de mortalidad aumenta en 1{,}07 defunciones,
+        indicando un efecto amplificador que incluye muertes asociadas pero no
+        directamente identificadas como golpe de calor.
+  \item Ninguno de los dos modelos por sí solo ofrece una imagen completa:
+        el descriptivo aporta contexto temporal y el modelo lineal cuantifica
+        la asociación, pero ambos son complementarios y necesarios.
+\end{itemize}
+
+\subsection{Limitaciones y líneas futuras}
+
+El principal limitante del análisis realizado es la ausencia de datos de
+temperatura en la base de datos utilizada. Incorporar la temperatura
+máxima diaria permitiría construir modelos de regresión más precisos 
+que son el estándar en epidemiología ambiental
+\cite{gasparrini2017}. Como línea futura prioritaria se propone replicar
+el análisis a nivel provincial para identificar territorios de mayor
+vulnerabilidad, y ampliar la línea temporal a la serie histórica
+2015--2025 para evaluar tendencias a largo plazo en el contexto del
+cambio climático.
+
+% ============================================================
+% BIBLIOGRAFÍA
+% ============================================================
+\bibliographystyle{plain}
+\begin{thebibliography}{9}
+
+\bibitem{inclusion2021}
+Ministerio de Inclusi\'{o}n, Seguridad Social y Migraciones (s.f.).
+\textit{Cambio clim\'{a}tico: una realidad ya}.
+Carta Espa\~{n}a. Gobierno de Espa\~{n}a.
+Recuperado el 24 de mayo de 2026, de
+\url{https://www.inclusion.gob.es/web/cartaespana/w/cambio-climatico-una-realidad-ya}
+
+\bibitem{gasparrini2017}
+Gasparrini, A., \textit{et al.} (2017).
+Projections of temperature-related excess mortality under climate change
+scenarios. \textit{The Lancet Planetary Health},  2017; 1, e360-e367.
+\url{https://doi.org/10.1016/S2542-5196(17)30156-0}
+
+\bibitem{momo}
+Instituto de Salud Carlos III.
+\textit{Sistema de Monitorización de la Mortalidad Diaria (MoMo).
+Panel de datos.}. ISCIII, Madrid.
+\url{https://momo.isciii.es}
+
+%\bibitem{romanello2023}
+%Romanello, M., \textit{et al.} (2023).
+%The 2023 report of the Lancet Countdown on health and climate change.
+%\textit{The Lancet}, 402(10419), 2022--2059.
+%\url{https://doi.org/10.1016/S0140-6736(23)01859-7}
+%
+%\bibitem{sanidad2025}
+%Ministerio de Sanidad (2025).
+%\textit{Plan Nacional de actuaciones preventivas de los efectos
+%del exceso de temperaturas sobre la salud. 2025}.
+%Direcci\'{o}n General de Salud P\'{u}blica y Equidad en Salud.
+%Gobierno de Espa\~{n}a.
+%\url{https://www.sanidad.gob.es/areas/sanidadAmbiental/riesgosAmbientales/calorExtremo/publicaciones/docs/balancePlanCalor_2025.pdf}
+
+\end{thebibliography}
+
+\end{document}

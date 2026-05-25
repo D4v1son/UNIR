@@ -1,0 +1,268 @@
+// ----------
+// CONTENEDOR
+// ----------
+
+// Creo el contenedor en un puerto que no estoy usando
+docker run --name Actividad2DBDB -d -p 27019:27017 mongo
+
+// ----------
+// APARTADO 1
+// ----------
+
+// Cargo los ficheros en la base de datos con mongoimport.exe
+// Añadí el comando --port porque no estoy usando el predeterminado, mi container está en el 27019
+mongoimport --verbose --port 27019 --db Proyecto --collection books --file C:\Users\david\Documents\UNIR\MasterBigDataUNIR\BasesDeDatos\actividades\actividad2_individual_18052026\act-2-books.json
+mongoimport --verbose --port 27019 --db Proyecto --collection companies --file C:\Users\david\Documents\UNIR\MasterBigDataUNIR\BasesDeDatos\actividades\actividad2_individual_18052026\act-2-companies.json
+
+// ----------
+// APARTADO 2
+// ----------
+
+// Obtener un documento de cada fichero
+db.books.findOne()
+db.companies.findOne()
+
+// a) Identifica 2 campos categóricos en cada fichero y muestra todos los valores distintos de dichos campos.
+
+// Para books
+// Tanto el estado como la categoría del libro son categorías
+// El estatus se almacena como String y las categorías como Array<String>.
+db.books.distinct("status")
+db.books.distinct("categories")
+
+// Para companies
+// Tanto el código de categoría como el año de fundación son categorías
+// El código se almacena como String y el año como Int
+db.companies.distinct("category_code")
+db.companies.distinct("offices.country_code")
+
+// b) Sobre la colección más poblada lanza la siguiente consulta reemplazando los campos que consideres más adecuados: 
+
+db.getCollection('COLECCION').find({CAMPO1: {$gte: "A", $lt: "B"}}, { CAMPO2: 1, CAMPO3: 1 })
+db.getCollection('companies').find({number_of_employees: {$gte: 500, $lt: 1000}}, { name: 1, homepage_url: 1 })
+
+// c) Utiliza la consulta anterior para recuperar aquellos documentos que, adicionalmente, cumplan dos condiciones más donde utilices el operador $type y $exists. Devuelve cuatro campos que elijas a excepción de "_id".
+
+db.getCollection('companies').find(
+  {
+    number_of_employees: {$gte: 500, $lt: 1000},
+    phone_number: { $exists: true },
+    homepage_url: { $type: "string" }
+  },
+  { _id: 0, name: 1, number_of_employees: 1, homepage_url: 1, phone_number: 1 }
+)
+
+// d) Describe brevemente qué ocurre si a la consulta del punto anterior, le añades al final la siguiente instrucción: .toArray()
+
+// Convierte el resultado de la búsqueda (find) en un array de documentos.
+
+// e) Qué ocurre si además le añades la siguiente instrucción: .forEach(...)? Si reemplazas los campos por aquellos que se ajusten a la consulta, ¿Para qué crees que sería útil esto último?
+
+.forEach(function(valor, indice, array) {
+  print(
+    "Empresa: " + valor.name +
+    " | Empleados: " + valor.number_of_employees +
+    " | Web: " + valor.homepage_url +
+    " | Teléfono: " + valor.phone_number +
+    " | Registro No. " + indice
+  )
+})
+
+// Imprime en consola una línea formateada, por cada documento que cumple las condiciones, que contiene los datos buscados. Se podría utilizar para generar informes dinámicos desde consola sin necesidad de usar herramientas externas.
+
+
+// ----------
+// APARTADO 3
+// ----------
+
+// a) ¿Cuál es el tamaño de la colección (en bytes)? 
+
+db.books.dataSize()
+// > 517474 B
+
+// b) ¿Cuántos documentos tiene la colección?
+
+db.books.countDocuments()
+// > 431
+
+// c) Diseña y ejecuta una consulta donde utilices el operador $lt y $gt
+
+// Libros con más de 300 páginas y menos de 600
+db.books.find(
+  { pageCount: { $gt: 300, $lt: 600 } },
+  { _id: 0, title: 1, pageCount: 1 }
+)
+
+// d) Diseña y ejecuta una consulta donde utilices el operador $AND, $lte y $gte
+
+// Libros con entre 400 y 700 páginas y estado PUBLISH
+db.books.find(
+  {
+    $and: [
+      { pageCount: { $gte: 400 } },
+      { pageCount: { $lte: 700 } },
+      { status: "PUBLISH" }
+    ]
+  },
+  { _id: 0, title: 1, pageCount: 1, status: 1 }
+)
+
+// e) Diseña y ejecuta una consulta con algún tipo de agregación donde calcules un valor máximo, un valor mínimo y un valor medio.
+
+// Estadísticas de páginas de libros con pageCount mayor que 0
+db.books.aggregate([
+  { $match: { pageCount: { $gt: 0 } } },
+  {
+    $group: {
+      _id: null,
+      max_paginas: { $max: "$pageCount" },
+      min_paginas: { $min: "$pageCount" },
+      media_paginas: { $avg: "$pageCount" }
+    }
+  }
+])
+
+// f) Elige una variable categórica y calcula el total de documentos agrupando por dicha variable.
+
+// Total de documentos agrupados por status
+db.books.aggregate([
+  {
+    $group: {
+      _id: "$status",
+      total: { $sum: 1 }
+    }
+  },
+  { $sort: { total: -1 } }
+])
+
+
+// ----------
+// APARTADO 4
+// ----------
+
+// a) ¿Cuál es el tamaño de la colección (en bytes)? 
+
+db.companies.dataSize()
+// > 72236994 B
+
+// b) ¿Cuántos documentos tiene la colección?
+
+db.companies.countDocuments()
+// > 18801
+
+// c) Diseña y ejecuta una consulta donde puedas utilizar el operador $in y un array de valores [val1, val2, val3, val4…] 
+
+// Empresas que pertenecen a alguna de estas categorías
+db.companies.find(
+  { category_code: { $in: ["software", "web", "mobile", "games_video"] } },
+  { _id: 0, name: 1, category_code: 1 }
+)
+
+// d) Diseña y ejecuta una consulta con la que puedas generar un informe recuperando solo campos de tipo String. Utiliza Aggregate para generar dicho informe como una vista materializada.
+
+db.companies.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      category_code: 1,
+      homepage_url: 1
+    }
+  },
+  {
+    $match: {
+      name: { $type: "string" },
+      category_code: { $type: "string" },
+      homepage_url: { $type: "string" }
+    }
+  },
+  {
+    $out: "companies_report"
+  }
+])
+
+// e) Diseña y ejecuta una consulta donde puedas utilizar los siguientes operadores de agregación: $match, $out, $project, $skip, $sort, $sortByCount o $unwind
+
+// $match
+// Compañías de software con más de 100 empleados
+{
+  category_code: { $in: ['software', 'web', 'mobile'] },
+  number_of_employees: { $gte: 100 }
+}
+
+// $unwind
+// Separo los productos de cada documento
+{
+  path: '$products',
+  preserveNullAndEmptyArrays: false
+}
+
+// $project
+// Me quedo con los datos que más me interesan
+{
+  _id: 0,
+  name: 1,
+  homepage_url: 1,
+  category_code: 1,
+  number_of_employees: 1,
+  founded_year: 1,
+  product: '$products'
+}
+
+// $sort
+// Ordeno según el número de empleados de forma descendiente
+{
+  number_of_employees: -1
+}
+
+// $out
+// Guardo el resultado en una nueva colección a modo de informe
+{
+  db: 'Proyecto',
+  coll: 'great_software_products_report',
+}
+
+// f) Crea un índice compuesto, tres índices simples y un índice de texto en esta colección.
+
+// Índice compuesto
+db.companies.createIndex(
+  { category_code: 1, number_of_employees: -1 },
+  { name: "idx_categoria_empleados" }
+)
+
+// Índice simple 1
+db.companies.createIndex(
+  { name: 1 },
+  { name: "idx_nombre" }
+)
+
+// Índice simple 2
+db.companies.createIndex(
+  { founded_year: 1 },
+  { name: "idx_año_fundacion" }
+)
+
+// Índice simple 3
+db.companies.createIndex(
+  { founded_month: 1 },
+  { name: "idx_mes_fundacion" }
+)
+
+// Índice de texto
+db.companies.createIndex(
+  { description: "text", overview: "text" },
+  { name: "idx_texto_descripcion" }
+)
+
+// g) Diseña y ejecuta una consulta donde utilices el índice de texto creado.
+
+// Buscar empresas cuya descripción contenga "social network"
+db.companies.find(
+  { $text: { $search: "social network" } },
+  { 
+    _id: 0,
+    name: 1,
+    description: 1,
+    score: { $meta: "textScore" }
+  }
+).sort({ score: { $meta: "textScore" } })

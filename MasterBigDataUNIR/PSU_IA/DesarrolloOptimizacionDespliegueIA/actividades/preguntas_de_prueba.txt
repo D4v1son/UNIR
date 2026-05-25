@@ -1,0 +1,15 @@
+// Las que ha podido responder antes de que se me acaben los tokens
+1. ¿Qué es el AI Regulatory Framework y qué tipos de riesgo define?
+2. ¿Cómo garantiza la UE que la IA sea digna de confianza?
+3. ¿Qué obligaciones tienen los proveedores de sistemas de IA de alto riesgo?
+4. ¿Qué es el AI Pact y quién puede adherirse a él?
+5. ¿Qué papel juega la Comisión Europea en la gobernanza de la IA?
+// Las respuestas han sido vagas porque tenía la temperatura del modelo muy alta a 0.9
+// Me he dado cuenta para cuando se me han acabado los tokens
+// Si genero más api keys o me espero un tiempo puedo seguir haciendo más preguntas
+// Ya lo mirare mañana que tal, no creo que me de tiempo a ir a entrenar
+
+// Las que aún no he tenido oportunidad de preguntar
+¿Cuáles son los usos prohibidos de la IA según el reglamento europeo?
+¿Qué es el "sandbox" regulatorio y para qué sirve en el contexto de la IA?
+¿Cómo afecta el Reglamento de IA a las startups y PYMEs europeas?

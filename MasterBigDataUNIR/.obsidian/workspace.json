@@ -11,14 +11,13 @@
             "id": "b90b17f544f74d4e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "VisualizacionInteractiva/BLOQUE_3.md",
-                "mode": "preview",
-                "source": true
+                "file": "ENTREGAS/AAAentregasdb.base",
+                "viewName": "Tabla"
               },
-              "icon": "lucide-file",
-              "title": "BLOQUE_3"
+              "icon": "lucide-table",
+              "title": "AAAentregasdb"
             }
           }
         ]
@@ -185,24 +184,26 @@
   },
   "active": "b90b17f544f74d4e",
   "lastOpenFiles": [
-    "TecnicasInteligenciaArtificial/actividades/actividad2_individual_22052026/~$dama03_act2.docx",
-    "Hoja_de_control_del_rendimiento_de_los_miembros_del_equipo.xlsx",
-    "VisualizacionInteractiva/documentacion/Clase09/7. Codificación gráfica de datos (III) - Posición y longitud.pdf",
-    "VisualizacionInteractiva/documentacion/Clase09/Ejemplo tema 7 Longitud.csv",
-    "VisualizacionInteractiva/documentacion/Clase09",
-    "VisualizacionInteractiva/documentacion/Nueva carpeta",
+    "IngenieriaProcesadoDatos/BLOQUE_3.md",
+    "AnalisisInterpretacionDatos/actividades/actividad2_individual_25052026/~$Act2.docx",
+    "AnalisisInterpretacionDatos/actividades/actividad2_individual_25052026/actividad_2_David_Vicente_Moya.pdf",
+    "BasesDeDatos/documentacion/Clase10/manual_cassandra.txt",
+    "BasesDeDatos/documentacion/Clase10/Nuevo Documento de texto.txt",
+    "BasesDeDatos/documentacion/Clase10/Taller 05 - Cassandra  Python_v01.ipynb",
+    "BasesDeDatos/documentacion/Clase10/Taller 03 - Denormalización en Apache Cassandra.pdf",
+    "BasesDeDatos/documentacion/Clase10/Taller 04 - UDT en Apache Cassandra.pdf",
+    "BasesDeDatos/documentacion/Clase10/Taller 07 - Modelo de Datos en Cassandra.pdf",
+    "BasesDeDatos/documentacion/Clase10/Taller 06 - Cluster de Cassandra (opcional).pdf",
+    "BasesDeDatos/documentacion/Clase10",
+    "IngenieriaProcesadoDatos/documentacion/replicacion_kafka.png",
+    "IngenieriaProcesadoDatos/documentacion/apache_kafka_estructura.png",
+    "IngenieriaProcesadoDatos/BLOQUE_2.md",
+    "VisualizacionInteractiva/BLOQUE_3.md",
     "BasesDeDatos/actividades/actividad2_individual_18052026/modelo_nosql.png",
-    "ENTREGAS/AAAentregasdb.base",
-    "BasesDeDatos/actividades/actividad2_individual_18052026/comandos.txt",
-    "BasesDeDatos/actividades/actividad2_individual_18052026/Nuevo Documento de texto.txt",
-    "BasesDeDatos/ContainerMongoDB.txt",
-    "BasesDeDatos/Nuevo Documento de texto.txt",
     "AnalisisInterpretacionDatos/BLOQUE_1.md",
     "TecnicasInteligenciaArtificial/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_2.md",
-    "IngenieriaProcesadoDatos/BLOQUE_2.md",
     "BasesDeDatos/BLOQUE_1.md",
-    "VisualizacionInteractiva/BLOQUE_3.md",
     "IngenieriaProcesadoDatos/documentacion/pipelines.png",
     "IngenieriaProcesadoDatos/BLOQUE_1.md",
     "VisualizacionInteractiva/BLOQUE_2.md",
@@ -215,8 +216,6 @@
     "IngenieriaProcesadoDatos/documentacion/transformer.png",
     "IngenieriaProcesadoDatos/documentacion/matriz_preprocesado.png",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/Herramientas.md",
-    "VisualizacionInteractiva/documentacion/Clase04/organizacion_perceptual.png",
-    "VisualizacionInteractiva/documentacion/Clase04/percepcion_visual.png",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
     "VisualizacionInteractiva/BLOQUE_1.md",
     "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
@@ -229,7 +228,6 @@
     "CertificacionesUNIR/Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
     "ENTREGAS/Limpieza de Datos.md",
     "VisualizacionInteractiva/Herramientas.md",
-    "AprenderPorMiCuenta.md",
-    "Deberes.md"
+    "AprenderPorMiCuenta.md"
   ]
 }
