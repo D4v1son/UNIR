@@ -1,0 +1,16 @@
+- Comparación de modelos predictivos con predicciones de apuestas (Polymarket, Kalshi...).
+	- [Análisis de los mercados de predicción|https://repositorio.unican.es/xmlui/handle/10902/20049].
+	- Esto también se podría hacer con predicciones en resultados de juegos (de esto ya hay mucho de fútbol).
+- Reportaje tipo periodístico.
+	- Sobre la guerra Ukrania/Gaza/Irán...
+	- Sobre el genocidio en Yemen/Sudáfrica...
+	- Correlación natalidad nivel económico PIB.
+	- Mercado de los videojuegos: auge del Indie.
+- Comparación de modelo estadísticos/predictivos que aún no hemos visto.
+- Visualización interactiva de un dataset.
+	- Redes sociales.
+	- Resultados deportivos.
+- Simulador urbano de valorización de los efectos las áreas verdes en el precio de la vivienda.
+- Técnicas de IA Generativa para la creación automática de vídeos cortos a partir de fotos artificiales.
+- Procesado de datos raw para su almacenamiento.
+	- hacer mi propio web scrapper básicamente.

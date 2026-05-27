@@ -11,13 +11,14 @@
             "id": "b90b17f544f74d4e",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "ENTREGAS/AAAentregasdb.base",
-                "viewName": "Tabla"
+                "file": "AnalisisInterpretacionDatos/BLOQUE_1.md",
+                "mode": "preview",
+                "source": true
               },
-              "icon": "lucide-table",
-              "title": "AAAentregasdb"
+              "icon": "lucide-file",
+              "title": "BLOQUE_1"
             }
           }
         ]
@@ -184,17 +185,19 @@
   },
   "active": "b90b17f544f74d4e",
   "lastOpenFiles": [
+    "AnalisisInterpretacionDatos/documentacion/bloque3/procesado.R",
+    "AnalisisInterpretacionDatos/documentacion/bloque3/weather_temp_clean.csv",
+    "AnalisisInterpretacionDatos/documentacion/bloque3/weather2.csv",
+    "AnalisisInterpretacionDatos/documentacion/bloque3/demostracion_muestral.ipynb",
+    "AnalisisInterpretacionDatos/documentacion/bloque3/clase_practica.ipynb",
+    "AnalisisInterpretacionDatos/documentacion/bloque3/clase_practica.ypnb",
+    "AnalisisInterpretacionDatos/documentacion/bloque3/Libro_estadistica_Mario_Triola.pdf",
+    "AnalisisInterpretacionDatos/documentacion/bloque3/Tema5_2.pdf",
+    "AnalisisInterpretacionDatos/documentacion/bloque3/Tema5_1.pdf",
+    "AnalisisInterpretacionDatos/documentacion/bloque3/probabilidad_condicional.zip",
+    "AnalisisInterpretacionDatos/documentacion/bloque3/Tema6.pdf",
+    "ENTREGAS/Análisis Exploratorio con Google Big Query.md",
     "IngenieriaProcesadoDatos/BLOQUE_3.md",
-    "AnalisisInterpretacionDatos/actividades/actividad2_individual_25052026/~$Act2.docx",
-    "AnalisisInterpretacionDatos/actividades/actividad2_individual_25052026/actividad_2_David_Vicente_Moya.pdf",
-    "BasesDeDatos/documentacion/Clase10/manual_cassandra.txt",
-    "BasesDeDatos/documentacion/Clase10/Nuevo Documento de texto.txt",
-    "BasesDeDatos/documentacion/Clase10/Taller 05 - Cassandra  Python_v01.ipynb",
-    "BasesDeDatos/documentacion/Clase10/Taller 03 - Denormalización en Apache Cassandra.pdf",
-    "BasesDeDatos/documentacion/Clase10/Taller 04 - UDT en Apache Cassandra.pdf",
-    "BasesDeDatos/documentacion/Clase10/Taller 07 - Modelo de Datos en Cassandra.pdf",
-    "BasesDeDatos/documentacion/Clase10/Taller 06 - Cluster de Cassandra (opcional).pdf",
-    "BasesDeDatos/documentacion/Clase10",
     "IngenieriaProcesadoDatos/documentacion/replicacion_kafka.png",
     "IngenieriaProcesadoDatos/documentacion/apache_kafka_estructura.png",
     "IngenieriaProcesadoDatos/BLOQUE_2.md",
@@ -227,7 +230,6 @@
     "CertificacionesUNIR/Python_PER15725/Tema1_Introduccion.md",
     "CertificacionesUNIR/Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
     "ENTREGAS/Limpieza de Datos.md",
-    "VisualizacionInteractiva/Herramientas.md",
-    "AprenderPorMiCuenta.md"
+    "VisualizacionInteractiva/Herramientas.md"
   ]
 }
