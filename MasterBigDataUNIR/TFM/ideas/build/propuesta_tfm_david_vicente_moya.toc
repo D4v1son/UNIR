@@ -1,0 +1,16 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducci\'on y Motivaci\'on}{2}{section.1}%
+\contentsline {section}{\numberline {2}Objetivos}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Objetivo General}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Objetivos Espec\'ificos}{2}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Fuentes de Datos}{3}{section.3}%
+\contentsline {section}{\numberline {4}Metodolog\'ia}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Fase 1 --- Adquisici\'on y Preparaci\'on de Datos}{3}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Fase 2 --- An\'alisis Exploratorio y Descriptivo (EDA)}{3}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Fase 3 --- Modelado Predictivo}{4}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Fase 4 --- Visualizaci\'on Interactiva}{4}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Tecnolog\'ias y Herramientas}{4}{section.5}%
+\contentsline {section}{\numberline {6}Planificaci\'on Temporal}{4}{section.6}%
+\contentsline {section}{\numberline {7}Resultados Esperados}{5}{section.7}%
+\contentsline {section}{\numberline {8}Vinculaci\'on con las Competencias del M\'aster}{5}{section.8}%
+\contentsline {section}{\numberline {9}Referencias Preliminares}{6}{section.9}%

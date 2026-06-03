@@ -1,0 +1,309 @@
+\documentclass[12pt, a4paper]{article}
+
+% -- Paquetes ------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{sectsty}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{parskip}
+
+% -- Geometr\'ia -----------------------------------------------------------------
+\geometry{
+  headheight=15pt,
+  top=2.5cm, bottom=2.5cm,
+  left=3cm,  right=3cm
+}
+
+% -- Colores -------------------------------------------------------------------
+\definecolor{unirblue}{RGB}{0, 51, 102}
+\definecolor{accent}{RGB}{0, 120, 200}
+\definecolor{lightgray}{RGB}{245, 245, 245}
+
+% -- Hiperv\'inculos -------------------------------------------------------------
+\hypersetup{
+  colorlinks=true,
+  linkcolor=unirblue,
+  urlcolor=accent,
+  citecolor=unirblue
+}
+
+% -- Cabecera y pie ------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{unirblue} Propuesta de TFM --- M\'aster en Visual Analytics \& Big Data}
+\fancyhead[R]{\small\color{unirblue} UNIR}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% -- T\'itulos de secci\'on (sectsty, compatible con MiKTeX) ----------------------
+\sectionfont{\large\bfseries\color{unirblue}}
+\subsectionfont{\normalsize\bfseries\color{accent}}
+
+% -- Entorno destacado ---------------------------------------------------------
+\newmdenv[
+  backgroundcolor=lightgray,
+  linecolor=accent,
+  linewidth=1.5pt,
+  leftline=true, rightline=false, topline=false, bottomline=false,
+  innerleftmargin=12pt, innerrightmargin=8pt,
+  innertopmargin=8pt, innerbottommargin=8pt
+]{destacado}
+
+% -----------------------------------------------------------------------------
+\begin{document}
+
+% -- Portada -------------------------------------------------------------------
+\begin{titlepage}
+  \centering
+  \vspace*{1.5cm}
+
+  {\color{unirblue}\rule{\linewidth}{1.5pt}}\\[0.4cm]
+  {\LARGE\bfseries\color{unirblue}
+    Auge del Indie:\\[0.3cm]
+    An\'alisis Predictivo y Visualizaci\'on\\[0.3cm]
+    del Mercado de Videojuegos Independientes\\[0.3cm]
+    (2010--2025)
+  }\\[0.4cm]
+  {\color{unirblue}\rule{\linewidth}{1.5pt}}
+
+  \vspace{1.2cm}
+  {\large\bfseries Propuesta de Trabajo Fin de M\'aster}
+
+  \vspace{0.6cm}
+  {\large M\'aster Universitario en An\'alisis y Visualizaci\'on de Datos Masivos/ 
+  Visual Analytics \& Big Data}\\[0.2cm]
+  {\large\color{unirblue} Universidad Internacional de La Rioja (UNIR)}
+
+  \vfill
+
+  \begin{tabular}{rl}
+    \textbf{Autor:}     & [David Vicente Moya] \\[4pt]
+    \textbf{Fecha:}     & \today \\
+  \end{tabular}
+
+  \vspace{1.5cm}
+\end{titlepage}
+
+% -- \'Indice --------------------------------------------------------------------
+\tableofcontents
+\newpage
+
+% -----------------------------------------------------------------------------
+\section{Introducci\'on y Motivaci\'on}
+
+La industria del videojuego ha experimentado una transformaci\'on radical durante la 
+\'ultima d\'ecada. El auge de las plataformas digitales de distribuci\'on ---Steam, 
+itch.io, Epic Games Store--- ha democratizado el acceso al mercado, permitiendo que 
+estudios independientes (conocidos como \textit{estudios indie}) compitan en igualdad 
+de condiciones con grandes compa\~n\'ias (AAA). Este fen\'omeno ha desplazado el 
+centro de gravedad creativo e, incluso, econ\'omico del sector.
+
+\begin{destacado}
+\textbf{Pregunta de investigaci\'on central:} \textquestiondown{}Qu\'e factores 
+determinan el \'exito comercial de un videojuego independiente, y c\'omo ha 
+evolucionado la cuota de mercado del sector indie frente al mercado AAA entre 2010 y 
+2025?
+\end{destacado}
+
+La relevancia de esta pregunta es m\'ultiple: para los desarrolladores independientes, 
+disponer de un modelo predictivo puede orientar decisiones cr\'iticas sobre g\'enero, 
+precio, fecha de lanzamiento y estrategia de marketing. Para investigadores, el 
+mercado de los videojuegos representa un ecosistema digital con patrones de consumo, 
+rese\~nas y datos de uso excepcionalmente ricos.
+
+Este TFM propone abordar dicha pregunta combinando t\'ecnicas de an\'alisis 
+exploratorio de datos, modelado estad\'istico-predictivo y visualizaci\'on interactiva 
+avanzada, todas ellas competencias centrales del M\'aster en Visual Analytics \& Big 
+Data.
+
+% -----------------------------------------------------------------------------
+\section{Objetivos}
+
+\subsection{Objetivo General}
+
+Desarrollar un sistema de an\'alisis y visualizaci\'on que permita comprender la evoluci\'on del mercado indie de videojuegos y predecir el \'exito relativo de un t\'itulo a partir de sus caracter\'isticas en el momento de lanzamiento.
+
+\subsection{Objetivos Espec\'ificos}
+
+\begin{enumerate}[leftmargin=*, label=\textbf{OE\arabic*.}]
+  \item Recopilar, limpiar e integrar datos procedentes de m\'ultiples fuentes p\'ublicas sobre el mercado de videojuegos (2010--2025).
+  \item Realizar un an\'alisis exploratorio que caracterice la evoluci\'on del segmento indie: n\'umero de t\'itulos, ingresos estimados, g\'eneros dominantes, tendencias de precio y valoraciones de usuarios.
+  \item Identificar los factores estad\'isticamente asociados al \'exito comercial de un videojuego independiente mediante t\'ecnicas de an\'alisis multivariante.
+  \item Construir y evaluar un modelo predictivo de nivel de \'exito (clasificaci\'on o regresi\'on) basado en variables disponibles antes o durante el lanzamiento.
+  \item Dise\~nar y desarrollar un \textit{dashboard} interactivo que permita explorar el dataset y los resultados del modelo de forma intuitiva.
+\end{enumerate}
+
+% -----------------------------------------------------------------------------
+\section{Fuentes de Datos}
+
+El proyecto se apoyar\'a en fuentes de datos p\'ublicas y bien documentadas, lo que garantiza la reproducibilidad del trabajo:
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{>{\bfseries}p{3.5cm} p{5.5cm} p{4.5cm}}
+\toprule
+Fuente & Informaci\'on proporcionada & Acceso \\
+\midrule
+SteamSpy API        & Ventas estimadas, jugadores, g\'eneros, precio, tags & API p\'ublica gratuita \\
+Steam Store API     & Metadatos oficiales, fecha de lanzamiento, desarrollador & API p\'ublica \\
+Kaggle Datasets     & Datasets curados de Steam con hist\'orico & Descarga directa \\
+IGDB (Twitch API)   & Clasificaci\'on de publisher, puntuaciones, plataformas & API gratuita (registro) \\
+Metacritic (scraping ligero) & Puntuaciones de cr\'itica & Web p\'ublica \\
+\bottomrule
+\end{tabular}
+\caption{Fuentes de datos principales del proyecto.}
+\end{table}
+
+La variable objetivo para el modelo predictivo ser\'a una m\'etrica compuesta de \'exito, definida a partir de las ventas estimadas y la valoraci\'on de los usuarios, categorizada en niveles (p.\,ej., \textit{nicho}, \textit{moderado}, \textit{exitoso}, \textit{superventas}).
+
+% -----------------------------------------------------------------------------
+\section{Metodolog\'ia}
+
+El proyecto seguir\'a una metodolog\'ia iterativa organizada en cuatro fases:
+
+\subsection{Fase 1 --- Adquisici\'on y Preparaci\'on de Datos}
+
+\begin{itemize}
+  \item Extracci\'on de datos mediante las APIs indicadas y datasets de Kaggle.
+  \item Limpieza: gesti\'on de valores nulos, normalizaci\'on de variables categ\'oricas (g\'eneros, tags), detecci\'on de outliers.
+  \item Enriquecimiento: clasificaci\'on autom\'atica indie/AAA a partir del tama\~no del publisher.
+  \item Construcci\'on del dataset final en formato tabular (\texttt{.parquet} / \texttt{.csv}).
+\end{itemize}
+
+\subsection{Fase 2 --- An\'alisis Exploratorio y Descriptivo (EDA)}
+
+\begin{itemize}
+  \item Evoluci\'on temporal del n\'umero de lanzamientos indie vs. AAA.
+  \item Distribuci\'on de precios, g\'eneros y valoraciones.
+  \item An\'alisis de correlaciones entre variables (precio, n\'umero de reviews, tags, plataforma de lanzamiento).
+  \item Identificaci\'on de los g\'eneros y mec\'anicas m\'as asociados al \'exito.
+\end{itemize}
+
+\subsection{Fase 3 --- Modelado Predictivo}
+
+Se construir\'an y comparar\'an al menos dos modelos:
+
+\begin{itemize}
+  \item \textbf{Regresi\'on log\'istica multinomial}: modelo base interpretable.
+  \item \textbf{Random Forest / XGBoost}: modelo de mayor capacidad predictiva.
+\end{itemize}
+
+La evaluaci\'on se realizar\'a con validaci\'on cruzada estratificada (k=5), m\'etricas de \textit{accuracy}, F1-score y AUC-ROC por clase. Se incluir\'a an\'alisis de importancia de variables (SHAP values) para garantizar la interpretabilidad del modelo.
+
+\subsection{Fase 4 --- Visualizaci\'on Interactiva}
+
+Desarrollo de un \textit{dashboard} con las siguientes vistas:
+
+\begin{itemize}
+  \item \textbf{Vista temporal}: evoluci\'on del mercado indie 2010--2025.
+  \item \textbf{Vista exploratoria}: filtros por g\'enero, precio, a\~no y plataforma.
+  \item \textbf{Vista comparativa}: indie vs. AAA en ventas y valoraciones.
+  \item \textbf{Predictor interactivo}: el usuario introduce caracter\'isticas de un juego hipot\'etico y obtiene la predicci\'on del modelo.
+\end{itemize}
+
+\textbf{Herramientas candidatas}: Tableau Public, Power BI o Plotly Dash (Python). La elecci\'on final depender\'a de las recomendaciones del tutor y los requisitos de entrega del m\'aster.
+
+% -----------------------------------------------------------------------------
+\section{Tecnolog\'ias y Herramientas}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{>{\bfseries}p{3cm} p{9.5cm}}
+\toprule
+\'Area & Herramientas \\
+\midrule
+Lenguaje principal  & Python 3.11 \\
+Adquisici\'on         & \texttt{requests}, \texttt{pandas}, APIs REST \\
+Procesado           & \texttt{pandas}, \texttt{numpy}, \texttt{scikit-learn} \\
+Modelado            & \texttt{scikit-learn}, \texttt{xgboost}, \texttt{shap} \\
+Visualizaci\'on       & \texttt{matplotlib}, \texttt{seaborn}, Plotly / Tableau \\
+Entorno             & Jupyter Notebooks, Git / GitHub \\
+\bottomrule
+\end{tabular}
+\caption{Stack tecnol\'ogico del proyecto.}
+\end{table}
+
+% -----------------------------------------------------------------------------
+\section{Planificaci\'on Temporal}
+
+La duraci\'on estimada del proyecto es de \textbf{5 meses}, distribuidos de la siguiente forma:
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{>{\bfseries}p{1.2cm} p{4.5cm} p{7cm}}
+\toprule
+Mes & Fase & Hitos principales \\
+\midrule
+1   & Adquisici\'on y preparaci\'on  & Dataset limpio y documentado \\
+2   & EDA                        & Informe exploratorio, primeras visualizaciones est\'aticas \\
+3   & Modelado                   & Modelos entrenados y evaluados, an\'alisis SHAP \\
+4   & Visualizaci\'on interactiva  & Dashboard funcional (v1) \\
+5   & Redacci\'on y revisi\'on       & Memoria final entregada, presentaci\'on preparada \\
+\bottomrule
+\end{tabular}
+\caption{Planificaci\'on temporal del TFM.}
+\end{table}
+
+% -----------------------------------------------------------------------------
+\section{Resultados Esperados}
+
+Al finalizar el proyecto se habr\'an generado los siguientes entregables:
+
+\begin{enumerate}[leftmargin=*, label=\textbf{R\arabic*.}]
+  \item \textbf{Dataset curado} del mercado de videojuegos indie 2010--2025, con documentaci\'on detallada del proceso de extracci\'on y limpieza.
+  \item \textbf{An\'alisis exploratorio} con hallazgos sobre tendencias, g\'eneros emergentes y factores de \'exito en el mercado indie.
+  \item \textbf{Modelo predictivo} evaluado y comparado, con an\'alisis de interpretabilidad (SHAP).
+  \item \textbf{Dashboard interactivo} p\'ublico (Tableau Public o similar) que permita explorar los datos y probar el predictor.
+  \item \textbf{Memoria acad\'emica} conforme a los requisitos formales de la UNIR.
+\end{enumerate}
+
+% -----------------------------------------------------------------------------
+\section{Vinculaci\'on con las Competencias del M\'aster}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{p{5.5cm} p{7cm}}
+\toprule
+\textbf{Competencia del M\'aster} & \textbf{C\'omo se aborda en el TFM} \\
+\midrule
+Adquisici\'on y gesti\'on de datos & APIs, limpieza, integraci\'on de fuentes heterog\'eneas \\
+An\'alisis estad\'istico y ML       & EDA, modelos supervisados, validaci\'on cruzada \\
+Visual Analytics                & Dashboard interactivo multicapa \\
+Comunicaci\'on de resultados      & Narrativa de datos, informe ejecutivo \\
+Herramientas Big Data           & Python, Jupyter, control de versiones \\
+\bottomrule
+\end{tabular}
+\caption{Alineaci\'on del TFM con las competencias del m\'aster.}
+\end{table}
+
+% -----------------------------------------------------------------------------
+\section{Referencias Preliminares}
+
+\begin{itemize}
+  \item Marchand, A., \& Hennig-Thurau, T. (2013). Value Creation in the Video Game Industry. \textit{Journal of Interactive Marketing}, 27(3), 141--157.
+  \item Zhu, M., \& G\'omez M\'armol, F. (2022). An\'alisis de los mercados de predicci\'on. Universidad de Cantabria. \url{https://repositorio.unican.es/xmlui/handle/10902/20049}
+  \item Valve Corporation. (2024). \textit{Steamworks Documentation}. \url{https://partner.steamgames.com/doc/home}
+  \item SteamSpy. (2024). \textit{SteamSpy API Documentation}. \url{https://steamspy.com/api.php}
+  \item Lundberg, S. M., \& Lee, S.-I. (2017). A Unified Approach to Interpreting Model Predictions. \textit{NeurIPS 2017}.
+\end{itemize}
+
+\vfill
+\begin{center}
+{\small\color{gray} Propuesta sujeta a revisi\'on y aprobaci\'on por parte del tutor asignado por la UNIR.}
+\end{center}
+
+\end{document}

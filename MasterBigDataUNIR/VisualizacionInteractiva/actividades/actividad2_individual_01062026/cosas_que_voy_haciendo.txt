@@ -1,0 +1,20 @@
+PARTE I
+
+Datos que no aportan nada:
+- Location solo tiene un valor "Global"
+- Age solo tiene un valor "All ages"
+- Sex solo tiene un valor  "Both"
+
+Datos que tengo que modificar:
+- Pivoto las filas de Measure para crear dos columnas con los datos de Value.
+	- Una columna con el porcentaje de muertes en 2017
+	- Una columna con el porcentaje anual de muertes desde 2010 hasta 2017
+
+He procesado los datos con Openrefine y los visualizar en Scimago Graphica.
+
+PARTE 2
+
+1º) Voy a comparar los datos de los últimos 3 años (2023-2025), por lo que no necesito los demás.
+2ª) Solo me quiero quedar con LUGAR_RESIDENCIA Todos, no me interesa comparar turismo nacional con internacional en esta actividad.
+3ª) Me interesan las pernoctaciones y el número de viajeros, el resto de datos los puedo ignorar por el momento.
+4º) Si creo que estos datos no son suficientes buscare más datos complementarios (para el apartado opcional) pero esto no es necesario.

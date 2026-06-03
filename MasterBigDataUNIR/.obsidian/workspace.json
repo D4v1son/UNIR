@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AnalisisInterpretacionDatos/BLOQUE_1.md",
-                "mode": "preview",
+                "file": "TecnicasInteligenciaArtificial/REPASO_EXAMEN.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "BLOQUE_1"
+              "title": "REPASO_EXAMEN"
             }
           }
         ]
@@ -185,17 +185,21 @@
   },
   "active": "b90b17f544f74d4e",
   "lastOpenFiles": [
+    "TecnicasInteligenciaArtificial/documentacion/EjerciciosRecursosExamen/Cuaderno_de_ejercicios_Tema3.ipynb",
+    "TecnicasInteligenciaArtificial/documentacion/EjerciciosRecursosExamen/Tema_3_Arboles_de_decision.ipynb",
+    "TecnicasInteligenciaArtificial/documentacion/EjerciciosRecursosExamen/Tema_3_Random_Forest.ipynb",
+    "TecnicasInteligenciaArtificial/documentacion/EjerciciosRecursosExamen",
+    "TecnicasInteligenciaArtificial/documentacion/Nueva carpeta",
+    "TecnicasInteligenciaArtificial/BLOQUE_4.md",
+    "TecnicasInteligenciaArtificial/REPASO_EXAMEN.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_3.md",
+    "TecnicasInteligenciaArtificial/documentacion/Clase09/Clase09. Clustering II_Explicación modelo de examen.pdf",
+    "TecnicasInteligenciaArtificial/documentacion/Clase09",
+    "AnalisisInterpretacionDatos/BLOQUE_1.md",
+    "AnalisisInterpretacionDatos/documentacion/bloque3/Untitled.ipynb",
+    "AnalisisInterpretacionDatos/documentacion/bloque3/prueba_kernel.ipynb",
+    "AnalisisInterpretacionDatos/documentacion/bloque3/prueba_kernel",
     "AnalisisInterpretacionDatos/documentacion/bloque3/procesado.R",
-    "AnalisisInterpretacionDatos/documentacion/bloque3/weather_temp_clean.csv",
-    "AnalisisInterpretacionDatos/documentacion/bloque3/weather2.csv",
-    "AnalisisInterpretacionDatos/documentacion/bloque3/demostracion_muestral.ipynb",
-    "AnalisisInterpretacionDatos/documentacion/bloque3/clase_practica.ipynb",
-    "AnalisisInterpretacionDatos/documentacion/bloque3/clase_practica.ypnb",
-    "AnalisisInterpretacionDatos/documentacion/bloque3/Libro_estadistica_Mario_Triola.pdf",
-    "AnalisisInterpretacionDatos/documentacion/bloque3/Tema5_2.pdf",
-    "AnalisisInterpretacionDatos/documentacion/bloque3/Tema5_1.pdf",
-    "AnalisisInterpretacionDatos/documentacion/bloque3/probabilidad_condicional.zip",
-    "AnalisisInterpretacionDatos/documentacion/bloque3/Tema6.pdf",
     "ENTREGAS/Análisis Exploratorio con Google Big Query.md",
     "IngenieriaProcesadoDatos/BLOQUE_3.md",
     "IngenieriaProcesadoDatos/documentacion/replicacion_kafka.png",
@@ -203,8 +207,6 @@
     "IngenieriaProcesadoDatos/BLOQUE_2.md",
     "VisualizacionInteractiva/BLOQUE_3.md",
     "BasesDeDatos/actividades/actividad2_individual_18052026/modelo_nosql.png",
-    "AnalisisInterpretacionDatos/BLOQUE_1.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_2.md",
     "BasesDeDatos/BLOQUE_1.md",
     "IngenieriaProcesadoDatos/documentacion/pipelines.png",
@@ -228,8 +230,6 @@
     "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema2_EmpezandoConR.md",
     "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema1_Introduccion.md",
     "CertificacionesUNIR/Python_PER15725/Tema1_Introduccion.md",
-    "CertificacionesUNIR/Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md",
-    "ENTREGAS/Limpieza de Datos.md",
-    "VisualizacionInteractiva/Herramientas.md"
+    "CertificacionesUNIR/Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md"
   ]
 }
