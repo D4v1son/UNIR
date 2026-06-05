@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TecnicasInteligenciaArtificial/REPASO_EXAMEN.md",
+                "file": "IngenieriaProcesadoDatos/BLOQUE_3.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "REPASO_EXAMEN"
+              "title": "BLOQUE_3"
             }
           }
         ]
@@ -185,21 +185,21 @@
   },
   "active": "b90b17f544f74d4e",
   "lastOpenFiles": [
-    "TecnicasInteligenciaArtificial/documentacion/EjerciciosRecursosExamen/Cuaderno_de_ejercicios_Tema3.ipynb",
-    "TecnicasInteligenciaArtificial/documentacion/EjerciciosRecursosExamen/Tema_3_Arboles_de_decision.ipynb",
-    "TecnicasInteligenciaArtificial/documentacion/EjerciciosRecursosExamen/Tema_3_Random_Forest.ipynb",
-    "TecnicasInteligenciaArtificial/documentacion/EjerciciosRecursosExamen",
-    "TecnicasInteligenciaArtificial/documentacion/Nueva carpeta",
-    "TecnicasInteligenciaArtificial/BLOQUE_4.md",
+    "IngenieriaProcesadoDatos/documentacion/apache_hive.png",
     "TecnicasInteligenciaArtificial/REPASO_EXAMEN.md",
+    "VisualizacionInteractiva/documentacion/Clase10/8. Visualización estática - Análisis Multivariante.pdf",
+    "VisualizacionInteractiva/documentacion/Clase10/Ejemplo tema 8 cars.csv",
+    "VisualizacionInteractiva/documentacion/Clase10",
+    "VisualizacionInteractiva/documentacion/Nueva carpeta",
+    "VisualizacionInteractiva/documentacion/Clase01/1.Introducción a la visualización de datos.pdf",
+    "VisualizacionInteractiva/documentacion/Clase01/0. Presentación de la asignatura.pdf",
+    "VisualizacionInteractiva/documentacion/Clase02/Ejemplo tema 2. Life expectancy vs Income.csv",
+    "VisualizacionInteractiva/documentacion/Clase02/2.Historia de la visualización de datos.pdf",
+    "VisualizacionInteractiva/documentacion/Clase03/Ejemplo tema 3 Votos Trump Clinton.csv",
+    "VisualizacionInteractiva/documentacion/Clase03/Ejemplo tema 3 Design Tools Survey by uxtools.co.xlsx",
+    "TecnicasInteligenciaArtificial/BLOQUE_4.md",
     "TecnicasInteligenciaArtificial/BLOQUE_3.md",
-    "TecnicasInteligenciaArtificial/documentacion/Clase09/Clase09. Clustering II_Explicación modelo de examen.pdf",
-    "TecnicasInteligenciaArtificial/documentacion/Clase09",
     "AnalisisInterpretacionDatos/BLOQUE_1.md",
-    "AnalisisInterpretacionDatos/documentacion/bloque3/Untitled.ipynb",
-    "AnalisisInterpretacionDatos/documentacion/bloque3/prueba_kernel.ipynb",
-    "AnalisisInterpretacionDatos/documentacion/bloque3/prueba_kernel",
-    "AnalisisInterpretacionDatos/documentacion/bloque3/procesado.R",
     "ENTREGAS/Análisis Exploratorio con Google Big Query.md",
     "IngenieriaProcesadoDatos/BLOQUE_3.md",
     "IngenieriaProcesadoDatos/documentacion/replicacion_kafka.png",
