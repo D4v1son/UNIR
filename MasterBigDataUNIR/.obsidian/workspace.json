@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IngenieriaProcesadoDatos/BLOQUE_3.md",
-                "mode": "source",
+                "file": "AnalisisInterpretacionDatos/BLOQUE_3.md",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
@@ -185,6 +185,11 @@
   },
   "active": "b90b17f544f74d4e",
   "lastOpenFiles": [
+    "AnalisisInterpretacionDatos/BLOQUE_2.md",
+    "AnalisisInterpretacionDatos/BLOQUE_3.md",
+    "AnalisisInterpretacionDatos/BLOQUE_1.md",
+    "AnalisisInterpretacionDatos/BLOQUE_4.md",
+    "IngenieriaProcesadoDatos/BLOQUE_3.md",
     "IngenieriaProcesadoDatos/documentacion/apache_hive.png",
     "TecnicasInteligenciaArtificial/REPASO_EXAMEN.md",
     "VisualizacionInteractiva/documentacion/Clase10/8. Visualización estática - Análisis Multivariante.pdf",
@@ -199,9 +204,7 @@
     "VisualizacionInteractiva/documentacion/Clase03/Ejemplo tema 3 Design Tools Survey by uxtools.co.xlsx",
     "TecnicasInteligenciaArtificial/BLOQUE_4.md",
     "TecnicasInteligenciaArtificial/BLOQUE_3.md",
-    "AnalisisInterpretacionDatos/BLOQUE_1.md",
     "ENTREGAS/Análisis Exploratorio con Google Big Query.md",
-    "IngenieriaProcesadoDatos/BLOQUE_3.md",
     "IngenieriaProcesadoDatos/documentacion/replicacion_kafka.png",
     "IngenieriaProcesadoDatos/documentacion/apache_kafka_estructura.png",
     "IngenieriaProcesadoDatos/BLOQUE_2.md",
@@ -219,7 +222,6 @@
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/img_map_02.png",
     "IngenieriaProcesadoDatos/documentacion/estimador_diagrama.png",
     "IngenieriaProcesadoDatos/documentacion/transformer.png",
-    "IngenieriaProcesadoDatos/documentacion/matriz_preprocesado.png",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/Herramientas.md",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
     "VisualizacionInteractiva/BLOQUE_1.md",
@@ -228,8 +230,6 @@
     "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
     "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema3_EstructuraDeDatos.md",
     "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema2_EmpezandoConR.md",
-    "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema1_Introduccion.md",
-    "CertificacionesUNIR/Python_PER15725/Tema1_Introduccion.md",
-    "CertificacionesUNIR/Python_PER15725/Tema2_tipos_de_datos_y_estructuras.md"
+    "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema1_Introduccion.md"
   ]
 }
