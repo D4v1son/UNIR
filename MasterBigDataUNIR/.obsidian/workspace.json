@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BasesDeDatos/BLOQUE_2.md",
+                "file": "TecnicasInteligenciaArtificial/BLOQUE_2.md",
                 "mode": "preview",
                 "source": true
               },
@@ -185,8 +185,12 @@
   },
   "active": "b90b17f544f74d4e",
   "lastOpenFiles": [
-    "BasesDeDatos/BLOQUE_1.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_1.md",
+    "IngenieriaProcesadoDatos/BLOQUE_2.md",
+    "IngenieriaProcesadoDatos/BLOQUE_1.md",
     "BasesDeDatos/BLOQUE_2.md",
+    "BasesDeDatos/BLOQUE_3.md",
+    "BasesDeDatos/BLOQUE_1.md",
     "AnalisisInterpretacionDatos/BLOQUE_3.md",
     "AnalisisInterpretacionDatos/BLOQUE_2.md",
     "AnalisisInterpretacionDatos/BLOQUE_1.md",
@@ -209,12 +213,10 @@
     "ENTREGAS/Análisis Exploratorio con Google Big Query.md",
     "IngenieriaProcesadoDatos/documentacion/replicacion_kafka.png",
     "IngenieriaProcesadoDatos/documentacion/apache_kafka_estructura.png",
-    "IngenieriaProcesadoDatos/BLOQUE_2.md",
     "VisualizacionInteractiva/BLOQUE_3.md",
     "BasesDeDatos/actividades/actividad2_individual_18052026/modelo_nosql.png",
     "TecnicasInteligenciaArtificial/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/documentacion/pipelines.png",
-    "IngenieriaProcesadoDatos/BLOQUE_1.md",
     "VisualizacionInteractiva/BLOQUE_2.md",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/flask_dashboard/README.md",
@@ -224,12 +226,10 @@
     "IngenieriaProcesadoDatos/documentacion/estimador_diagrama.png",
     "IngenieriaProcesadoDatos/documentacion/transformer.png",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/Herramientas.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_1.md",
     "VisualizacionInteractiva/BLOQUE_1.md",
     "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
     "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema2_FundamentosIngenieriaPrompts.md",
     "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
-    "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema3_EstructuraDeDatos.md",
-    "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema2_EmpezandoConR.md"
+    "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema3_EstructuraDeDatos.md"
   ]
 }
