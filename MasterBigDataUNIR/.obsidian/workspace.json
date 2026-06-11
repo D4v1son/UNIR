@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TecnicasInteligenciaArtificial/BLOQUE_2.md",
+                "file": "TecnicasInteligenciaArtificial/BLOQUE_3.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "BLOQUE_2"
+              "title": "BLOQUE_3"
             }
           }
         ]
@@ -185,6 +185,11 @@
   },
   "active": "b90b17f544f74d4e",
   "lastOpenFiles": [
+    "TecnicasInteligenciaArtificial/BLOQUE_4.md",
+    "TecnicasInteligenciaArtificial/REPASO_EXAMEN.md",
+    "AnalisisInterpretacionDatos/documentacion/bloque3/Tema7.pdf",
+    "TecnicasInteligenciaArtificial/BLOQUE_3.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
     "IngenieriaProcesadoDatos/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/BLOQUE_1.md",
@@ -197,7 +202,6 @@
     "AnalisisInterpretacionDatos/BLOQUE_4.md",
     "IngenieriaProcesadoDatos/BLOQUE_3.md",
     "IngenieriaProcesadoDatos/documentacion/apache_hive.png",
-    "TecnicasInteligenciaArtificial/REPASO_EXAMEN.md",
     "VisualizacionInteractiva/documentacion/Clase10/8. Visualización estática - Análisis Multivariante.pdf",
     "VisualizacionInteractiva/documentacion/Clase10/Ejemplo tema 8 cars.csv",
     "VisualizacionInteractiva/documentacion/Clase10",
@@ -207,15 +211,11 @@
     "VisualizacionInteractiva/documentacion/Clase02/Ejemplo tema 2. Life expectancy vs Income.csv",
     "VisualizacionInteractiva/documentacion/Clase02/2.Historia de la visualización de datos.pdf",
     "VisualizacionInteractiva/documentacion/Clase03/Ejemplo tema 3 Votos Trump Clinton.csv",
-    "VisualizacionInteractiva/documentacion/Clase03/Ejemplo tema 3 Design Tools Survey by uxtools.co.xlsx",
-    "TecnicasInteligenciaArtificial/BLOQUE_4.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_3.md",
     "ENTREGAS/Análisis Exploratorio con Google Big Query.md",
     "IngenieriaProcesadoDatos/documentacion/replicacion_kafka.png",
     "IngenieriaProcesadoDatos/documentacion/apache_kafka_estructura.png",
     "VisualizacionInteractiva/BLOQUE_3.md",
     "BasesDeDatos/actividades/actividad2_individual_18052026/modelo_nosql.png",
-    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/documentacion/pipelines.png",
     "VisualizacionInteractiva/BLOQUE_2.md",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
@@ -229,7 +229,6 @@
     "VisualizacionInteractiva/BLOQUE_1.md",
     "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
     "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema2_FundamentosIngenieriaPrompts.md",
-    "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md",
-    "CertificacionesUNIR/ProgramacionEnR_PER15730/Tema3_EstructuraDeDatos.md"
+    "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md"
   ]
 }
