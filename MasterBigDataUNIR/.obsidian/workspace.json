@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TecnicasInteligenciaArtificial/BLOQUE_3.md",
+                "file": "VisualizacionInteractiva/BLOQUE_3.md",
                 "mode": "preview",
                 "source": true
               },
@@ -185,10 +185,13 @@
   },
   "active": "b90b17f544f74d4e",
   "lastOpenFiles": [
+    "VisualizacionInteractiva/BLOQUE_2.md",
+    "VisualizacionInteractiva/BLOQUE_1.md",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_4.md",
     "TecnicasInteligenciaArtificial/REPASO_EXAMEN.md",
     "AnalisisInterpretacionDatos/documentacion/bloque3/Tema7.pdf",
-    "TecnicasInteligenciaArtificial/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_2.md",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
     "IngenieriaProcesadoDatos/BLOQUE_2.md",
@@ -217,8 +220,6 @@
     "VisualizacionInteractiva/BLOQUE_3.md",
     "BasesDeDatos/actividades/actividad2_individual_18052026/modelo_nosql.png",
     "IngenieriaProcesadoDatos/documentacion/pipelines.png",
-    "VisualizacionInteractiva/BLOQUE_2.md",
-    "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/flask_dashboard/README.md",
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/map_salamanca.png",
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/map_retiro.png",
@@ -226,7 +227,6 @@
     "IngenieriaProcesadoDatos/documentacion/estimador_diagrama.png",
     "IngenieriaProcesadoDatos/documentacion/transformer.png",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/Herramientas.md",
-    "VisualizacionInteractiva/BLOQUE_1.md",
     "CertificacionesUNIR/CursoCertificacionAZ_900_PER15726/Modelo1_ConceptosBasicosDeLaNube.md",
     "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema2_FundamentosIngenieriaPrompts.md",
     "CertificacionesUNIR/FundamentosIAGenerativa_PER15732/Tema1_MetodosIAgenerativa.md"
