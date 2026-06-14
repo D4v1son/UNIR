@@ -1,0 +1,13 @@
+Hola, David.
+
+Tu entrega está bien organizada, con explicaciones claras y una buena correspondencia entre la memoria y el fichero de consultas. Además, justificas las decisiones tomadas y documentas correctamente los resultados obtenidos.
+
+La carga de datos está correctamente documentada y se incluyen los comandos utilizados para la importación de las colecciones.
+La exploración de las colecciones está bien resuelta, identificando campos categóricos, mostrando consultas y explicando adecuadamente el comportamiento de .toArray() y .forEach().
+Las consultas sobre la colección books cumplen los requisitos solicitados y las agregaciones están correctamente planteadas.
+En la colección companies se resuelven adecuadamente las consultas de filtrado, la vista materializada, la creación de índices y la búsqueda mediante índice de texto.
+El pipeline de agregación está bien planteado y utiliza varios de los operadores solicitados, además de mostrar evidencias del resultado generado en Compass.
+Como aspecto mejorable, el enunciado solicita trabajar con tres ficheros iniciales y en la memoria únicamente se documentan dos colecciones (books y companies), por lo que parte del apartado de exploración queda menos completa de lo esperado.
+También habría sido recomendable incluir de forma explícita el esquema generado con Data Modeling, ya que se describe la carga de datos pero no se aporta evidencia del modelado solicitado.
+
+Calificación: 10 / 10.

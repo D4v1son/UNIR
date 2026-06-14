@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "VisualizacionInteractiva/BLOQUE_3.md",
+                "file": "VisualizacionInteractiva/BLOQUE_4.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "BLOQUE_3"
+              "title": "BLOQUE_4"
             }
           }
         ]
@@ -185,6 +185,8 @@
   },
   "active": "b90b17f544f74d4e",
   "lastOpenFiles": [
+    "VisualizacionInteractiva/BLOQUE_3.md",
+    "VisualizacionInteractiva/BLOQUE_4.md",
     "VisualizacionInteractiva/BLOQUE_2.md",
     "VisualizacionInteractiva/BLOQUE_1.md",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
@@ -217,7 +219,6 @@
     "ENTREGAS/Análisis Exploratorio con Google Big Query.md",
     "IngenieriaProcesadoDatos/documentacion/replicacion_kafka.png",
     "IngenieriaProcesadoDatos/documentacion/apache_kafka_estructura.png",
-    "VisualizacionInteractiva/BLOQUE_3.md",
     "BasesDeDatos/actividades/actividad2_individual_18052026/modelo_nosql.png",
     "IngenieriaProcesadoDatos/documentacion/pipelines.png",
     "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/flask_dashboard/README.md",
