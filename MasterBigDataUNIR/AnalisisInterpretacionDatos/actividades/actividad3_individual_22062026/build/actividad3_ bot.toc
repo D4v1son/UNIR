@@ -1,0 +1,16 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}¿Qué son y para qué se utilizan los contrastes de hipótesis?}{1}{section.1}%
+\contentsline {section}{\numberline {2}Algoritmo general para realizar un contraste de hipótesis}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Caso de una población}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Caso de comparación de dos poblaciones}{2}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Planteamiento de los escenarios}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Escenario A: contraste sobre una población (tiempo de entrega)}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Escenario B: contraste entre dos poblaciones (gasto de clientes nuevos y recurrentes)}{3}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Modelos numéricos}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Escenario A: tiempo de entrega}{3}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Estadística descriptiva}{3}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Contraste de hipótesis}{4}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Escenario B: gasto de clientes nuevos y recurrentes}{4}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Estadística descriptiva}{4}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Contraste de hipótesis}{5}{subsubsection.4.2.2}%
+\contentsline {section}{\numberline {5}Conclusiones}{6}{section.5}%
