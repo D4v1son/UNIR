@@ -103,7 +103,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "6b9cea7ec0ad8da8",
@@ -211,9 +212,9 @@
   },
   "active": "c7ccef7d70bb3967",
   "lastOpenFiles": [
-    "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
-    "BasesDeDatos/esquema_bloque1_BDBD.md",
     "BasesDeDatos/BLOQUE_1.md",
+    "BasesDeDatos/esquema_bloque1_BDBD.md",
+    "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
     "IngenieriaProcesadoDatos/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
     "IngenieriaProcesadoDatos/BLOQUE_1.md",
