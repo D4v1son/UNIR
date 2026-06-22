@@ -11,6 +11,32 @@
             "id": "b90b17f544f74d4e",
             "type": "leaf",
             "state": {
+              "type": "markdown",
+              "state": {
+                "file": "BasesDeDatos/BLOQUE_1.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "BLOQUE_1"
+            }
+          },
+          {
+            "id": "c7ccef7d70bb3967",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "BasesDeDatos/esquema_bloque1_BDBD.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "esquema_bloque1_BDBD"
+            }
+          },
+          {
+            "id": "77d921e5a90ef562",
+            "type": "leaf",
+            "state": {
               "type": "excalidraw",
               "state": {
                 "file": "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md"
@@ -18,22 +44,9 @@
               "icon": "excalidraw-icon",
               "title": "esquema_bloque1_TIA"
             }
-          },
-          {
-            "id": "c7ccef7d70bb3967",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "TecnicasInteligenciaArtificial/BLOQUE_1.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "BLOQUE_1"
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -196,8 +209,15 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "29f72046f9bf0fdc",
+  "active": "c7ccef7d70bb3967",
   "lastOpenFiles": [
+    "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
+    "BasesDeDatos/esquema_bloque1_BDBD.md",
+    "BasesDeDatos/BLOQUE_1.md",
+    "IngenieriaProcesadoDatos/BLOQUE_3.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_1.md",
+    "IngenieriaProcesadoDatos/BLOQUE_1.md",
+    "IngenieriaProcesadoDatos/BLOQUE_2.md",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/actividad_3_ DavidVicenteMoya.pdf",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/actividad3_ bot.pdf",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/build/actividad3_ bot.synctex(busy)",
@@ -208,15 +228,12 @@
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/build/actividad3_ bot.out",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/build/actividad3_ bot.log",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/build/actividad3_ bot.fdb_latexmk",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/build/actividad3_ bot.aux",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/imgs/gasto_tipo_cliente (1).png",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/imgs/gasto_tipo_cliente.png",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/imgs/frecuencia_tiempo_entrega.png",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/frecuencia_tiempo_entrega.png",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/ecommerce_dataset_readme_v_2.md",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/DATASET_README.md",
-    "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_1.md",
     "AnalisisInterpretacionDatos/BLOQUE_1.md",
     "TecnicasInteligenciaArtificial/REPASO_EXAMEN.md",
     "AnalisisInterpretacionDatos/resumen_bloque1_AID.md",
@@ -229,14 +246,10 @@
     "TecnicasInteligenciaArtificial/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_4.md",
     "TecnicasInteligenciaArtificial/BLOQUE_2.md",
-    "IngenieriaProcesadoDatos/BLOQUE_2.md",
-    "IngenieriaProcesadoDatos/BLOQUE_1.md",
     "BasesDeDatos/BLOQUE_2.md",
     "BasesDeDatos/BLOQUE_3.md",
-    "BasesDeDatos/BLOQUE_1.md",
     "AnalisisInterpretacionDatos/BLOQUE_3.md",
     "AnalisisInterpretacionDatos/BLOQUE_4.md",
-    "IngenieriaProcesadoDatos/BLOQUE_3.md",
     "IngenieriaProcesadoDatos/documentacion/apache_hive.png",
     "ENTREGAS/Análisis Exploratorio con Google Big Query.md",
     "IngenieriaProcesadoDatos/documentacion/replicacion_kafka.png",
