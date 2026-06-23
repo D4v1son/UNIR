@@ -1,0 +1,144 @@
+Guion 2. Redis con Docker, uso consciente como data store en memoria
+
+Redis no es una base de datos generalista. Es memoria compartida estructurada con persistencia opcional.
+
+1. Crear y arrancar contenedor Redis
+
+Imagen oficial (paso opcional):
+
+docker pull redis/redis-stack:latest
+
+
+Arranque básico:
+
+docker run -d --name lab_redis -p 6379:6379 redis/redis-stack:latest
+
+
+Verifica estado:
+
+docker logs lab_redis
+
+2. Acceder a Redis
+
+Acceso vía CLI:
+
+docker exec -it lab_redis redis-cli
+
+
+Prompt esperado:
+
+127.0.0.1:6379>
+
+3. Operaciones básicas con claves
+
+Insertar valor simple:
+
+SET user:1:name "User One"
+
+
+Leer valor:
+
+GET user:1:name
+
+
+Redis no valida esquemas. Tú eres el esquema.
+
+4. Estructuras de datos
+
+Hash para representar entidad:
+
+HSET user:1 email "user1@mail.com" name "User One"
+
+
+Leer hash completo:
+
+HGETALL user:1
+
+
+Esto es lo correcto para pseudo documentos.
+
+5. Listas y sets
+
+Lista ordenada:
+
+LPUSH logs "event1"
+LPUSH logs "event2"
+LRANGE logs 0 -1
+
+
+Set sin duplicados:
+
+SADD active_users user1 user2
+SMEMBERS active_users
+
+6. TTL y expiración
+
+Clave con expiración:
+
+SET session:1 "token123" EX 60
+
+
+Consulta TTL:
+
+TTL session:1
+
+
+Redis brilla aquí. No ignores este patrón.
+
+7. Borrado
+
+Eliminar clave:
+
+DEL user:1
+
+
+Eliminar múltiples:
+
+DEL key1 key2 key3
+
+8. Inspección básica
+
+Claves existentes:
+
+KEYS *
+
+
+Uso real:
+
+SCAN 0
+
+
+KEYS * no se usa en producción.
+
+9. Persistencia en Redis
+
+Redis guarda en memoria. La persistencia es opcional y configurable.
+
+Volumen Docker:
+
+docker volume create redis_data
+
+
+Arranque persistente:
+
+docker run -d --name lab_redis -p 6379:6379 -v redis_data:/data redis --appendonly yes
+
+
+Ruta crítica:
+
+/data
+
+
+Sin AOF o RDB, Redis es volátil por diseño.
+
+10. Salir y detener contenedor
+
+Salir:
+
+exit
+
+
+Parar y eliminar:
+
+docker stop lab_redis
+docker rm lab_redis

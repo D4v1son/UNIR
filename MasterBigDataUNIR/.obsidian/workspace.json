@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BasesDeDatos/BLOQUE_1.md",
+                "file": "VisualizacionInteractiva/BLOQUE_1.md",
                 "mode": "preview",
                 "source": true
               },
@@ -27,10 +27,10 @@
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "BasesDeDatos/esquema_bloque1_BDBD.md"
+                "file": "VisualizacionInteractiva/esquema_bloque1_VII.md"
               },
               "icon": "excalidraw-icon",
-              "title": "esquema_bloque1_BDBD"
+              "title": "esquema_bloque1_VII"
             }
           },
           {
@@ -103,8 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "6b9cea7ec0ad8da8",
@@ -212,9 +211,11 @@
   },
   "active": "c7ccef7d70bb3967",
   "lastOpenFiles": [
-    "BasesDeDatos/BLOQUE_1.md",
-    "BasesDeDatos/esquema_bloque1_BDBD.md",
     "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
+    "VisualizacionInteractiva/esquema_bloque1_VII.md",
+    "VisualizacionInteractiva/BLOQUE_1.md",
+    "BasesDeDatos/esquema_bloque1_BDBD.md",
+    "BasesDeDatos/BLOQUE_1.md",
     "IngenieriaProcesadoDatos/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
     "IngenieriaProcesadoDatos/BLOQUE_1.md",
@@ -242,7 +243,6 @@
     "VisualizacionInteractiva/BLOQUE_4.md",
     "VisualizacionInteractiva/BLOQUE_3.md",
     "VisualizacionInteractiva/BLOQUE_2.md",
-    "VisualizacionInteractiva/BLOQUE_1.md",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
     "TecnicasInteligenciaArtificial/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_4.md",
@@ -252,7 +252,6 @@
     "AnalisisInterpretacionDatos/BLOQUE_3.md",
     "AnalisisInterpretacionDatos/BLOQUE_4.md",
     "IngenieriaProcesadoDatos/documentacion/apache_hive.png",
-    "ENTREGAS/Análisis Exploratorio con Google Big Query.md",
     "IngenieriaProcesadoDatos/documentacion/replicacion_kafka.png",
     "IngenieriaProcesadoDatos/documentacion/apache_kafka_estructura.png",
     "BasesDeDatos/actividades/actividad2_individual_18052026/modelo_nosql.png",
