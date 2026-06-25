@@ -13,12 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "VisualizacionInteractiva/BLOQUE_1.md",
+                "file": "IngenieriaProcesadoDatos/BLOQUE_1.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
               "title": "BLOQUE_1"
+            }
+          },
+          {
+            "id": "77d921e5a90ef562",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "IngenieriaProcesadoDatos/esquema_bloque1_IPMD.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "esquema_bloque1_IPMD"
             }
           },
           {
@@ -31,18 +43,6 @@
               },
               "icon": "excalidraw-icon",
               "title": "esquema_bloque1_VII"
-            }
-          },
-          {
-            "id": "77d921e5a90ef562",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "esquema_bloque1_TIA"
             }
           }
         ],
@@ -209,17 +209,30 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "c7ccef7d70bb3967",
+  "active": "77d921e5a90ef562",
   "lastOpenFiles": [
-    "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
+    "IngenieriaProcesadoDatos/BLOQUE_1.md",
+    "IngenieriaProcesadoDatos/esquema_bloque1_IPMD.md",
+    "IngenieriaProcesadoDatos/documentacion/proceso_escritura_hdfs.png",
+    "IngenieriaProcesadoDatos/documentacion/proceso_lectura_hdfs.png",
+    "IngenieriaProcesadoDatos/BLOQUE_2.md",
+    "IngenieriaProcesadoDatos/documentacion/google_icon.png",
+    "Pasted Image 20260625110917_274.png",
+    "horario_convocatoriaexamenes_ordinaria.png",
+    "Pasted Image 20260625110837_163.png",
     "VisualizacionInteractiva/esquema_bloque1_VII.md",
     "VisualizacionInteractiva/BLOQUE_1.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_4.md",
+    "TecnicasInteligenciaArtificial/documentacion/Clase12/Clase12. Resolución de problemas mediante búsqueda I.pdf",
+    "TecnicasInteligenciaArtificial/documentacion/Clase12",
+    "TecnicasInteligenciaArtificial/documentacion/Nueva carpeta",
+    "TecnicasInteligenciaArtificial/BLOQUE_3.md",
+    "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
+    "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
     "BasesDeDatos/esquema_bloque1_BDBD.md",
     "BasesDeDatos/BLOQUE_1.md",
     "IngenieriaProcesadoDatos/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
-    "IngenieriaProcesadoDatos/BLOQUE_1.md",
-    "IngenieriaProcesadoDatos/BLOQUE_2.md",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/actividad_3_ DavidVicenteMoya.pdf",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/actividad3_ bot.pdf",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/build/actividad3_ bot.synctex(busy)",
@@ -227,9 +240,6 @@
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/build/actividad3_ bot.synctex.gz",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/build/actividad3_ bot.toc",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/build/actividad3_ bot.pdf",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/build/actividad3_ bot.out",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/build/actividad3_ bot.log",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/build/actividad3_ bot.fdb_latexmk",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/imgs/gasto_tipo_cliente (1).png",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/imgs/gasto_tipo_cliente.png",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/imgs/frecuencia_tiempo_entrega.png",
@@ -243,19 +253,8 @@
     "VisualizacionInteractiva/BLOQUE_4.md",
     "VisualizacionInteractiva/BLOQUE_3.md",
     "VisualizacionInteractiva/BLOQUE_2.md",
-    "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_3.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_4.md",
     "TecnicasInteligenciaArtificial/BLOQUE_2.md",
     "BasesDeDatos/BLOQUE_2.md",
-    "BasesDeDatos/BLOQUE_3.md",
-    "AnalisisInterpretacionDatos/BLOQUE_3.md",
-    "AnalisisInterpretacionDatos/BLOQUE_4.md",
-    "IngenieriaProcesadoDatos/documentacion/apache_hive.png",
-    "IngenieriaProcesadoDatos/documentacion/replicacion_kafka.png",
-    "IngenieriaProcesadoDatos/documentacion/apache_kafka_estructura.png",
-    "BasesDeDatos/actividades/actividad2_individual_18052026/modelo_nosql.png",
-    "IngenieriaProcesadoDatos/documentacion/pipelines.png",
-    "BasesDeDatos/documentacion/Clase06/04 - MongoDB - Agregación PyMongo/map_salamanca.png"
+    "BasesDeDatos/BLOQUE_3.md"
   ]
 }

@@ -1,0 +1,251 @@
+{
+  "name": "workflow_psu_prim_26",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "994ebee6-e402-4cf1-9790-d791709db549",
+      "name": "Telegram Trigger",
+      "webhookId": "c306831b-9492-4652-af97-c04635943e1e",
+      "credentials": {
+        "telegramApi": {
+          "id": "zESU109X7B8BAel7",
+          "name": "psu_prim_26"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Eres el agente de pedidos. Si el mensaje del usuario contiene o empieza por “pedido”, llama a la herramienta “Data table” para registrar el mensaje. Tras registrar, responde: “✅ Pedido registrado. Gracias.” Si el mensaje no contiene “pedido”, no uses la herramienta y responde informando que para realizar el pedido se requiere comenzar el mensaje por “pedido” e incluir el producto, cantidad y email sin repreguntas ni confirmaciones adicionales. Si se requieren cálculos para estimar el número de unidades del pedido emplea el MCP Client Calculator. El mensaje del usuario es:\n{{$json.message.text}}\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "e96add85-ade6-4299-b6c5-62a830e5aa6c",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "={{ $json.output }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        560,
+        0
+      ],
+      "id": "c61e8ba2-9039-4834-8e70-6694743d5177",
+      "name": "Send a text message",
+      "webhookId": "7213345d-343c-46df-92da-9e47c3c53e77",
+      "credentials": {
+        "telegramApi": {
+          "id": "zESU109X7B8BAel7",
+          "name": "psu_prim_26"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-5-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        192,
+        208
+      ],
+      "id": "5718e9af-3c97-4c50-ba5e-0a90e422c309",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "6dU4zpyrXmmgHHDL",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "value": "qtIwTQZuiWsyUp2L",
+          "mode": "list",
+          "cachedResultName": "psu_prim_26_table",
+          "cachedResultUrl": "/projects/wbyFzbHWOCAf70LP/datatables/qtIwTQZuiWsyUp2L"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "chat_id": "={{ $json.message.chat.id }}",
+            "text": "={{ $json.message.text }}",
+            "first_name": "={{ $json.message.chat.first_name }}",
+            "Unidades": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Unidades', ``, 'number') }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "chat_id",
+              "displayName": "chat_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "first_name",
+              "displayName": "first_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "text",
+              "displayName": "text",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Unidades",
+              "displayName": "Unidades",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1.1,
+      "position": [
+        352,
+        208
+      ],
+      "id": "d1a38d1e-44bd-4bb2-a181-4b4c593c5124",
+      "name": "Tabla pedidos"
+    },
+    {
+      "parameters": {
+        "endpointUrl": "https://epozuelo.app.n8n.cloud/mcp/dd79ef3d-274d-4f98-b907-9002be0ddfe7",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
+      "typeVersion": 1.3,
+      "position": [
+        480,
+        208
+      ],
+      "id": "2d781a89-4d61-439b-93af-b9301567a332",
+      "name": "MCP Client Calculator"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tabla pedidos": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MCP Client Calculator": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "ffa93c43-3bed-49f6-a29c-e5127a4ac206",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "4838d473d3b1747799c22ac5bf68b7239e1c0462e4d5bbb5da92bdbcb6f36aba"
+  },
+  "nodeGroups": [],
+  "id": "CzHSHjNtvw4pOmpc",
+  "tags": []
+}

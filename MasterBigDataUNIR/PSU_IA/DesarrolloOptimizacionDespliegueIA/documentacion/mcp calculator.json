@@ -1,0 +1,57 @@
+{
+  "name": "mcp calculator",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "dd79ef3d-274d-4f98-b907-9002be0ddfe7"
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpTrigger",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "b9a0fc6f-a8dc-404d-a056-e19285e42fb1",
+      "name": "MCP Server Trigger",
+      "webhookId": "dd79ef3d-274d-4f98-b907-9002be0ddfe7"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+      "typeVersion": 1,
+      "position": [
+        96,
+        208
+      ],
+      "id": "95c2521e-5b17-4b21-ab7f-d7eba0bd6e09",
+      "name": "Calculator"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Calculator": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "7d18b6be-6ae8-4163-9b90-fa0165126b35",
+  "meta": {
+    "instanceId": "4838d473d3b1747799c22ac5bf68b7239e1c0462e4d5bbb5da92bdbcb6f36aba"
+  },
+  "nodeGroups": [],
+  "id": "AlFeyB8DAJhX1Fm1",
+  "tags": []
+}

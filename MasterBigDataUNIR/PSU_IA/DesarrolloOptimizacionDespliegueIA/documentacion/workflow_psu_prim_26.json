@@ -1,0 +1,1102 @@
+{
+  "name": "workflow_psu_prim_26",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -1120,
+        0
+      ],
+      "id": "994ebee6-e402-4cf1-9790-d791709db549",
+      "name": "Telegram Trigger",
+      "webhookId": "c306831b-9492-4652-af97-c04635943e1e",
+      "credentials": {
+        "telegramApi": {
+          "id": "zESU109X7B8BAel7",
+          "name": "psu_prim_26"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "={{ $json.output }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1168,
+        -224
+      ],
+      "id": "c61e8ba2-9039-4834-8e70-6694743d5177",
+      "name": "Send a text message",
+      "webhookId": "7213345d-343c-46df-92da-9e47c3c53e77",
+      "credentials": {
+        "telegramApi": {
+          "id": "zESU109X7B8BAel7",
+          "name": "psu_prim_26"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "endpointUrl": "https://epozuelo.app.n8n.cloud/mcp/dd79ef3d-274d-4f98-b907-9002be0ddfe7",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
+      "typeVersion": 1.3,
+      "position": [
+        624,
+        368
+      ],
+      "id": "2d781a89-4d61-439b-93af-b9301567a332",
+      "name": "MCP Client Calculator"
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "value": "qtIwTQZuiWsyUp2L",
+          "mode": "list",
+          "cachedResultName": "psu_prim_26_table",
+          "cachedResultUrl": "/projects/wbyFzbHWOCAf70LP/datatables/qtIwTQZuiWsyUp2L"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "chat_id": "={{ $json.message.chat.id }}",
+            "text": "={{ $json.message.text }}",
+            "first_name": "={{ $json.message.chat.first_name }}",
+            "Unidades": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Unidades', ``, 'number') }}",
+            "email": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('email', ``, 'string') }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "chat_id",
+              "displayName": "chat_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "first_name",
+              "displayName": "first_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "text",
+              "displayName": "text",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Unidades",
+              "displayName": "Unidades",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1.1,
+      "position": [
+        496,
+        368
+      ],
+      "id": "d1a38d1e-44bd-4bb2-a181-4b4c593c5124",
+      "name": "Tabla pedidos"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Agente de pedidos que los almacena y responde al cliente",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "options": {
+          "systemMessage": "Eres el agente de pedidos. Responde siempre en español, con 1–2 frases, sin repreguntas ni detalles internos. Orden de acciones (siempre en este orden): \nCálculo (primero): si el mensaje contiene una expresión aritmética clara, ejecútala con la herramienta MCP Client → Calculator. Detecta y normaliza la expresión: convierte x o · a *, cambia comas decimales por punto (45,5→45.5), permite + - * / ( ), borra texto no numérico alrededor. Entrada a la tool: pasa la expresión normalizada como string (ej.: 20000*1234). Si la tool devuelve error, no reintentes; informa con “No pude calcular esa expresión”. \nRegistro de pedido: si el mensaje contiene o empieza por pedido (ignorando mayúsculas/minúsculas), usa Insert row in Data table con: message: texto completo, source: \"telegram\", messageId: si existe, createdAt: ISO 8601. Idempotencia: si ya insertaste para este messageId, no insertes de nuevo. \nRespuesta al usuario: Si calculaste y registraste: ✅ Pedido registrado. 🧮 Resultado: <valor> Si solo calculaste: 🧮 Resultado: <valor> Si solo registraste: ✅ Pedido registrado. Gracias. \nSi no hubo ni cálculo ni “pedido”: Para registrar un pedido, comienza por \"pedido\" e incluye producto, cantidad y email. Restricciones: No pidas confirmaciones. No muestres nombres de tools ni pasos internos. Mantén números tal cual los devuelve la calculadora; no redondees salvo que la tool ya lo haga. No dupliques inserciones. Ejemplos: pedido 20000 x 1234 paquetes... email a@b.com → Calcula 20000*1234; inserta fila → Respuesta: ✅ Pedido registrado. 🧮 Resultado: 24680000 3+5*2 → Calcula; no registra → Respuesta: 🧮 Resultado: 13 hola → No cálculo, no registro → Respuesta: Para registrar un pedido, comienza por \"pedido\" e incluye producto, cantidad y email.\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 3,
+      "position": [
+        352,
+        208
+      ],
+      "id": "e7868d9d-a5e3-4ea3-9c28-0486955a5e3a",
+      "name": "Pedidos"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Eres el ORQUESTADOR del asistente de Telegram en n8n.\n\nAnaliza el mensaje del usuario:\n\n{{ $json.texto }}\n\ny decide si debes invocar un único agente principal.\n\nAGENTES PRINCIPALES\n\nPuedes elegir SOLO 1:\n\n* Pedidos: compras, encargos, cálculos, presupuestos, confirmaciones o modificaciones de pedido.\n* Reclamaciones: incidencias, quejas, devoluciones, reembolsos, retrasos, productos defectuosos, incompletos o equivocados.\n* Hipotecas: consultas sobre hipotecas, comisiones, cuotas, tipos, gastos, requisitos o condiciones hipotecarias.\n\nEmail es opcional y solo puede usarse como acción secundaria si el mensaje contiene una dirección de correo.\n\nPRIORIDAD DE CLASIFICACIÓN\n\n1. Reclamaciones\n   Si el usuario comunica un problema o queja: “no llegó”, “llegó tarde”, “roto”, “defectuoso”, “incompleto”, “equivocado”, “devolución”, “reembolso”, “incidencia”, “reclamación”, etc.\n\n2. Pedidos\n   Si el mensaje empieza por “pedido” o expresa intención clara de comprar, encargar, calcular, presupuestar o modificar un pedido.\n\n3. Hipotecas\n   Si pregunta sobre hipotecas, financiación de vivienda, comisiones, cuotas, tipos, gastos, requisitos o condiciones bancarias relacionadas.\n\n4. Indefinido\n   Si no encaja claramente, no invoques agentes. Responde en una frase pidiendo que indique si quiere hacer un pedido, poner una reclamación o consultar sobre hipotecas.\n\nEJECUCIÓN\n\n* Invoca exactamente 1 agente principal si la intención es Pedidos, Reclamaciones o Hipotecas.\n* Pásale el mensaje original completo:\n\n{{ $json.message.text }}\n\n* No invoques agentes si la intención es Indefinido.\n* No inventes datos, referencias, pedidos ni reclamaciones.\n* No recalcules ni modifiques la respuesta del agente especialista.\n\nEMAIL OPCIONAL\n\nSi el mensaje contiene un email tipo [usuario@dominio.tld](mailto:usuario@dominio.tld) y la intención no es Indefinido, puedes enviar una confirmación breve. Si hay varios emails, usa el primero.\n\nRESPUESTA FINAL AL USUARIO\n\n* Responde en español.\n* Máximo 1–2 frases.\n* Tono claro y profesional.\n* No menciones agentes, herramientas, nodos, flujos internos ni razonamiento.\n* Si enviaste email, añade:\n  “✉️ Confirmación enviada a <email>.”\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "e96add85-ade6-4299-b6c5-62a830e5aa6c",
+      "name": "Orquestador"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolThink",
+      "typeVersion": 1.1,
+      "position": [
+        240,
+        208
+      ],
+      "id": "60364bf7-fd4c-4067-bef3-e7a6cae3f972",
+      "name": "Think"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Agente de reclamaciones",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "options": {
+          "systemMessage": "Rol\nEres el agente de reclamaciones. Atiendes incidencias de clientes y dejas un registro trazable de cada caso.\nObjetivo\nEn 2–4 frases en español, clasifica el motivo de la reclamación, pide solo el dato mínimo que falte y explica el siguiente paso (seguimiento, devolución o revisión). Evita información interna.\nHerramienta de registro\nUsa “Registra reclamaciones” exactamente una vez por mensaje para guardar la evidencia.\nDetección de motivo (elige uno)\nno_llego: “no llegó”, “no ha llegado”, “retraso”, “paquete perdido”.\ndefectuoso: “defectuoso”, “roto”, “no funciona”, “en mal estado”.\notro: cualquier incidencia distinta.\nFlujo de acción\nRegistra la reclamación con la herramienta (siempre, antes de responder).\nIdentifica el motivo (no_llego | defectuoso | otro).\nPide SOLO el dato mínimo que falte (por ejemplo, n.º de pedido o email) y una sola vez.\nExplica en una frase el siguiente paso:\nno_llego → comprobación con logística y plazo estimado (24–48 h).\ndefectuoso → proceso de devolución/cambio (etiqueta, plazos).\notro → derivación a revisión con tiempo de respuesta.\nEstilo de respuesta\n2–4 frases, claras y empáticas.\nNo muestres nombres de herramientas ni procesos internos.\nNo entres en bucles de repreguntas; una solicitud de dato mínimo es suficiente.\nResponde solo con el texto al cliente (sin JSON ni metadatos).\nPlantillas breves (orientativas, adapta al caso real)\nNo llegó:\n“Hemos registrado tu incidencia y ya estamos revisando el envío. Si nos indicas el n.º de pedido, podremos acelerarlo; si no aparece en 24–48 h, tramitaremos el reembolso.”\nDefectuoso:\n“Tu reclamación ha quedado registrada. Gestionaremos la devolución/cambio: te enviaremos una etiqueta y, al recibir el producto, remitiremos el reemplazo o el reembolso.”\nOtro:\n“Hemos anotado tu reclamación. Indícanos el n.º de pedido para verificarla y te daremos una actualización en breve.”\nSi falta información esencial\nSi no hay datos mínimos para avanzar y no es posible inferirlos, solicita solo uno (el más útil) y explica el siguiente paso tras recibirlo.\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 3,
+      "position": [
+        752,
+        208
+      ],
+      "id": "342a158e-8c6a-4544-8a10-0b2f61fd4079",
+      "name": "Reclamaciones"
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "value": "x0HnNhnyJZlqIyv7",
+          "mode": "list",
+          "cachedResultName": "Reclamaciones_psuprim26",
+          "cachedResultUrl": "/projects/wbyFzbHWOCAf70LP/datatables/x0HnNhnyJZlqIyv7"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "chat_id": "={{ $json.message.chat.id }}",
+            "message_id": "={{ $json.message.message_id }}",
+            "FirstName": "={{ $json.message.from.first_name }}",
+            "Reclamacion": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Reclamacion', ``, 'string') }}",
+            "email": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('email', ``, 'string') }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "chat_id",
+              "displayName": "chat_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "message_id",
+              "displayName": "message_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "FirstName",
+              "displayName": "FirstName",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Reclamacion",
+              "displayName": "Reclamacion",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1.1,
+      "position": [
+        912,
+        368
+      ],
+      "id": "819767e3-18ad-45d6-916d-a0946b6483aa",
+      "name": "Tabla reclamaciones"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Agente para responder sobre condiciones en las hipotecas",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "options": {
+          "systemMessage": "Eres el AGENTE DE HIPOTECAS de un banco.\n\nRespondes consultas sobre hipotecas, comisiones, cuotas, tipos, gastos, requisitos, documentación y condiciones hipotecarias.\n\nAntes de responder, consulta la base Pinecone `documentacion-hipotecas` y usa esa información como fuente principal.\n\nReglas:\n\n* Prioriza siempre la información recuperada de Pinecone.\n* No inventes porcentajes, importes, plazos, comisiones ni requisitos.\n* Si no hay información suficiente, responde de forma general e indica que es orientativo.\n* No confirmes aprobaciones ni condiciones definitivas.\n* Si requiere estudio personalizado, aclara que dependerá del análisis individual del cliente.\n* Responde en el idioma del usuario.\n* Tono claro, profesional y breve.\n* No menciones Pinecone, herramientas, nodos ni procesos internos.\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 3,
+      "position": [
+        1056,
+        208
+      ],
+      "id": "7b722a19-b48b-47ac-8ce5-5e45431fab2c",
+      "name": "Hipotecas"
+    },
+    {
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "toolDescription": "Información sobre condiciones en hipotecas",
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "hipotecas",
+          "mode": "list",
+          "cachedResultName": "hipotecas"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1.3,
+      "position": [
+        1152,
+        368
+      ],
+      "id": "85ab1106-088f-4d9c-a7ee-0d2d6f0f8fff",
+      "name": "Pinecone Vector Store",
+      "credentials": {
+        "pineconeApi": {
+          "id": "pkuI0vmkudyiSSnl",
+          "name": "prim26"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        1152,
+        496
+      ],
+      "id": "4018602f-d84c-4f27-97ca-bf514dab1d7a",
+      "name": "Embeddings Google Gemini",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "2whQWGjZVw3FGkWW",
+          "name": "gemini_psu_prim_26"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('To', ``, 'string') }}",
+        "subject": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Subject', ``, 'string') }}",
+        "message": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Message', ``, 'string') }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.2,
+      "position": [
+        1568,
+        368
+      ],
+      "id": "5b9bdae5-3d9e-4634-b3d7-4932042acf97",
+      "name": "Enviar email",
+      "webhookId": "f87ac1c9-1b69-4858-85e5-3fbb92ee3508",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "iP8kcicTBs7sTbBB",
+          "name": "Gmail account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "AI Agent para enviar acuse de recibo por email",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "options": {
+          "systemMessage": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('System_Message', ``, 'string') }}"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 3,
+      "position": [
+        1424,
+        208
+      ],
+      "id": "d2013959-a573-4788-bd18-3a547e8e7e0f",
+      "name": "Envío email"
+    },
+    {
+      "parameters": {
+        "model": "llama-3.3-70b-versatile",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        16,
+        208
+      ],
+      "id": "5a9f4550-5eee-4153-8575-770070ce9f0a",
+      "name": "Groq Chat Model",
+      "credentials": {
+        "groqApi": {
+          "id": "fmsr8gL3hiHcjrG7",
+          "name": "Groq account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "llama-3.3-70b-versatile",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        352,
+        368
+      ],
+      "id": "132aca51-bcdf-49fe-899e-208d055dbe5e",
+      "name": "Groq Chat Model1",
+      "credentials": {
+        "groqApi": {
+          "id": "fmsr8gL3hiHcjrG7",
+          "name": "Groq account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "llama-3.3-70b-versatile",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        752,
+        368
+      ],
+      "id": "9a13c9cc-56e1-4590-9f17-0766519c55ef",
+      "name": "Groq Chat Model2",
+      "credentials": {
+        "groqApi": {
+          "id": "fmsr8gL3hiHcjrG7",
+          "name": "Groq account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "llama-3.3-70b-versatile",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        1056,
+        368
+      ],
+      "id": "2e195cd2-a6cd-462b-82f6-e597952601aa",
+      "name": "Groq Chat Model3",
+      "credentials": {
+        "groqApi": {
+          "id": "fmsr8gL3hiHcjrG7",
+          "name": "Groq account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "qwen/qwen3.6-27b",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        1424,
+        368
+      ],
+      "id": "4e0cde45-66ec-44c3-9cd6-75547066b0e1",
+      "name": "Groq Chat Model4",
+      "credentials": {
+        "groqApi": {
+          "id": "fmsr8gL3hiHcjrG7",
+          "name": "Groq account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.message.voice.file_id }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "notExists",
+                      "singleValue": true
+                    },
+                    "id": "79695a96-941a-4e76-beea-b292146a1f49"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Texto"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "0b8fdf4e-38d8-47bf-a7d0-bd9192aea951",
+                    "leftValue": "={{ $json.message.voice.file_id }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "exists",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Audio"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        -912,
+        0
+      ],
+      "id": "80dcaaec-c079-4459-a515-f8de9128e7eb",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "51cbe936-2309-467d-87a0-5c250222c320",
+              "name": "texto",
+              "value": "={{ $json.message.text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -496,
+        -96
+      ],
+      "id": "4237308b-4eb0-4766-a17d-889ac7dcb47d",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "fileId": "={{ $json.message.voice.file_id }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -704,
+        96
+      ],
+      "id": "0c9ef778-2393-415b-821b-66eaa5e24c5f",
+      "name": "Get a file",
+      "webhookId": "dfee0273-8487-4536-b28e-8ffcfbe292ea",
+      "credentials": {
+        "telegramApi": {
+          "id": "zESU109X7B8BAel7",
+          "name": "psu_prim_26"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-3-flash-preview",
+          "mode": "list",
+          "cachedResultName": "models/gemini-3-flash-preview"
+        },
+        "inputType": "binary",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1.2,
+      "position": [
+        -496,
+        96
+      ],
+      "id": "2c1def04-88fb-4eae-8e5c-2c6059770f7e",
+      "name": "Transcribe a recording",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "2whQWGjZVw3FGkWW",
+          "name": "gemini_psu_prim_26"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c686d0d7-a710-4f9b-999f-4e32d044a714",
+              "name": "texto",
+              "value": "={{ $json.content.parts[0].text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -288,
+        96
+      ],
+      "id": "3ce2bd64-5f98-4507-b13a-bf2216b855fd",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Telegram Trigger').item.json.message.chat.id }}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.4,
+      "position": [
+        128,
+        208
+      ],
+      "id": "418be01c-8395-48ea-956a-e79f3b484833",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('Telegram Trigger').item.json.message.voice.file_id }}",
+                    "rightValue": "={{ $('Telegram Trigger').item.json.message.voice.file_id }}",
+                    "operator": {
+                      "type": "string",
+                      "operation": "notExists",
+                      "singleValue": true
+                    },
+                    "id": "3efb87d9-8e27-49d0-a548-1f2660665f1c"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Texto"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "123c407a-38c4-401b-8c9c-2ea2d4cd2ffc",
+                    "leftValue": "={{ $('Telegram Trigger').item.json.message.voice.file_id }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "exists",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Audio"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        560,
+        0
+      ],
+      "id": "1f342418-142e-4295-aecd-ae70d727c363",
+      "name": "Switch1"
+    },
+    {
+      "parameters": {
+        "operation": "sendAudio",
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "binaryData": true,
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1152,
+        -16
+      ],
+      "id": "6816c63d-f3ab-4c2c-a37d-4ab41cb088c3",
+      "name": "Send an audio file",
+      "webhookId": "f0290fcb-14bf-4e6d-9b53-716ed41eddb0",
+      "credentials": {
+        "telegramApi": {
+          "id": "zESU109X7B8BAel7",
+          "name": "psu_prim_26"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "input": "={{ $json.output }}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 2.3,
+      "position": [
+        880,
+        0
+      ],
+      "id": "9b9f1f90-2940-4678-badf-624e9de1cec1",
+      "name": "Generate audio",
+      "credentials": {
+        "openAiApi": {
+          "id": "6dU4zpyrXmmgHHDL",
+          "name": "OpenAi account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MCP Client Calculator": {
+      "ai_tool": [
+        [
+          {
+            "node": "Pedidos",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tabla pedidos": {
+      "ai_tool": [
+        [
+          {
+            "node": "Pedidos",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pedidos": {
+      "ai_tool": [
+        [
+          {
+            "node": "Orquestador",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Orquestador": {
+      "main": [
+        [
+          {
+            "node": "Switch1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Think": {
+      "ai_tool": [
+        [
+          {
+            "node": "Orquestador",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Reclamaciones": {
+      "ai_tool": [
+        [
+          {
+            "node": "Orquestador",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tabla reclamaciones": {
+      "ai_tool": [
+        [
+          {
+            "node": "Reclamaciones",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hipotecas": {
+      "ai_tool": [
+        [
+          {
+            "node": "Orquestador",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store": {
+      "ai_tool": [
+        [
+          {
+            "node": "Hipotecas",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings Google Gemini": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enviar email": {
+      "ai_tool": [
+        [
+          {
+            "node": "Envío email",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Envío email": {
+      "ai_tool": [
+        [
+          {
+            "node": "Orquestador",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Orquestador",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Pedidos",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Reclamaciones",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Hipotecas",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Envío email",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Get a file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Orquestador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get a file": {
+      "main": [
+        [
+          {
+            "node": "Transcribe a recording",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Transcribe a recording": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Orquestador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "Orquestador",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch1": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Generate audio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate audio": {
+      "main": [
+        [
+          {
+            "node": "Send an audio file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "51106213-a45f-4be6-ab2e-b54d31a688ab",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "4838d473d3b1747799c22ac5bf68b7239e1c0462e4d5bbb5da92bdbcb6f36aba"
+  },
+  "nodeGroups": [],
+  "id": "CzHSHjNtvw4pOmpc",
+  "tags": []
+}
