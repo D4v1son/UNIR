@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IngenieriaProcesadoDatos/BLOQUE_1.md",
+                "file": "AnalisisInterpretacionDatos/BLOQUE_2.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "BLOQUE_1"
+              "title": "BLOQUE_2"
             }
           },
           {
@@ -45,8 +45,7 @@
               "title": "esquema_bloque1_VII"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -78,7 +77,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:IPMD",
+                "query": "tag:#test",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -209,52 +208,54 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "77d921e5a90ef562",
+  "active": "b90b17f544f74d4e",
   "lastOpenFiles": [
+    "AnalisisInterpretacionDatos/BLOQUE_3.md",
+    "AnalisisInterpretacionDatos/BLOQUE_4.md",
+    "BasesDeDatos/BLOQUE_3.md",
+    "VisualizacionInteractiva/BLOQUE_3.md",
+    "IngenieriaProcesadoDatos/BLOQUE_2.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
+    "VisualizacionInteractiva/BLOQUE_1.md",
+    "BasesDeDatos/BLOQUE_1.md",
+    "IngenieriaProcesadoDatos/BLOQUE_3.md",
     "IngenieriaProcesadoDatos/BLOQUE_1.md",
+    "BasesDeDatos/BLOQUE_2.md",
+    "VisualizacionInteractiva/esquema_bloque1_VII.md",
     "IngenieriaProcesadoDatos/esquema_bloque1_IPMD.md",
+    "VisualizacionInteractiva/documentacion/10. Visualización dinámica e interactividad (II).pdf",
+    "VisualizacionInteractiva/documentacion/9. Visualización dinámica e interactividad (I).pdf",
+    "VisualizacionInteractiva/documentacion/Ejemplo tema 8 cars.csv",
+    "VisualizacionInteractiva/documentacion/8. Visualización estática - Análisis Multivariante.pdf",
+    "VisualizacionInteractiva/documentacion/Ejemplo tema 7 Longitud.csv",
+    "VisualizacionInteractiva/documentacion/7. Codificación gráfica de datos (III) - Posición y longitud.pdf",
+    "VisualizacionInteractiva/documentacion/Ejemplo tema 7 Color.csv",
+    "VisualizacionInteractiva/documentacion/7. Codificación gráfica de datos (II) - Color.pdf",
+    "VisualizacionInteractiva/documentacion/7. Codificación gráfica de datos (I) - Texto.pdf",
+    "VisualizacionInteractiva/documentacion/Ejemplo tema 6 Student Performance.csv",
+    "VisualizacionInteractiva/documentacion/percepcion_visual.png",
+    "VisualizacionInteractiva/documentacion/organizacion_perceptual.png",
+    "VisualizacionInteractiva/documentacion/codificar_y_decodificar.png",
+    "nota.md",
+    "Sin título.canvas",
     "IngenieriaProcesadoDatos/documentacion/proceso_escritura_hdfs.png",
     "IngenieriaProcesadoDatos/documentacion/proceso_lectura_hdfs.png",
-    "IngenieriaProcesadoDatos/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/documentacion/google_icon.png",
     "Pasted Image 20260625110917_274.png",
     "horario_convocatoriaexamenes_ordinaria.png",
     "Pasted Image 20260625110837_163.png",
-    "VisualizacionInteractiva/esquema_bloque1_VII.md",
-    "VisualizacionInteractiva/BLOQUE_1.md",
     "TecnicasInteligenciaArtificial/BLOQUE_4.md",
-    "TecnicasInteligenciaArtificial/documentacion/Clase12/Clase12. Resolución de problemas mediante búsqueda I.pdf",
-    "TecnicasInteligenciaArtificial/documentacion/Clase12",
-    "TecnicasInteligenciaArtificial/documentacion/Nueva carpeta",
     "TecnicasInteligenciaArtificial/BLOQUE_3.md",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
     "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
     "BasesDeDatos/esquema_bloque1_BDBD.md",
-    "BasesDeDatos/BLOQUE_1.md",
-    "IngenieriaProcesadoDatos/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/actividad_3_ DavidVicenteMoya.pdf",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/actividad3_ bot.pdf",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/build/actividad3_ bot.synctex(busy)",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/build/actividad3_ bot.fls",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/build/actividad3_ bot.synctex.gz",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/build/actividad3_ bot.toc",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/build/actividad3_ bot.pdf",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/imgs/gasto_tipo_cliente (1).png",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/imgs/gasto_tipo_cliente.png",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/imgs/frecuencia_tiempo_entrega.png",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/frecuencia_tiempo_entrega.png",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/ecommerce_dataset_readme_v_2.md",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/DATASET_README.md",
     "AnalisisInterpretacionDatos/BLOQUE_1.md",
     "TecnicasInteligenciaArtificial/REPASO_EXAMEN.md",
     "AnalisisInterpretacionDatos/resumen_bloque1_AID.md",
-    "AnalisisInterpretacionDatos/BLOQUE_2.md",
-    "VisualizacionInteractiva/BLOQUE_4.md",
-    "VisualizacionInteractiva/BLOQUE_3.md",
-    "VisualizacionInteractiva/BLOQUE_2.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
-    "BasesDeDatos/BLOQUE_2.md",
-    "BasesDeDatos/BLOQUE_3.md"
+    "AnalisisInterpretacionDatos/BLOQUE_2.md"
   ]
 }
