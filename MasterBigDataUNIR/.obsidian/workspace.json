@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AnalisisInterpretacionDatos/BLOQUE_2.md",
+                "file": "TecnicasInteligenciaArtificial/BLOQUE_2.md",
                 "mode": "preview",
                 "source": true
               },
@@ -210,12 +210,15 @@
   },
   "active": "b90b17f544f74d4e",
   "lastOpenFiles": [
+    "TecnicasInteligenciaArtificial/BLOQUE_3.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_1.md",
     "AnalisisInterpretacionDatos/BLOQUE_3.md",
+    "AnalisisInterpretacionDatos/BLOQUE_2.md",
     "AnalisisInterpretacionDatos/BLOQUE_4.md",
     "BasesDeDatos/BLOQUE_3.md",
     "VisualizacionInteractiva/BLOQUE_3.md",
     "IngenieriaProcesadoDatos/BLOQUE_2.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
     "VisualizacionInteractiva/BLOQUE_1.md",
     "BasesDeDatos/BLOQUE_1.md",
     "IngenieriaProcesadoDatos/BLOQUE_3.md",
@@ -245,17 +248,14 @@
     "horario_convocatoriaexamenes_ordinaria.png",
     "Pasted Image 20260625110837_163.png",
     "TecnicasInteligenciaArtificial/BLOQUE_4.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_3.md",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
     "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
     "BasesDeDatos/esquema_bloque1_BDBD.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_1.md",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/imgs/gasto_tipo_cliente (1).png",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/ecommerce_dataset_readme_v_2.md",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/DATASET_README.md",
     "AnalisisInterpretacionDatos/BLOQUE_1.md",
     "TecnicasInteligenciaArtificial/REPASO_EXAMEN.md",
-    "AnalisisInterpretacionDatos/resumen_bloque1_AID.md",
-    "AnalisisInterpretacionDatos/BLOQUE_2.md"
+    "AnalisisInterpretacionDatos/resumen_bloque1_AID.md"
   ]
 }
