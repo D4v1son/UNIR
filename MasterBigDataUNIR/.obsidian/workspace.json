@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TecnicasInteligenciaArtificial/BLOQUE_2.md",
+                "file": "IngenieriaProcesadoDatos/BLOQUE_2.md",
                 "mode": "preview",
                 "source": true
               },
@@ -210,22 +210,24 @@
   },
   "active": "b90b17f544f74d4e",
   "lastOpenFiles": [
-    "TecnicasInteligenciaArtificial/BLOQUE_3.md",
+    "IngenieriaProcesadoDatos/esquema_bloque1_IPMD.md",
+    "IngenieriaProcesadoDatos/BLOQUE_2.md",
+    "IngenieriaProcesadoDatos/BLOQUE_3.md",
+    "VisualizacionInteractiva/BLOQUE_2.md",
+    "VisualizacionInteractiva/BLOQUE_3.md",
+    "BasesDeDatos/BLOQUE_2.md",
+    "BasesDeDatos/BLOQUE_4.md",
+    "BasesDeDatos/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_2.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
     "AnalisisInterpretacionDatos/BLOQUE_3.md",
     "AnalisisInterpretacionDatos/BLOQUE_2.md",
     "AnalisisInterpretacionDatos/BLOQUE_4.md",
-    "BasesDeDatos/BLOQUE_3.md",
-    "VisualizacionInteractiva/BLOQUE_3.md",
-    "IngenieriaProcesadoDatos/BLOQUE_2.md",
     "VisualizacionInteractiva/BLOQUE_1.md",
     "BasesDeDatos/BLOQUE_1.md",
-    "IngenieriaProcesadoDatos/BLOQUE_3.md",
     "IngenieriaProcesadoDatos/BLOQUE_1.md",
-    "BasesDeDatos/BLOQUE_2.md",
     "VisualizacionInteractiva/esquema_bloque1_VII.md",
-    "IngenieriaProcesadoDatos/esquema_bloque1_IPMD.md",
     "VisualizacionInteractiva/documentacion/10. Visualización dinámica e interactividad (II).pdf",
     "VisualizacionInteractiva/documentacion/9. Visualización dinámica e interactividad (I).pdf",
     "VisualizacionInteractiva/documentacion/Ejemplo tema 8 cars.csv",
@@ -254,8 +256,6 @@
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/imgs/gasto_tipo_cliente (1).png",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/ecommerce_dataset_readme_v_2.md",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/DATASET_README.md",
-    "AnalisisInterpretacionDatos/BLOQUE_1.md",
-    "TecnicasInteligenciaArtificial/REPASO_EXAMEN.md",
-    "AnalisisInterpretacionDatos/resumen_bloque1_AID.md"
+    "AnalisisInterpretacionDatos/BLOQUE_1.md"
   ]
 }
