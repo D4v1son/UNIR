@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IngenieriaProcesadoDatos/BLOQUE_2.md",
+                "file": "AnalisisInterpretacionDatos/BLOQUE_3.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "BLOQUE_2"
+              "title": "BLOQUE_3"
             }
           },
           {
@@ -27,10 +27,10 @@
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "IngenieriaProcesadoDatos/esquema_bloque1_IPMD.md"
+                "file": "TecnicasInteligenciaArtificial/esquema_bloque2_TIA.md"
               },
               "icon": "excalidraw-icon",
-              "title": "esquema_bloque1_IPMD"
+              "title": "esquema_bloque2_TIA"
             }
           },
           {
@@ -210,16 +210,21 @@
   },
   "active": "b90b17f544f74d4e",
   "lastOpenFiles": [
+    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
+    "TecnicasInteligenciaArtificial/esquema_bloque2_TIA.md",
+    "IngenieriaProcesadoDatos/documentacion/Tema 8 - Conceptos generales cloud y Azure.pdf",
+    "IngenieriaProcesadoDatos/documentacion/Tema 9 - Amazon Web Services.pdf",
+    "VisualizacionInteractiva/esquema_bloque1_VII.md",
     "IngenieriaProcesadoDatos/esquema_bloque1_IPMD.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_4.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_3.md",
+    "BasesDeDatos/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/BLOQUE_3.md",
     "VisualizacionInteractiva/BLOQUE_2.md",
     "VisualizacionInteractiva/BLOQUE_3.md",
-    "BasesDeDatos/BLOQUE_2.md",
     "BasesDeDatos/BLOQUE_4.md",
     "BasesDeDatos/BLOQUE_3.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
     "AnalisisInterpretacionDatos/BLOQUE_3.md",
     "AnalisisInterpretacionDatos/BLOQUE_2.md",
@@ -227,7 +232,6 @@
     "VisualizacionInteractiva/BLOQUE_1.md",
     "BasesDeDatos/BLOQUE_1.md",
     "IngenieriaProcesadoDatos/BLOQUE_1.md",
-    "VisualizacionInteractiva/esquema_bloque1_VII.md",
     "VisualizacionInteractiva/documentacion/10. Visualización dinámica e interactividad (II).pdf",
     "VisualizacionInteractiva/documentacion/9. Visualización dinámica e interactividad (I).pdf",
     "VisualizacionInteractiva/documentacion/Ejemplo tema 8 cars.csv",
@@ -236,8 +240,6 @@
     "VisualizacionInteractiva/documentacion/7. Codificación gráfica de datos (III) - Posición y longitud.pdf",
     "VisualizacionInteractiva/documentacion/Ejemplo tema 7 Color.csv",
     "VisualizacionInteractiva/documentacion/7. Codificación gráfica de datos (II) - Color.pdf",
-    "VisualizacionInteractiva/documentacion/7. Codificación gráfica de datos (I) - Texto.pdf",
-    "VisualizacionInteractiva/documentacion/Ejemplo tema 6 Student Performance.csv",
     "VisualizacionInteractiva/documentacion/percepcion_visual.png",
     "VisualizacionInteractiva/documentacion/organizacion_perceptual.png",
     "VisualizacionInteractiva/documentacion/codificar_y_decodificar.png",
@@ -249,13 +251,10 @@
     "Pasted Image 20260625110917_274.png",
     "horario_convocatoriaexamenes_ordinaria.png",
     "Pasted Image 20260625110837_163.png",
-    "TecnicasInteligenciaArtificial/BLOQUE_4.md",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
     "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
     "BasesDeDatos/esquema_bloque1_BDBD.md",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/imgs/gasto_tipo_cliente (1).png",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/ecommerce_dataset_readme_v_2.md",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/DATASET_README.md",
-    "AnalisisInterpretacionDatos/BLOQUE_1.md"
+    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/ecommerce_dataset_readme_v_2.md"
   ]
 }
