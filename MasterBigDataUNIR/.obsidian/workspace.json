@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b90b17f544f74d4e",
+            "id": "0730a311e421d637",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AnalisisInterpretacionDatos/BLOQUE_3.md",
+                "file": "TecnicasInteligenciaArtificial/BLOQUE_4.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "BLOQUE_3"
+              "title": "BLOQUE_4"
             }
           },
           {
@@ -208,16 +208,20 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "b90b17f544f74d4e",
+  "active": "0730a311e421d637",
   "lastOpenFiles": [
-    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
+    "TecnicasInteligenciaArtificial/REPASO_EXAMEN.md",
     "TecnicasInteligenciaArtificial/esquema_bloque2_TIA.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_3.md",
+    "horario_convocatoriaexamenes_ordinaria.png",
+    "AnalisisInterpretacionDatos/BLOQUE_3.md",
+    "AnalisisInterpretacionDatos/temario/Libro_estadistica_Mario_Triola.pdf",
+    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/documentacion/Tema 8 - Conceptos generales cloud y Azure.pdf",
     "IngenieriaProcesadoDatos/documentacion/Tema 9 - Amazon Web Services.pdf",
     "VisualizacionInteractiva/esquema_bloque1_VII.md",
     "IngenieriaProcesadoDatos/esquema_bloque1_IPMD.md",
     "TecnicasInteligenciaArtificial/BLOQUE_4.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_3.md",
     "BasesDeDatos/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/BLOQUE_3.md",
@@ -226,7 +230,6 @@
     "BasesDeDatos/BLOQUE_4.md",
     "BasesDeDatos/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
-    "AnalisisInterpretacionDatos/BLOQUE_3.md",
     "AnalisisInterpretacionDatos/BLOQUE_2.md",
     "AnalisisInterpretacionDatos/BLOQUE_4.md",
     "VisualizacionInteractiva/BLOQUE_1.md",
@@ -239,7 +242,6 @@
     "VisualizacionInteractiva/documentacion/Ejemplo tema 7 Longitud.csv",
     "VisualizacionInteractiva/documentacion/7. Codificación gráfica de datos (III) - Posición y longitud.pdf",
     "VisualizacionInteractiva/documentacion/Ejemplo tema 7 Color.csv",
-    "VisualizacionInteractiva/documentacion/7. Codificación gráfica de datos (II) - Color.pdf",
     "VisualizacionInteractiva/documentacion/percepcion_visual.png",
     "VisualizacionInteractiva/documentacion/organizacion_perceptual.png",
     "VisualizacionInteractiva/documentacion/codificar_y_decodificar.png",
@@ -249,7 +251,6 @@
     "IngenieriaProcesadoDatos/documentacion/proceso_lectura_hdfs.png",
     "IngenieriaProcesadoDatos/documentacion/google_icon.png",
     "Pasted Image 20260625110917_274.png",
-    "horario_convocatoriaexamenes_ordinaria.png",
     "Pasted Image 20260625110837_163.png",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
     "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
