@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TecnicasInteligenciaArtificial/BLOQUE_4.md",
+                "file": "BasesDeDatos/BLOQUE_3.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "BLOQUE_4"
+              "title": "BLOQUE_3"
             }
           },
           {
@@ -210,18 +210,19 @@
   },
   "active": "0730a311e421d637",
   "lastOpenFiles": [
-    "TecnicasInteligenciaArtificial/REPASO_EXAMEN.md",
-    "TecnicasInteligenciaArtificial/esquema_bloque2_TIA.md",
     "TecnicasInteligenciaArtificial/BLOQUE_3.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_4.md",
+    "TecnicasInteligenciaArtificial/REPASO_EXAMEN.md",
+    "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
+    "TecnicasInteligenciaArtificial/esquema_bloque2_TIA.md",
+    "VisualizacionInteractiva/esquema_bloque1_VII.md",
     "horario_convocatoriaexamenes_ordinaria.png",
     "AnalisisInterpretacionDatos/BLOQUE_3.md",
     "AnalisisInterpretacionDatos/temario/Libro_estadistica_Mario_Triola.pdf",
     "TecnicasInteligenciaArtificial/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/documentacion/Tema 8 - Conceptos generales cloud y Azure.pdf",
     "IngenieriaProcesadoDatos/documentacion/Tema 9 - Amazon Web Services.pdf",
-    "VisualizacionInteractiva/esquema_bloque1_VII.md",
     "IngenieriaProcesadoDatos/esquema_bloque1_IPMD.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_4.md",
     "BasesDeDatos/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/BLOQUE_3.md",
@@ -253,7 +254,6 @@
     "Pasted Image 20260625110917_274.png",
     "Pasted Image 20260625110837_163.png",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
-    "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
     "BasesDeDatos/esquema_bloque1_BDBD.md",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/imgs/gasto_tipo_cliente (1).png",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/ecommerce_dataset_readme_v_2.md"
