@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BasesDeDatos/BLOQUE_3.md",
+                "file": "IngenieriaProcesadoDatos/BLOQUE_3.md",
                 "mode": "preview",
                 "source": true
               },
@@ -210,6 +210,8 @@
   },
   "active": "0730a311e421d637",
   "lastOpenFiles": [
+    "VisualizacionInteractiva/BLOQUE_4.md",
+    "VisualizacionInteractiva/BLOQUE_3.md",
     "BasesDeDatos/BLOQUE_4.md",
     "BasesDeDatos/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_3.md",
@@ -229,7 +231,6 @@
     "IngenieriaProcesadoDatos/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/BLOQUE_3.md",
     "VisualizacionInteractiva/BLOQUE_2.md",
-    "VisualizacionInteractiva/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
     "AnalisisInterpretacionDatos/BLOQUE_2.md",
     "AnalisisInterpretacionDatos/BLOQUE_4.md",
@@ -255,7 +256,6 @@
     "Pasted Image 20260625110837_163.png",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
     "BasesDeDatos/esquema_bloque1_BDBD.md",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/imgs/gasto_tipo_cliente (1).png",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/ecommerce_dataset_readme_v_2.md"
+    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/imgs/gasto_tipo_cliente (1).png"
   ]
 }
