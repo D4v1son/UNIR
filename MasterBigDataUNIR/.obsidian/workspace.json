@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IngenieriaProcesadoDatos/BLOQUE_3.md",
+                "file": "TecnicasInteligenciaArtificial/BLOQUE_2.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "BLOQUE_3"
+              "title": "BLOQUE_2"
             }
           },
           {
@@ -39,13 +39,14 @@
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "VisualizacionInteractiva/esquema_bloque1_VII.md"
+                "file": "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md"
               },
               "icon": "excalidraw-icon",
-              "title": "esquema_bloque1_VII"
+              "title": "esquema_bloque1_TIA"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -102,7 +103,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "6b9cea7ec0ad8da8",
@@ -208,8 +210,15 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "0730a311e421d637",
+  "active": "77d921e5a90ef562",
   "lastOpenFiles": [
+    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
+    "TecnicasInteligenciaArtificial/esquema_bloque2_TIA.md",
+    "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
+    "AnalisisInterpretacionDatos/BLOQUE_3.md",
+    "VisualizacionInteractiva/esquema_bloque1_VII.md",
+    "AnalisisInterpretacionDatos/BLOQUE_4.md",
+    "IngenieriaProcesadoDatos/BLOQUE_3.md",
     "VisualizacionInteractiva/BLOQUE_4.md",
     "VisualizacionInteractiva/BLOQUE_3.md",
     "BasesDeDatos/BLOQUE_4.md",
@@ -217,23 +226,16 @@
     "TecnicasInteligenciaArtificial/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_4.md",
     "TecnicasInteligenciaArtificial/REPASO_EXAMEN.md",
-    "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
-    "TecnicasInteligenciaArtificial/esquema_bloque2_TIA.md",
-    "VisualizacionInteractiva/esquema_bloque1_VII.md",
     "horario_convocatoriaexamenes_ordinaria.png",
-    "AnalisisInterpretacionDatos/BLOQUE_3.md",
     "AnalisisInterpretacionDatos/temario/Libro_estadistica_Mario_Triola.pdf",
-    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/documentacion/Tema 8 - Conceptos generales cloud y Azure.pdf",
     "IngenieriaProcesadoDatos/documentacion/Tema 9 - Amazon Web Services.pdf",
     "IngenieriaProcesadoDatos/esquema_bloque1_IPMD.md",
     "BasesDeDatos/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/BLOQUE_2.md",
-    "IngenieriaProcesadoDatos/BLOQUE_3.md",
     "VisualizacionInteractiva/BLOQUE_2.md",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
     "AnalisisInterpretacionDatos/BLOQUE_2.md",
-    "AnalisisInterpretacionDatos/BLOQUE_4.md",
     "VisualizacionInteractiva/BLOQUE_1.md",
     "BasesDeDatos/BLOQUE_1.md",
     "IngenieriaProcesadoDatos/BLOQUE_1.md",
