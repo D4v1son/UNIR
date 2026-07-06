@@ -45,8 +45,7 @@
               "title": "esquema_bloque1_TIA"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -210,10 +209,10 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "77d921e5a90ef562",
+  "active": "0730a311e421d637",
   "lastOpenFiles": [
-    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
     "TecnicasInteligenciaArtificial/esquema_bloque2_TIA.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
     "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
     "AnalisisInterpretacionDatos/BLOQUE_3.md",
     "VisualizacionInteractiva/esquema_bloque1_VII.md",
