@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TecnicasInteligenciaArtificial/BLOQUE_2.md",
+                "file": "BasesDeDatos/BLOQUE_2.md",
                 "mode": "preview",
                 "source": true
               },
@@ -39,13 +39,14 @@
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md"
+                "file": "BasesDeDatos/esquema_bloque2_BDBD.md"
               },
               "icon": "excalidraw-icon",
-              "title": "esquema_bloque1_TIA"
+              "title": "esquema_bloque2_BDBD"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -209,11 +210,13 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "0730a311e421d637",
+  "active": "c7ccef7d70bb3967",
   "lastOpenFiles": [
     "TecnicasInteligenciaArtificial/esquema_bloque2_TIA.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
+    "BasesDeDatos/esquema_bloque2_BDBD.md",
+    "BasesDeDatos/BLOQUE_2.md",
     "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_2.md",
     "AnalisisInterpretacionDatos/BLOQUE_3.md",
     "VisualizacionInteractiva/esquema_bloque1_VII.md",
     "AnalisisInterpretacionDatos/BLOQUE_4.md",
@@ -230,7 +233,6 @@
     "IngenieriaProcesadoDatos/documentacion/Tema 8 - Conceptos generales cloud y Azure.pdf",
     "IngenieriaProcesadoDatos/documentacion/Tema 9 - Amazon Web Services.pdf",
     "IngenieriaProcesadoDatos/esquema_bloque1_IPMD.md",
-    "BasesDeDatos/BLOQUE_2.md",
     "IngenieriaProcesadoDatos/BLOQUE_2.md",
     "VisualizacionInteractiva/BLOQUE_2.md",
     "TecnicasInteligenciaArtificial/BLOQUE_1.md",
@@ -256,7 +258,6 @@
     "Pasted Image 20260625110917_274.png",
     "Pasted Image 20260625110837_163.png",
     "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
-    "BasesDeDatos/esquema_bloque1_BDBD.md",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/imgs/gasto_tipo_cliente (1).png"
   ]
 }
