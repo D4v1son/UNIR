@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BasesDeDatos/BLOQUE_2.md",
+                "file": "BasesDeDatos/BLOQUE_3.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "BLOQUE_2"
+              "title": "BLOQUE_3"
             }
           },
           {
@@ -45,8 +45,7 @@
               "title": "esquema_bloque2_BDBD"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -103,8 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "6b9cea7ec0ad8da8",
@@ -210,11 +208,11 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "c9d3423bc6b7c658",
+  "active": "0730a311e421d637",
   "lastOpenFiles": [
+    "BasesDeDatos/BLOQUE_2.md",
     "BasesDeDatos/esquema_bloque2_BDBD.md",
     "TecnicasInteligenciaArtificial/esquema_bloque2_TIA.md",
-    "BasesDeDatos/BLOQUE_2.md",
     "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
     "TecnicasInteligenciaArtificial/BLOQUE_2.md",
     "AnalisisInterpretacionDatos/BLOQUE_3.md",
