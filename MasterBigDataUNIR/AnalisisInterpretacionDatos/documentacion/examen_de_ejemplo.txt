@@ -1,0 +1,9 @@
+# Pregunta 1. Pregunta de desarrollo
+
+(2 pts). Escenario:
+Suponga que una plataforma de análisis de opiniones recoge las valoraciones de productos tacnológicos realizadas por usuarios de distintos países. Se desea estimar la probanilidad de que un usuario de México y uno de Argentina otorguen la misma calificación (en una escala de 1 a 5) al mismo producto tecnológico tras una reseña en vídeo publicada por la marca.
+A partir de este escenario, complete las siguientes cuestiones:
+	1. Discusión sobre la elección de la fórmula estadística utilizada para calcular la probabilidad de coincidencia de calificación entre ambos usuarios.
+	2. Cálculo numérico de dicha probabilidad a partir de una muestra de datos simulada.
+
+Representa la solución en un script de R

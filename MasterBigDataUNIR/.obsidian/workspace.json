@@ -45,7 +45,8 @@
               "title": "esquema_bloque2_BDBD"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -208,11 +209,12 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "0730a311e421d637",
+  "active": "c7ccef7d70bb3967",
   "lastOpenFiles": [
+    "BasesDeDatos/BLOQUE_3.md",
+    "TecnicasInteligenciaArtificial/esquema_bloque2_TIA.md",
     "BasesDeDatos/BLOQUE_2.md",
     "BasesDeDatos/esquema_bloque2_BDBD.md",
-    "TecnicasInteligenciaArtificial/esquema_bloque2_TIA.md",
     "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
     "TecnicasInteligenciaArtificial/BLOQUE_2.md",
     "AnalisisInterpretacionDatos/BLOQUE_3.md",
@@ -222,7 +224,6 @@
     "VisualizacionInteractiva/BLOQUE_4.md",
     "VisualizacionInteractiva/BLOQUE_3.md",
     "BasesDeDatos/BLOQUE_4.md",
-    "BasesDeDatos/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_4.md",
     "TecnicasInteligenciaArtificial/REPASO_EXAMEN.md",
