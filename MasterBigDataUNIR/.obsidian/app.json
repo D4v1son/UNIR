@@ -2,5 +2,5 @@
   "defaultViewMode": "preview",
   "livePreview": false,
   "alwaysUpdateLinks": true,
-  "propertiesInDocument": "hidden"
+  "propertiesInDocument": "visible"
 }

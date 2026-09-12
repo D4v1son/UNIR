@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <!-- Aquí van los metadatos de la página, como por ejemplo referencias a otros documentos -->
+        <title>Primera Clase</title>
+        <script>
+            console.log("Hola Mundo!")
+            console.log(10+5)
+            function saludar(){
+                console.log("Hola Mundo! desde saludar.")
+            }
+            function area_rectangulo(x,y){
+                console.log("El area del rectangulo es: ", x*y, "cm2")
+            }
+            saludar()
+            area_rectangulo (4,5)
+        </script>
+
+    </head>
+    <body>
+        <h1>Primer Título H1</h1>
+        <h2>Mi primer título h2</h2>
+        <p>
+            Mi primer párrafo.
+        </p>
+        <p id="parrafo_1">Párrafo con identificador1.</p>
+        <p class="negrita_cursiva tamano">Este texto estará en negrita cursiva
+            y de distinto tamaño gracias a la magia de las clases.</p>
+
+    </body>
+
+
+    <style>
+        p{
+            color: red;
+        }
+        #parrafo_1{
+            color: blue;
+        }
+        .negrita_cursiva{
+            font-weight: bold;
+            font-style: italic;
+        }
+        .tamano{
+            font-size: 30px;
+        }
+    </style>
+</html>

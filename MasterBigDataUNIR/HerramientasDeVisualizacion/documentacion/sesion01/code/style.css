@@ -1,0 +1,17 @@
+
+p{
+    color: red;
+}
+
+#parrafo_1{
+    color: blue;
+}
+
+.negrita_cursiva{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.tamano{
+    font-size: 30px;
+}

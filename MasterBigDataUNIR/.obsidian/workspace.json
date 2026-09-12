@@ -13,40 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BasesDeDatos/BLOQUE_3.md",
-                "mode": "preview",
+                "file": "GobiernoDelDato/BLOQUE_1.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "BLOQUE_3"
-            }
-          },
-          {
-            "id": "77d921e5a90ef562",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "TecnicasInteligenciaArtificial/esquema_bloque2_TIA.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "esquema_bloque2_TIA"
-            }
-          },
-          {
-            "id": "c7ccef7d70bb3967",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "BasesDeDatos/esquema_bloque2_BDBD.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "esquema_bloque2_BDBD"
+              "title": "BLOQUE_1"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -66,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Explorador de archivos"
@@ -78,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#test",
+                "query": "tag:AID",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -189,8 +166,21 @@
               "icon": "lucide-list",
               "title": "Esquema de 10610329_full_6678_Modulo_1._Introduccion_a_la_nube_de_AWS_esl-ES"
             }
+          },
+          {
+            "id": "c5519c96feb4a2da",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "GobiernoDelDato/BLOQUE_1.md"
+              },
+              "icon": "lucide-info",
+              "title": "Propiedades del archivo"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -209,54 +199,54 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "c7ccef7d70bb3967",
+  "active": "29f72046f9bf0fdc",
   "lastOpenFiles": [
-    "BasesDeDatos/BLOQUE_3.md",
-    "TecnicasInteligenciaArtificial/esquema_bloque2_TIA.md",
-    "BasesDeDatos/BLOQUE_2.md",
+    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema7.pdf",
+    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema7.pdf.opdownload",
+    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema6.pdf",
+    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema6.pdf.opdownload",
+    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema5.pdf",
+    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema5.pdf.opdownload",
+    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema4.pdf",
+    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema4.pdf.opdownload",
+    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema3.pdf",
+    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema3.pdf.opdownload",
+    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema2.pdf",
+    "AnalisisInterpretacionDatos/BLOQUE_1.md",
+    "GobiernoDelDato/BLOQUE_1.md",
+    "IngenieriaProcesadoDatos/esquema_bloque1_IPMD.md",
+    "Sin título.canvas",
+    "testeo.md",
+    "AnalisisInterpretacionDatos.md",
+    "AnalisisInterpretacionDatos/BLOQUE_4.md",
+    "VisualizacionInteractiva/BLOQUE_1.md",
+    "IngenieriaProcesadoDatos/BLOQUE_3.md",
+    "horario_convocatoriaexamenes_ordinaria.png",
     "BasesDeDatos/esquema_bloque2_BDBD.md",
-    "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
+    "BasesDeDatos/esquema_bloque1_BDBD.md",
+    "BasesDeDatos/BLOQUE_4.md",
     "TecnicasInteligenciaArtificial/BLOQUE_2.md",
+    "TecnicasInteligenciaArtificial/esquema_bloque1_TIA.md",
+    "BasesDeDatos/BLOQUE_1.md",
+    "TecnicasInteligenciaArtificial/esquema_bloque2_TIA.md",
+    "TecnicasInteligenciaArtificial/BLOQUE_3.md",
+    "BasesDeDatos/BLOQUE_3.md",
+    "BasesDeDatos/BLOQUE_2.md",
     "AnalisisInterpretacionDatos/BLOQUE_3.md",
     "VisualizacionInteractiva/esquema_bloque1_VII.md",
-    "AnalisisInterpretacionDatos/BLOQUE_4.md",
-    "IngenieriaProcesadoDatos/BLOQUE_3.md",
     "VisualizacionInteractiva/BLOQUE_4.md",
     "VisualizacionInteractiva/BLOQUE_3.md",
-    "BasesDeDatos/BLOQUE_4.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_3.md",
     "TecnicasInteligenciaArtificial/BLOQUE_4.md",
     "TecnicasInteligenciaArtificial/REPASO_EXAMEN.md",
-    "horario_convocatoriaexamenes_ordinaria.png",
-    "AnalisisInterpretacionDatos/temario/Libro_estadistica_Mario_Triola.pdf",
-    "IngenieriaProcesadoDatos/documentacion/Tema 8 - Conceptos generales cloud y Azure.pdf",
-    "IngenieriaProcesadoDatos/documentacion/Tema 9 - Amazon Web Services.pdf",
-    "IngenieriaProcesadoDatos/esquema_bloque1_IPMD.md",
     "IngenieriaProcesadoDatos/BLOQUE_2.md",
-    "VisualizacionInteractiva/BLOQUE_2.md",
-    "TecnicasInteligenciaArtificial/BLOQUE_1.md",
-    "AnalisisInterpretacionDatos/BLOQUE_2.md",
-    "VisualizacionInteractiva/BLOQUE_1.md",
-    "BasesDeDatos/BLOQUE_1.md",
-    "IngenieriaProcesadoDatos/BLOQUE_1.md",
-    "VisualizacionInteractiva/documentacion/10. Visualización dinámica e interactividad (II).pdf",
-    "VisualizacionInteractiva/documentacion/9. Visualización dinámica e interactividad (I).pdf",
-    "VisualizacionInteractiva/documentacion/Ejemplo tema 8 cars.csv",
-    "VisualizacionInteractiva/documentacion/8. Visualización estática - Análisis Multivariante.pdf",
-    "VisualizacionInteractiva/documentacion/Ejemplo tema 7 Longitud.csv",
-    "VisualizacionInteractiva/documentacion/7. Codificación gráfica de datos (III) - Posición y longitud.pdf",
-    "VisualizacionInteractiva/documentacion/Ejemplo tema 7 Color.csv",
     "VisualizacionInteractiva/documentacion/percepcion_visual.png",
     "VisualizacionInteractiva/documentacion/organizacion_perceptual.png",
     "VisualizacionInteractiva/documentacion/codificar_y_decodificar.png",
-    "nota.md",
-    "Sin título.canvas",
     "IngenieriaProcesadoDatos/documentacion/proceso_escritura_hdfs.png",
     "IngenieriaProcesadoDatos/documentacion/proceso_lectura_hdfs.png",
     "IngenieriaProcesadoDatos/documentacion/google_icon.png",
     "Pasted Image 20260625110917_274.png",
     "Pasted Image 20260625110837_163.png",
-    "PSU_IA/DesarrolloOptimizacionDespliegueIA/PreguntasDeTests.md",
     "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/imgs/gasto_tipo_cliente (1).png"
   ]
 }
