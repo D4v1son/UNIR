@@ -1,0 +1,41 @@
+﻿$.ajaxSetup({
+    cache: false,
+    type: "POST",
+    contentType: "application/json"
+});
+/* ***** CARGAR GLOBALIZACIÓN ********************************************************************/
+Globalize.locale(appData.currentCulture);
+
+function block() {
+    unblock();
+    var divBlock = $('<div/>',
+        {
+            class: 'modal-backdrop',
+            style: 'background-color:#00000073;'
+        });
+    $('body').prepend(divBlock);
+}
+
+function unblock() {
+    $('.modal-backdrop').remove();
+}
+
+jQuery.fn.extend({
+    disable: function () {
+        return this.each(function () {
+            this.disabled = true;
+        })
+    },
+    enable: function () {
+        return this.each(function () {
+            this.disabled = false;
+        })
+    }
+})
+
+function getFormattedDate(date) {
+    let year = date.getFullYear();
+    let month = (1 + date.getMonth()).toString().padStart(2, '0');
+    let day = date.getDate().toString().padStart(2, '0');
+    return day + '/' + month + '/' + year;
+}

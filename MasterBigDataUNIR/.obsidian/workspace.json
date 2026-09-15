@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f197c8a92d5f223b",
+        "id": "cf091d6b7e39c991",
         "type": "tabs",
         "children": [
           {
-            "id": "0730a311e421d637",
+            "id": "518103fe97b2e058",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GobiernoDelDato/BLOQUE_1.md",
+                "file": "PSU_IA/IntOpeModelosGenerativos/BLOQUE_1.md",
                 "mode": "source",
                 "source": true
               },
@@ -199,21 +199,23 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "29f72046f9bf0fdc",
+  "active": "518103fe97b2e058",
   "lastOpenFiles": [
-    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema7.pdf",
-    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema7.pdf.opdownload",
-    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema6.pdf",
-    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema6.pdf.opdownload",
-    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema5.pdf",
-    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema5.pdf.opdownload",
-    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema4.pdf",
-    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema4.pdf.opdownload",
-    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema3.pdf",
-    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema3.pdf.opdownload",
-    "PSU_IA/IntOpeModelosGenerativos/documentacion/tema2.pdf",
-    "AnalisisInterpretacionDatos/BLOQUE_1.md",
     "GobiernoDelDato/BLOQUE_1.md",
+    "PSU_IA/IntOpeModelosGenerativos/BLOQUE_1.md",
+    "PSU_IA/IntOpeModelosGenerativos/documentacion/00 - Presentación.pdf",
+    "PSU_IA/IntOpeModelosGenerativos/documentacion/01 - Tema 1 - parte 1.pdf",
+    "TFM/ideas/ejemplos_mi_master/Davalos Miranda, Jose Ricardo.pdf",
+    "TFM/ideas/ejemplos_mi_master/de Paz Martín, María del Pilar.pdf",
+    "TFM/ideas/ejemplos_mi_master/Sayols Puig, Sergi.pdf",
+    "TFM/ideas/build/propuesta_tfm_david_vicente_moya.pdf",
+    "TFM/plantillas/Plantilla latex/Plantilla LATEX TFE TFM UNIR/plantilla.toc",
+    "TFM/plantillas/Plantilla latex/Plantilla LATEX TFE TFM UNIR/plantilla.tex",
+    "TFM/plantillas/Plantilla latex/Plantilla LATEX TFE TFM UNIR/plantilla.synctex.gz",
+    "TFM/plantillas/Plantilla latex/Plantilla LATEX TFE TFM UNIR/plantilla.pdf",
+    "TFM/ideas/propuesta_b.png",
+    "TFM/ideas/propuesta_a.png",
+    "AnalisisInterpretacionDatos/BLOQUE_1.md",
     "IngenieriaProcesadoDatos/esquema_bloque1_IPMD.md",
     "Sin título.canvas",
     "testeo.md",
@@ -245,8 +247,6 @@
     "IngenieriaProcesadoDatos/documentacion/proceso_escritura_hdfs.png",
     "IngenieriaProcesadoDatos/documentacion/proceso_lectura_hdfs.png",
     "IngenieriaProcesadoDatos/documentacion/google_icon.png",
-    "Pasted Image 20260625110917_274.png",
-    "Pasted Image 20260625110837_163.png",
-    "AnalisisInterpretacionDatos/actividades/actividad3_individual_22062026/imgs/gasto_tipo_cliente (1).png"
+    "Pasted Image 20260625110917_274.png"
   ]
 }
