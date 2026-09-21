@@ -1,0 +1,21 @@
+.negrita_cursiva{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.tamano_120{
+    font-size: 120%;
+}
+
+.tamano_100{
+    font-size: 100%;
+}
+
+.rojo{
+    color:red
+}
+
+.divclass_cyan{
+    border: 2px red solid;
+    background: cyan
+}

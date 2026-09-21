@@ -1,0 +1,449 @@
+@font-face {
+    font-family: unitcomp;
+    src: url(fonts/unitcomp.woff);
+}
+
+@font-face {
+    font-family: opensans;
+    src: url(fonts/opensans-regular.woff);
+}
+
+:root {
+    --main-bg-celeste: #0098cd;
+    --main-bg-celeste-transparente-fuerte: #0098cd61;
+    --main-bg-celeste-transparente-suave: #0098cd26;
+    --main-bg-gris-oscuro: #2C2C2C;
+    --main-bg-rojo:red;
+}
+
+.header-frame {
+    background: var(--main-bg-celeste);
+}
+
+.header {
+    background-color: var(--main-bg-gris-oscuro);
+    color: white;
+}
+
+.text-title {
+    font-size: 120%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    line-height: 170%;
+}
+
+.text-color-white {
+    color: white;
+}
+
+.text-paragraph {
+    font-weight: 300;
+    color: #414648;
+    font-family: opensans, Arial, sans-serif;
+    line-height: 140%;
+    font-size: 15px;
+}
+
+.text-link {
+    font-weight: 300;
+    font-family: opensans, Arial, sans-serif;
+    line-height: 140%;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.default-text {
+    font-family: "unitcomp", "Arial", Gadget, sans-serif;
+    letter-spacing: 0.3px;
+}
+
+.flex-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.cursor-text {
+    cursor: text !important;
+}
+
+.cursor-default {
+    cursor: default !important;
+}
+
+.titulo-pregunta {
+    font-weight: bold;
+    color: var(--main-bg-celeste) !important;
+}
+
+.flex-body {
+    flex-direction: column;
+    margin: 0 10px 0 10px;
+}
+
+.full-width-inline-group {
+    display: flex;
+}
+
+    .full-width-inline-group > .inline-group-element {
+        flex: 1;
+        justify-content: center;
+    }
+
+.no-horizontal-padding {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.textarea-unir {
+    margin-top: 5px;
+    border-color: var(--main-bg-celeste) !important;
+    resize: none;
+    height: 80%;
+    width: 100%;
+}
+    .textarea-unir:focus {
+        outline: none !important;
+        border: 1px solid var(--main-bg-celeste);
+        box-shadow: 0 0 10px var(--main-bg-celeste-transparente-fuerte);
+    }
+
+.container-fluid-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.student-element, .answer-element {
+    justify-content: space-between;
+    align-items: center;
+    color: var(--main-bg-celeste) !important;
+    border-color: var(--main-bg-celeste) !important;
+    margin-top: 5px;
+    border-radius: 0;
+}
+
+.required-element {
+    border-color: var(--main-bg-rojo) !important;
+}
+
+.requires-answer>label {
+    border-color: var(--main-bg-rojo) !important;
+}
+
+
+    .student-element:hover {
+        background-color: var(--main-bg-celeste-transparente-solido) !important;
+        border-color: var(--main-bg-celeste) !important;
+    }
+
+    .answer-element:hover {
+        background-color: var(--main-bg-celeste-transparente-solido) !important;
+        border-color: var(--main-bg-celeste) !important;
+    }
+
+    .student-element.active, .answer-element.active {
+        background-color: var(--main-bg-celeste-transparente-suave) !important;
+    }
+
+    .student-element.focus:not(.active), .answer-element.focus:not(.active) {
+        background-color: white !important;
+    }
+
+.centered-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-entregable p {
+    margin-top: 1rem;
+}
+
+
+/*Formulario encuesta alumno IPN*/
+.contenedor-ipn {
+    width: 90%;
+    height: 500px;
+    margin: 90px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario-ipn {
+    box-shadow: 1px 11px 23px 14px rgb(0 0 0 / 7%);
+    border: none;
+    padding-bottom: 30px;
+}
+
+.lbl {
+    font-weight: bold;
+}
+
+    .lbl.chk-valora-ipn {
+        margin-left: 460px;
+        margin-top: 10px;
+    }
+
+.txt-area-ipn {
+    resize: none;
+    height: 150px;
+    width: 530px;
+}
+
+.btn-quiz {
+    width: 45px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.btn-quiz:hover {
+    background-color: #129cc4;
+    color: white;
+    cursor: pointer;
+}
+
+.current {
+    background-color: #129cc4;
+}
+
+.btn-send {
+    width: 100px;
+    height: 35px;
+    color: #fff;
+    background-color: #0098C4;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.margin-btn-send {
+    margin-left: 530px;
+}
+
+.btn-send:hover {
+    background-color: #21C4FF;
+    color: #fff;
+    cursor: pointer;
+}
+
+.lbl-text-rquerido {
+    margin-left: 518px;
+    margin-bottom: -5px;
+}
+
+.mensaje-error {
+    position: absolute;
+    color: #a94442;
+    border-color: #ebccd1;
+    background-color: #f2dede;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    display: flex;
+    left: 30px;
+}
+
+.mensaje-ok {
+    position: absolute;
+    color: #009cc6;
+    border-color: #f1f6fb;
+    background-color: #f1f6fb;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-top: 20px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    display: flex;
+    left: 30px;
+}
+/*Container-btn*/
+
+
+button:focus {
+    outline: 0px;
+}
+
+button {
+    padding: 14px 22px;
+    cursor: pointer;
+    border: 2px solid white;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+
+}
+
+.bg-red {
+    background: #dc2300;
+}
+
+.bg-orange {
+    background: #ff5d00;
+}
+
+.bg-yellow {
+    background: #fbc701;
+}
+
+.bg-green {
+    background: #01b53f;
+}
+
+.form-content {
+    padding: 20px;
+}
+
+#txt-observacion {
+    width: 100%;
+    outline: none;
+    border: 1px solid #f1f1f1;
+    padding: 8px;
+}
+
+.btn-send-aling {
+    align-items: center;
+    display: flex;
+}
+.experiencia.current {
+    border: 2px solid #000000;
+    transform: scale(1.1);
+    transition: transform ease-in-out 0.3s;
+}
+
+.container-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.experiencia:hover {
+    border: 2px solid #000000;
+    transition: all ease-in-out 0.2s;
+}
+
+.offset-md-cuestionarios-1 {
+    margin-left: 15px
+}
+
+.offset-md-cuestionarios-2 {
+    margin-left: 30px
+}
+
+.col-cuestionarios {
+    position: relative;
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.col12-cuestionarios {
+    position: relative;
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.collapsed:not(span) {
+    height: 200px;
+}
+
+.margin-text-area {
+    margin-top: -1.89rem !important
+}
+
+.expand-collapse-icon {
+    position: absolute;
+    right: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.expand-collapse-icon.collapsed {
+    background-image: url("../content/utils/icons/expand-icon.png");
+}
+
+.expand-collapse-icon.expanded {
+    background-image: url("../content/utils/icons/close-icon.png");
+}
+
+.overlay {
+    top: 0px;
+    position: fixed;
+    z-index: 9999;
+    background: white;
+    width: -webkit-fill-available;
+    right: 0;
+}
+
+.char-details {
+    position: absolute;
+    right: 30px;
+    color: gray;
+    font-style: italic;
+    font-size: medium;
+}
+
+.char-details.textarea {
+    top: 5px;
+}
+
+.icon-attach {
+    background-image: url("utils/icons/icon-attach.png");
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+
+.icon-trash-can {
+    background-image: url("utils/icons/icon-trash-can.png");
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+
+.file-line-actions {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.file-line-actions > .sub-action {
+    float: left;
+}
+
+span.link {
+    color: #000000; 
+    cursor: pointer;
+    text-decoration: underline;
+}
+span.link:hover {
+    color: #444444;
+}
+
+div.file-line-actions > span.disabled {
+    color: #666666;
+    cursor: default;
+    text-decoration: inherit;
+}
+
+.expand-text-area {
+    top: 50px !important;
+}
+
+.detail-chars-text-area {
+    top: 15px !important;
+}
+
+.t-header, .t-grid-header {
+    border-color: var(--main-bg-celeste);
+    background: transparent !important;
+}
