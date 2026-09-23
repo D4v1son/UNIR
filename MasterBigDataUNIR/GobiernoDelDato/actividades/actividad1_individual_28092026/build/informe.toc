@@ -1,0 +1,4 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Parte I. Estrategia y carga de datos}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}C) Espacios de trabajo}{2}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Limitación de Dremio OSS: wiki de espacios de trabajo}{2}{subsubsection.1.1.1}%
