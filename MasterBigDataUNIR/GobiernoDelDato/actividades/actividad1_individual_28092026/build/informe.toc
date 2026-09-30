@@ -1,4 +1,32 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {section}{\numberline {1}Parte I. Estrategia y carga de datos}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}C) Espacios de trabajo}{2}{subsection.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.1}Limitación de Dremio OSS: wiki de espacios de trabajo}{2}{subsubsection.1.1.1}%
+\contentsline {section}{\numberline {1}Introducción}{2}{section.1}%
+\contentsline {section}{\numberline {2}Parte I. Estrategia y carga de datos}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}A) Exploratory Data Analysis (EDA) previo}{2}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Carga y visión general}{2}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Datos faltantes}{2}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Distribución de variables y outliers}{2}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}Relaciones entre variables}{2}{subsubsection.2.1.4}%
+\contentsline {subsubsection}{\numberline {2.1.5}Detección de inconsistencias}{4}{subsubsection.2.1.5}%
+\contentsline {subsubsection}{\numberline {2.1.6}Reflexión: influencia en la carga en Dremio}{4}{subsubsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.2}B) Carga de datos}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Instalación de Dremio}{4}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Carga de los ficheros}{5}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Wiki de cada dataset}{5}{subsubsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.3}C) Espacios de trabajo}{8}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Limitación de Dremio OSS: wiki de espacios de trabajo}{8}{subsubsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.4}D) Crear datasets personalizados}{9}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}\texttt {Terraza\_001} (Analista 1)}{9}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}\texttt {Licencias\_002} (Analista 1)}{9}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}\texttt {Licencias\_Terrazas\_003} (Analista 2)}{10}{subsubsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.4}\texttt {Books\_001} (Analista 3)}{10}{subsubsection.2.4.4}%
+\contentsline {section}{\numberline {3}Parte II. Metodologías ETL y gobierno de datos}{11}{section.3}%
+\contentsline {subsection}{\numberline {3.1}A) Transformación y limpieza de datos (ETL)}{12}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Tarea 1: filtrado, normalización y variable derivada}{12}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Tarea 2: duplicados y limpieza de texto}{12}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Tarea 3: integración de datos}{12}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Tarea 4: concatenación de datasets}{12}{subsubsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.2}B) Modelado de datos}{13}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Tarea 5: modelado dimensional Kimball}{13}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Tarea 6: modelado Inmon en 3FN}{14}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Tarea 7: automatización}{15}{subsubsection.3.2.3}%
+\contentsline {section}{\numberline {4}Conclusiones}{15}{section.4}%

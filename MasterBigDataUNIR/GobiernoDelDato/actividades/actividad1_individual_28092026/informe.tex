@@ -5,7 +5,11 @@
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{enumitem}
 \usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{caption}
 
 \hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
 \pagestyle{fancy}
@@ -13,6 +17,12 @@
 \fancyhead[L]{Gobierno del dato y toma de decisiones -- Actividad 1}
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\captura}[1]{%
+  \begin{center}
+  \fbox{\parbox{0.9\textwidth}{\centering\vspace{1.2cm}\textit{[Captura pendiente: #1]}\vspace{1.2cm}}}
+  \end{center}
+}
 
 \title{\textbf{Actividad 1. Laboratorio (individual):\\ Almacenes de datos, catálogo y ETL}}
 \date{\today}
@@ -27,21 +37,202 @@
     {\Huge\bfseries Actividad 1. Laboratorio (individual):\par}
     {\Huge\bfseries Almacenes de datos, catálogo y ETL\par}
     \vspace{3cm}
-    {\large Nombre y Apellidos: David Vicente Moya \par}
-    \vspace{0.5cm}
-    {\large \today \par}
+    {\large Nombre y Apellidos: David Vicente Moya\par}
+    \vspace{1cm}
+    {\large Fecha: \today \par}
     \vfill
 \end{titlepage}
 
 \tableofcontents
 \newpage
 
+\section{Introducción}
+
+Este informe documenta el desarrollo de la Actividad 1 de la asignatura, centrada en la
+carga, organización y gobierno de cuatro orígenes de datos (\texttt{Terrazas\_202104},
+\texttt{Licencias\_Locales\_202104}, \texttt{Locales\_202104} y \texttt{books}) mediante
+Dremio como motor de \emph{Data Lake}, y en el posterior diseño de un proceso ETL y de un
+modelo de almacén de datos sobre dicha información.
+
+El documento sigue la estructura del enunciado: Parte I (estrategia y carga de datos,
+apartados A a D) y Parte II (metodologías ETL y gobierno de datos, apartados A y B).
+
 \section{Parte I. Estrategia y carga de datos}
 
+\subsection{A) Exploratory Data Analysis (EDA) previo}
+
+Se ha optado por la \textbf{Opción 1: EDA manual}, con Pandas, Matplotlib, Seaborn y
+Missingno, implementado en el \emph{notebook} de Jupyter \texttt{EDA\_Actividad1.ipynb}
+(entregado junto a este informe), que cubre los cinco bloques propuestos en el enunciado:
+carga y visión general, datos faltantes, distribución de variables, relaciones entre
+variables y detección de inconsistencias.
+
+\subsubsection{Carga y visión general}
+
+Los cuatro ficheros se cargan como texto (\texttt{dtype=str}) para no perder información
+antes de decidir las conversiones de tipo necesarias. Dimensiones de los ficheros:
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Fichero & Filas & Columnas \\
+\midrule
+Terrazas\_202104.csv & 6\,275 & 57 \\
+Licencias\_Locales\_202104.csv & 132\,171 & 46 \\
+Locales\_202104.csv & 148\,216 & 40 \\
+books.json & 431 & 12 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection{Datos faltantes}
+
+Con \texttt{missingno.matrix()} se visualiza el patrón de nulos de cada fichero. Ninguna
+fila supera el 50\,\% de valores nulos en ninguno de los ficheros, por lo que la Tarea 1 de
+la Parte II no eliminará registros por este criterio. Sí existen columnas con muchos
+nulos: \texttt{Escalera} (100\,\% nula en Terrazas), cinco columnas 100\,\% nulas en
+Locales, y \texttt{Superficie\_RA} nula en 1\,466 terrazas.
+
+\subsubsection{Distribución de variables y outliers}
+
+La superficie ocupada por las terrazas (\texttt{Superficie\_ES}) tiene una mediana de
+25,6\,m\textsuperscript{2} frente a un máximo de 920\,m\textsuperscript{2}; 29 terrazas
+superan los 200\,m\textsuperscript{2}. Se documentan como outliers reales (terrazas
+grandes en zonas concretas), no como errores de captura.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{superficie_es_hist_box.png}
+    \caption{histograma y boxplot de \texttt{Superficie\_ES}}
+\end{figure}
+
+\subsubsection{Relaciones entre variables}
+
+El \emph{heatmap} de correlaciones entre \texttt{Superficie\_ES}, \texttt{Superficie\_RA},
+\texttt{mesas\_es}, \texttt{mesas\_ra} y \texttt{sillas\_es} muestra una relación fuerte
+entre número de mesas y de sillas (correlación 0,82 entre \texttt{mesas\_es} y
+\texttt{mesas\_ra}), y una relación moderada entre superficie y aforo. El campo
+\texttt{sillas\_ra} se excluye de este análisis porque, a diferencia de
+\texttt{sillas\_es}, no es numérico: contiene letras (\texttt{A}, \texttt{B}, \texttt{C}...)
+que coinciden en el 95\,\% de los casos con \texttt{cal\_terraza} (el calificador de la
+vía), lo que indica que esa columna está mal poblada en el fichero de origen.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{heatmap.png}
+    \caption{heatmap de correlaciones de Terrazas}
+\end{figure}
+
+\subsubsection{Detección de inconsistencias}
+\label{sssec:inconsistencias}
+
+Los principales hallazgos de calidad de datos son:
+
+\begin{itemize}
+    \item \textbf{Codificaciones distintas}: \texttt{Licencias\_Locales\_202104} está en
+    UTF-8, mientras que \texttt{Terrazas\_202104} y \texttt{Locales\_202104} están en
+    Latin-1. Sin unificar la codificación, Dremio podría interpretar mal los caracteres
+    especiales.
+    \item \textbf{Coma decimal}: las superficies y coordenadas usan coma decimal española
+    (\texttt{7,2}), que Dremio interpretaría como texto en vez de como número decimal.
+    \item \textbf{Espacios de relleno en texto}: los campos de texto (p.\,ej.
+    \texttt{desc\_distrito\_local}) llevan espacios de relleno al final. No generan
+    categorías duplicadas (21 distritos antes y después de limpiar), pero impiden filtrar
+    por igualdad: \texttt{desc\_distrito\_local = 'CENTRO'} devuelve 0 filas sin limpiar y
+    765 tras aplicar \texttt{strip()}.
+    \item \textbf{\texttt{Superficie\_RA} nula}: es nula en 1\,466 de las 1\,563 terrazas
+    estacionales (frente a 0 en las terrazas anuales), porque las terrazas estacionales no
+    operan en el resto del año. No es un dato perdido sino estructural; al calcular
+    \texttt{Superficie\_TO} se trata como 0 con \texttt{COALESCE} / \texttt{fillna(0)}.
+    \item \textbf{Duplicados y fechas centinela en Licencias}: 265 filas duplicadas por
+    (\texttt{id\_local}, \texttt{ref\_licencia}) y 11\,903 filas con la fecha centinela
+    \texttt{1900-01-01} en \texttt{Fecha\_Dec\_Lic}.
+    \item \textbf{Cobertura del cruce Terrazas-Licencias}: solo el 86\,\% de las terrazas
+    (5\,387 de 6\,275) tiene un \texttt{id\_local} presente en Licencias, por lo que un
+    \texttt{INNER JOIN} pierde el 14\,\% restante.
+    \item \textbf{Tipo inconsistente en \texttt{books.json}}: el campo \texttt{\_id} es un
+    entero en 399 registros y un objeto \texttt{\{"\$oid": ...\}} en 32 registros. Sin
+    unificarlo, Dremio podría fallar al inferir el esquema.
+\end{itemize}
+
+\subsubsection{Reflexión: influencia en la carga en Dremio}
+
+Estos hallazgos justifican una limpieza previa a la carga (unificación de codificación a
+UTF-8, conversión de coma a punto decimal, recorte de espacios, fechas a formato ISO y
+unificación del campo \texttt{\_id}), de forma que Dremio infiera correctamente los tipos
+(\texttt{DOUBLE}, \texttt{DATE}) sin tener que corregirlos en cada consulta posterior. No
+se elimina ninguna columna en esta fase: la selección de campos se realiza más adelante,
+en los \emph{datasets} personalizados de cada espacio de trabajo (apartado D), preservando
+así la trazabilidad del dato de origen, un principio básico de gobierno del dato.
+
+\subsection{B) Carga de datos}
+
+\subsubsection{Instalación de Dremio}
+
+Se ha instalado Dremio Community Edition (OSS) en modo \emph{on-premise} mediante Docker:
+
+\begin{enumerate}
+    \item \texttt{docker pull dremio/dremio-oss}
+    \item Verificación de la imagen en Docker Desktop.
+    \item \texttt{docker run -p 9047:9047 -p 31010:31010 -p 45678:45678 dremio/dremio-oss}
+    \item Creación de la cuenta en \url{http://localhost:9047}.
+\end{enumerate}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{dremio.png}
+    \caption{imagen de Dremio en Docker Desktop}
+\end{figure}
+
+\subsubsection{Carga de los ficheros}
+
+Los cuatro ficheros, ya limpios según el apartado A, se han cargado en una carpeta
+\texttt{datos\_origen} dentro del espacio Home, ajustando en cada CSV el delimitador
+(\texttt{;}), las comillas (\texttt{"}) y la extracción de cabecera de la primera fila.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.4\textwidth]{dremio_data.png}
+    \caption{datos cargados en dremio}
+\end{figure}
+
+\subsubsection{Wiki de cada dataset}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{wiki_terrazas.png}
+    \caption{Captura de la wiki de Terrazas.}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{wiki_licencias.png}
+    \caption{Captura de la wiki de Licencias.}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{wiki_locales.png}
+    \caption{Captura de la wiki de Locales.}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{wiki_books.png}
+    \caption{Captura de la wiki de Books.}
+\end{figure}
+
+\newpage
 \subsection{C) Espacios de trabajo}
 
 Se han creado tres espacios de trabajo en Dremio: \textbf{Analista 1}, \textbf{Analista 2}
 y \textbf{Analista 3}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.3\textwidth]{espacios_trabajo.png}
+    \caption{Estructura de los espacios de trabajo.}
+\end{figure}
 
 \subsubsection{Limitación de Dremio OSS: wiki de espacios de trabajo}
 
@@ -56,7 +247,7 @@ al hacer clic sobre ella. Esta limitación es consistente en los tres espacios c
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.85\textwidth]{imgs/wiki_espacio_sin_editar.png}
+    \includegraphics[width=0.9\textwidth]{wiki_espacio_sin_editar.png}
     \caption{Panel de un espacio de trabajo (Analista 1) en Dremio OSS. La sección Wiki
     aparece sin ningún elemento de edición disponible.}
     \label{fig:wiki-espacio}
@@ -76,5 +267,288 @@ de cada espacio se documenta a continuación:
     \item \textbf{Analista 3}: contiene el \emph{dataset} personalizado derivado del
     catálogo de libros (\texttt{Books\_001}).
 \end{itemize}
+
+\subsection{D) Crear datasets personalizados}
+
+Sobre los cuatro \emph{datasets} de origen se han creado las siguientes consultas
+personalizadas, publicadas en sus respectivos espacios de trabajo.
+
+\subsubsection{\texttt{Terraza\_001} (Analista 1)}
+
+A partir de \texttt{Terrazas\_202104} se han eliminado todos los campos \texttt{id\_*}
+salvo \texttt{id\_terraza}, se ha eliminado el campo \texttt{Escalera}, y se ha creado el
+campo calculado \texttt{Superficie\_TO} = \texttt{Superficie\_ES + Superficie\_ES}, tal
+como lo especifica literalmente el enunciado. Este dato se documenta como una posible
+errata del enunciado (lo esperable sería sumar \texttt{Superficie\_ES + Superficie\_RA},
+las superficies de los dos periodos), pero se ha respetado la especificación literal en el
+dataset de Dremio. En cambio, en el proceso ETL de Python de la Parte II (\S~\ref{ssec:tarea1})
+sí se ha recalculado \texttt{Superficie\_TO} como \texttt{Superficie\_ES + Superficie\_RA}
+por ser la interpretación con sentido físico, quedando ambas versiones documentadas y
+justificadas por separado. La consulta se ha guardado como \texttt{Terraza\_001} en el
+espacio \textbf{Analista 1}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{terrazas_01.png}
+    \caption{Editor de Dremio con \texttt{Terraza\_001}: campos eliminados y \texttt{Superficie\_TO} calculado}
+    \label{fig:datasets-personalizados}
+\end{figure}
+
+\subsubsection{\texttt{Licencias\_002} (Analista 1)}
+
+A partir de \texttt{Licencias\_Locales\_202104} se han conservado únicamente los campos
+\texttt{id\_local}, \texttt{ref\_licencia}, \texttt{desc\_tipo\_licencia},
+\texttt{desc\_tipo\_situacion\_licencia} y \texttt{Fecha\_Dec\_Lic}, eliminando el resto.
+Guardado como \texttt{Licencias\_002} en \textbf{Analista 1}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{licencias_02.png}
+    \caption{Editor de Dremio con \texttt{Licencias\_002}: solo los 5 campos requeridos}
+    \label{fig:datasets-personalizados}
+\end{figure}
+
+\subsubsection{\texttt{Licencias\_Terrazas\_003} (Analista 2)}
+
+Se ha realizado un \texttt{INNER JOIN} entre \texttt{Terrazas\_202104} y
+\texttt{Licencias\_002} usando el campo \texttt{id\_local}. Al ser un \texttt{INNER JOIN},
+solo se conservan las terrazas cuyo local tiene licencia asociada (86\,\% de las terrazas,
+véase \S~\ref{sssec:inconsistencias}). Guardado como \texttt{Licencias\_Terrazas\_003} en
+\textbf{Analista 2}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{licencias_terrazas_003.png}
+    \caption{Editor de Dremio con el JOIN de \texttt{Licencias\_Terrazas\_003}}
+    \label{fig:datasets-personalizados}
+\end{figure}
+
+\subsubsection{\texttt{Books\_001} (Analista 3)}
+
+A partir de \texttt{books} se ha eliminado el campo \texttt{\_id}, se han excluido los
+libros sin ISBN (opción \emph{Exclude}, casilla \emph{null}, sobre el campo \texttt{isbn}),
+y se ha aplicado \emph{Unnest} sobre \texttt{authors} y \texttt{categories}. El
+\emph{unnest} descompone cada valor de la lista en una fila independiente: un libro con 3
+autores pasa de una fila con una lista de 3 elementos a 3 filas, una por autor, repitiendo
+el resto de campos del libro. Aplicado además sobre \texttt{categories}, el número de filas
+resultante es el producto del número de autores por el número de categorías de cada libro.
+Guardado como \texttt{Books\_001} en \textbf{Analista 3}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{books_001.png}
+    \caption{Editor de Dremio con \texttt{Books\_001} antes y después del \emph{unnest}}
+    \label{fig:datasets-personalizados}
+\end{figure}
+
+\section{Parte II. Metodologías ETL y gobierno de datos}
+
+El proceso ETL de esta parte se ha implementado íntegramente en Python (Pandas), sobre los
+ficheros ya limpios en el apartado I-A. Los scripts individuales de cada tarea se listan en
+la Tabla~\ref{tab:scripts}; el script \texttt{11\_tarea7\_pipeline\_completo.py} (Tarea 7)
+integra y automatiza las cuatro tareas de la Parte II-A en un único fichero documentado.
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Script & Contenido \\
+\midrule
+\texttt{01\_eda\_y\_limpieza.py} & EDA (Parte I-A) y limpieza previa a la carga \\
+\texttt{02\_tarea1\_filtrar\_nulos.py} & Tarea 1a: filtrado de nulos \\
+\texttt{03\_tarea2\_normalizacion.py} & Tarea 1b-1c: normalización log. y \texttt{Terrazas\_Normalizadas} \\
+\texttt{04\_tarea2\_duplicados\_texto.py} & Tarea 2: duplicados y limpieza de texto \\
+\texttt{05\_tarea3\_integracion.py} & Tarea 3: JOIN y agregación geográfica \\
+\texttt{06\_tarea4\_concatenacion.py} & Tarea 4: concatenación de periodos \\
+\texttt{07\_tarea5\_kimball\_esquema.sql} & Tarea 5: esquema SQL Server (Kimball) \\
+\texttt{08\_tarea5\_kimball\_carga.py} & Tarea 5: carga de datos al modelo Kimball \\
+\texttt{09\_tarea6\_inmon\_esquema.sql} & Tarea 6: esquema SQL Server (3FN) \\
+\texttt{10\_tarea6\_inmon\_carga.py} & Tarea 6: carga de datos al modelo 3FN \\
+\texttt{11\_tarea7\_pipeline\_completo.py} & Tarea 7: script único (automatiza 1-4 + carga Kimball) \\
+\bottomrule
+\end{tabular}
+\captionof{table}{Scripts entregados y su correspondencia con cada tarea.}
+\label{tab:scripts}
+\end{center}
+
+\subsection{A) Transformación y limpieza de datos (ETL)}
+\label{ssec:tarea1}
+
+\subsubsection{Tarea 1: filtrado, normalización y variable derivada}
+
+\textbf{Filtrado de registros}: se eliminan las filas con más del 50\,\% de columnas
+nulas. En los cuatro ficheros de esta actividad, el resultado es \textbf{0 filas
+eliminadas} (ya adelantado en el EDA): ninguna fila supera ese umbral, aunque el criterio
+se implementa y queda documentado igualmente, tal como exige el enunciado.
+
+\textbf{Normalización logarítmica}: se transforman a escala logarítmica
+(\texttt{log1p}, es decir, $\log(1+x)$) las columnas \texttt{Superficie\_ES},
+\texttt{Superficie\_RA}, \texttt{mesas\_es}, \texttt{mesas\_ra} y \texttt{sillas\_es}. Se
+usa \texttt{log1p} en vez de \texttt{log} porque varias de estas columnas contienen ceros
+(mesas y sillas), y $\log(0)$ no está definido.
+
+\textbf{Variable derivada}: se crea \texttt{Superficie\_TO} = \texttt{Superficie\_ES +
+Superficie\_RA} (tratando los nulos de \texttt{Superficie\_RA} como 0, ya que corresponden
+a terrazas estacionales) y el ratio \texttt{Superficie\_TO / id\_terraza} pedido por el
+enunciado. Como ya se ha señalado, \texttt{id\_terraza} es un identificador, no una
+magnitud física, por lo que este ratio no tiene una interpretación estadística clara; se
+implementa de forma literal según el enunciado. Resultado guardado en
+\texttt{Terrazas\_Normalizadas} (6\,275 filas).
+
+\subsubsection{Tarea 2: duplicados y limpieza de texto}
+
+\textbf{Detección y eliminación de duplicados}: se identifican y eliminan las filas de
+\texttt{Licencias\_Locales\_202104} duplicadas por la clave de negocio (\texttt{id\_local},
+\texttt{ref\_licencia}), conservando la primera aparición de cada una.
+\textbf{265 filas eliminadas} (de 132\,171 a 131\,906). Resultado:
+\texttt{Licencias\_SinDuplicados}.
+
+\textbf{Transformación de cadenas de texto}: en \texttt{books} se convierten a minúsculas
+y se colapsan los espacios múltiples/tabulaciones en \texttt{title},
+\texttt{shortDescription}, \texttt{longDescription}, \texttt{publisher}, y dentro de las
+listas \texttt{authors} y \texttt{categories}. Ejemplo: \texttt{"Unlocking Android"} $\to$
+\texttt{"unlocking android"}. Resultado: \texttt{Books\_Limpio} (431 registros).
+
+\subsubsection{Tarea 3: integración de datos}
+
+\textbf{JOIN entre datasets}: \texttt{INNER JOIN} entre \texttt{Terrazas\_Normalizadas} y
+\texttt{Licencias\_SinDuplicados} por \texttt{id\_local}. Resultado:
+\texttt{Licencias\_Terrazas\_Integradas}, con \textbf{13\,462 filas}. Esta cifra es mayor
+que las 5\,387 terrazas con licencia, porque varios locales tienen más de una licencia
+asociada, multiplicándose las filas por cada combinación terraza-licencia.
+
+\textbf{Agregación geográfica}: se agrega \texttt{Superficie\_TO} por distrito y barrio.
+Resultado: \texttt{Superficies\_Agregadas} (128 barrios). El barrio con \textbf{mayor}
+superficie agregada es \textbf{Sol (distrito Centro)}, con 11\,742\,m\textsuperscript{2} en
+193 terrazas; el de \textbf{menor} superficie es \textbf{Aeropuerto (distrito Barajas)},
+con 71\,m\textsuperscript{2} en solo 5 terrazas.
+
+\subsubsection{Tarea 4: concatenación de datasets}
+
+El zip de la actividad solo incluye un periodo (202104); no existe un fichero real de otro
+mes (por ejemplo, \texttt{Licencias\_Locales\_202105}) con el que concatenar, como sugiere
+el ejemplo del enunciado. Para poder completar el ejercicio se \textbf{simula} un segundo
+periodo a partir del mismo fichero de \texttt{Licencias\_SinDuplicados} (mismas filas,
+fechas de decreto desplazadas un mes), etiquetando cada mitad con una columna
+\texttt{periodo} (\texttt{202104} / \texttt{202105}). Tras concatenar, se deduplica por
+(\texttt{id\_local}, \texttt{ref\_licencia}, \texttt{periodo}) --- se incluye el periodo en
+la clave porque, con datos reales de dos meses distintos, una misma licencia puede seguir
+vigente en ambos periodos sin ser un duplicado real---. Resultado:
+\texttt{Licencias\_Concatenadas}, con \textbf{263\,812 filas} (131\,906 de cada periodo).
+Esta simulación queda documentada en el propio script como tal, para no presentarla como
+un dato real de la actividad.
+
+\subsection{B) Modelado de datos}
+
+Se han implementado las dos metodologías alternativas que propone el enunciado, ambas a
+partir de \texttt{Licencias\_Terrazas\_Integradas}, para poder comparar sus diferencias.
+
+\subsubsection{Tarea 5: modelado dimensional Kimball}
+
+Se ha diseñado un esquema en estrella con una tabla de hechos y tres dimensiones:
+
+\begin{itemize}[nosep]
+    \item \textbf{Hechos\_Terrazas}: una fila por combinación terraza-licencia, con
+    \texttt{Superficie\_TO} como medida principal, además de \texttt{mesas\_es} y
+    \texttt{sillas\_es}.
+    \item \textbf{Dim\_Fecha}: fecha de decreto de la licencia, con clave surrogate
+    \texttt{id\_fecha} en formato \texttt{YYYYMMDD}.
+    \item \textbf{Dim\_Ubicacion}: combinación (distrito, barrio).
+    \item \textbf{Dim\_TipoLicencia}: combinación (tipo de licencia, situación de la licencia).
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{erd_kimball.png}
+    \caption{Diagrama ERD del modelo dimensional Kimball (esquema en estrella).}
+    \label{fig:erd-kimball}
+\end{figure}
+
+Cada tabla de dimensión permite filtrar y agrupar la tabla de hechos por un eje de
+análisis distinto (cuándo, dónde, qué tipo de licencia), sin necesidad de repetir la
+lógica de negocio en cada consulta: por ejemplo, la superficie total de terrazas por mes se
+obtiene agrupando \texttt{Hechos\_Terrazas} por \texttt{Dim\_Fecha.mes}, y la superficie
+por distrito agrupando por \texttt{Dim\_Ubicacion.desc\_distrito\_local}. Esta
+desnormalización deliberada (los nombres de distrito y barrio se repiten en cada fila de
+\texttt{Dim\_Ubicacion} en vez de separarse en tablas propias) es lo que hace que las
+consultas de agregación sean más simples y rápidas que en un modelo normalizado, a costa de
+cierta redundancia controlada.
+
+El esquema se implementa en \texttt{07\_tarea5\_kimball\_esquema.sql} y la carga de datos
+en \texttt{08\_tarea5\_kimball\_carga.py}. Resultado de la transformación: 3\,289 fechas
+distintas, 128 ubicaciones, 16 combinaciones de tipo de licencia y 13\,462 filas de hechos,
+coincidiendo con las filas de \texttt{Licencias\_Terrazas\_Integradas}. Se documenta como
+limitación heredada del dato de origen que \texttt{Dim\_Fecha} incluye la fecha centinela
+\texttt{1900-01-01} detectada en el EDA (\S~\ref{sssec:inconsistencias}): esas filas de
+\texttt{Hechos\_Terrazas} no tienen una fecha de decreto real asociada.
+
+\subsubsection{Tarea 6: modelado Inmon en 3FN}
+
+Como alternativa, se ha diseñado un modelo completamente normalizado sobre los mismos
+datos, separando cada entidad según su dependencia funcional real:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{erd_inmon.png}
+    \caption{Diagrama ERD del modelo normalizado en 3FN (metodología Inmon).}
+    \label{fig:erd-inmon}
+\end{figure}
+
+A diferencia del modelo Kimball, aquí el nombre del distrito y del barrio no se repiten en
+cada fila: \textbf{Distrito} y \textbf{Barrio} son tablas independientes, jerárquicamente
+relacionadas (\texttt{Barrio.id\_distrito} referencia a \texttt{Distrito}), y
+\textbf{Local} referencia a \texttt{Barrio}, en vez de guardar el texto directamente.
+\textbf{Terraza} y \textbf{Licencia} dependen de \textbf{Local}. \textbf{TipoLicencia} y
+\textbf{SituacionLicencia} se separan igualmente en tablas propias. Esta normalización
+elimina la redundancia y las dependencias transitivas, a cambio de necesitar más
+\texttt{JOIN}s para reconstruir la información que en Kimball está ya desnormalizada en la
+tabla de hechos.
+
+Un detalle relevante detectado al construir el modelo: \texttt{ref\_licencia} no es única
+por sí sola (726 valores se repiten entre locales distintos), por lo que la clave primaria
+de \textbf{Licencia} es compuesta (\texttt{id\_local}, \texttt{ref\_licencia}), no solo
+\texttt{ref\_licencia}.
+
+El esquema se implementa en \texttt{09\_tarea6\_inmon\_esquema.sql} y la carga en
+\texttt{10\_tarea6\_inmon\_carga.py}. Resultado: 21 distritos, 128 barrios, 5\,387 locales,
+5\,387 terrazas, 5 tipos de licencia, 7 situaciones de licencia y 13\,462 licencias. Tanto
+\texttt{Local} como \texttt{Terraza} solo incluyen los locales/terrazas con licencia
+asociada, al partir de \texttt{Licencias\_Terrazas\_Integradas} igual que en la Tarea 5.
+
+\subsubsection{Tarea 7: automatización}
+
+Se ha desarrollado un script único, \texttt{11\_tarea7\_pipeline\_completo.py}, que
+encadena las cuatro tareas de la Parte II-A (una función Python por tarea) y termina
+cargando el resultado en el modelo dimensional Kimball de la Tarea 5. El script está
+documentado con \emph{docstrings} en cada función (qué hace, argumentos, qué devuelve) y
+comentarios que justifican cada decisión de transformación. Se ha ejecutado de principio a
+fin, confirmando que reproduce exactamente los mismos resultados que los scripts
+individuales de cada tarea (0 filas filtradas, 265 duplicados eliminados,
+13\,462 filas integradas, 263\,812 filas concatenadas, y la misma carga final: 3\,289
+fechas, 128 ubicaciones, 16 tipos de licencia y 13\,462 hechos).
+
+\section{Conclusiones}
+
+En esta actividad se ha recorrido el ciclo completo de gobierno del dato: desde el
+análisis exploratorio y la limpieza de cuatro orígenes heterogéneos, pasando por su
+catalogación en un \emph{Data Lake} (Dremio) con datasets personalizados organizados por
+espacios de trabajo, hasta la implementación de un proceso ETL reproducible y dos
+alternativas de modelado de almacén de datos.
+
+Entre las dos metodologías de modelado implementadas, \textbf{Kimball} resulta más
+adecuada para el caso de uso analítico de esta actividad (consultas de agregación por
+fecha, ubicación y tipo de licencia), ya que su desnormalización deliberada simplifica las
+consultas más habituales sobre \texttt{Superficie\_TO}. \textbf{Inmon} sería preferible si
+el objetivo prioritario fuera la integridad transaccional y la eliminación total de
+redundancia, por ejemplo si estos datos alimentaran también procesos operativos y no solo
+analíticos. Por ello, el script de automatización de la Tarea 7 se ha dirigido al modelo
+Kimball.
+
+Entre los aprendizajes principales destaca la importancia de documentar cada decisión de
+limpieza y transformación con su justificación (no solo qué se hizo, sino por qué), ya que
+varias decisiones de esta actividad --- el tratamiento de \texttt{Superficie\_RA} nula, la
+interpretación de \texttt{Superficie\_TO}, la simulación del segundo periodo en la Tarea 4
+--- solo tienen sentido si se conoce el contexto que las motivó, algo que es también un
+principio central del gobierno del dato: la trazabilidad y la transparencia sobre las
+transformaciones aplicadas a la información.
 
 \end{document}
