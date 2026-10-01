@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex build/plantilla"] 1789902690.96157 "build/plantilla.aux" "build/plantilla.bbl" "build/plantilla" 1789903126.99529 0
-  "./bibliografia.bib" 1789902689 1507 83e399c289c79876a44bb83f32e3144a ""
+["bibtex build/plantilla"] 1790880162.32528 "build/plantilla.aux" "build/plantilla.bbl" "build/plantilla" 1790880163.81681 0
+  "./bibliografia.bib" 1790879935 3457 5a1fe87b58ddcd3c443815671f154cac ""
   "C:/Program Files/MiKTeX/bibtex/bst/apacite/apacite.bst" 1374952728 146156 9d7b79dbf9d91133318126032cff8c27 ""
-  "build/plantilla.aux" 1789903126 3353 93ee579c7e9edf5ac25c45945b597768 "pdflatex"
+  "build/plantilla.aux" 1790880163 4223 59e921802b9ae468a245b23a0fccaa72 "pdflatex"
   (generated)
   "build/plantilla.bbl"
   "build/plantilla.blg"
   (rewritten before read)
-["pdflatex"] 1789903125.67656 "c:/Users/david/Documents/UNIR/MasterBigDataUNIR/TFM/plantillas/memoria/plantilla.tex" "build/plantilla.pdf" "plantilla" 1789903126.99577 0
+["pdflatex"] 1790880162.64677 "c:/Users/david/Documents/UNIR/MasterBigDataUNIR/TFM/memoria/plantilla.tex" "build/plantilla.pdf" "plantilla" 1790880163.8173 0
   "C:/Program Files/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
   "C:/Program Files/MiKTeX/tex/generic/bitset/bitset.sty" 1575926576 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
   "C:/Program Files/MiKTeX/tex/generic/gettitlestring/gettitlestring.sty" 1576433666 8371 9d55b8bd010bc717624922fb3477d92e ""
@@ -35,8 +35,6 @@
   "C:/Program Files/MiKTeX/tex/latex/titling/titling.sty" 1252048308 7358 95ac619994bd30d405a74f3eca431c84 ""
   "C:/Program Files/MiKTeX/tex/latex/vmargin/vmargin.sty" 1090523124 7055 5eae49c3f07fead60d92def0a4f5c30f ""
   "C:/Users/david/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1779534628 136688 4dfe91c28eeb0bac513e8c0dbdaa0520 ""
-  "C:/Users/david/AppData/Local/MiKTeX/fonts/pk/ljfour/public/mathabx/dpi657/matha10.pk" 1789902518 27204 d21109d7f01535abd01023c46e9a2c32 ""
-  "C:/Users/david/AppData/Local/MiKTeX/fonts/pk/ljfour/public/mathabx/dpi657/mathx10.pk" 1789902517 34036 be068369ac8a004788b9f9fb0625de4d ""
   "C:/Users/david/AppData/Local/MiKTeX/fonts/tfm/public/mathabx/matha10.tfm" 1789902512 1372 84a1ef28ab0d13263326e8d7d854aaa0 ""
   "C:/Users/david/AppData/Local/MiKTeX/fonts/tfm/public/mathabx/matha6.tfm" 1789902513 1380 5f328d9a92ea6dd75eba04691d285ce9 ""
   "C:/Users/david/AppData/Local/MiKTeX/fonts/tfm/public/mathabx/matha8.tfm" 1789902513 1380 d3de7fc3f19729dff1005b767ed5d48f ""
@@ -73,9 +71,8 @@
   "C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb" 1247596666 32166 b0c356b15f19587482a9217ce1d8fa67 ""
   "C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb" 1247596667 32001 6aeea3afe875097b1eb0da29acd61e28 ""
-  "C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
-  "C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
+  "C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1247596667 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1247596667 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "C:/Users/david/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1247596667 31099 342ef5a582aacbd3346f3cf4579679fa ""
   "C:/Users/david/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -120,15 +117,15 @@
   "C:/Users/david/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1774811737 30909 7dedb28cb21a1e79c47a35a35ae3c507 ""
   "C:/Users/david/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1761901070 15651 9d7c62df82cb29a555c00550babfe364 ""
   "C:/Users/david/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "build/plantilla.aux" 1789903126 3353 93ee579c7e9edf5ac25c45945b597768 "pdflatex"
-  "build/plantilla.bbl" 1789902691 2146 ec182bad24102c43c90007ff4b78b89e "bibtex build/plantilla"
-  "build/plantilla.lof" 1789903126 293 c224653801110d6406ff002c3d304cde "pdflatex"
-  "build/plantilla.lot" 1789903126 289 562b3ab9b90ff277bd913c1f81fed788 "pdflatex"
-  "build/plantilla.out" 1789903126 1287 f83f7dea1c4b261727094116ac9c2038 "pdflatex"
-  "build/plantilla.toc" 1789903126 740 dac60085ee198dd358bd5a5caa4379b7 "pdflatex"
-  "c:/Users/david/Documents/UNIR/MasterBigDataUNIR/TFM/plantillas/memoria/plantilla.tex" 1789903125 6836 be90a55376a1f56dea3dfc7fe12fae56 ""
+  "build/plantilla.aux" 1790880163 4223 59e921802b9ae468a245b23a0fccaa72 "pdflatex"
+  "build/plantilla.bbl" 1790880162 4443 bb42ffece85d69c51ed73ca68e5061b5 "bibtex build/plantilla"
+  "build/plantilla.lof" 1790880163 210 bd16b93b12a299fc03440b5e021371b3 "pdflatex"
+  "build/plantilla.lot" 1790880163 210 bd16b93b12a299fc03440b5e021371b3 "pdflatex"
+  "build/plantilla.out" 1790880163 2174 1bf1f2cab18f509e158f22eb50720a9e "pdflatex"
+  "build/plantilla.toc" 1790880163 1156 7a8f37dd5323a10ad516fb8e40176a2c "pdflatex"
+  "c:/Users/david/Documents/UNIR/MasterBigDataUNIR/TFM/memoria/plantilla.tex" 1790880160 7456 bf0b37a947cdbef4cdc9901cf599dbfe ""
   "logo_unir.pdf" 1789398011 5261 e89deec51d32a79481fdbc2d4b98931c ""
-  "plantilla.tex" 1789903125 6836 be90a55376a1f56dea3dfc7fe12fae56 ""
+  "plantilla.tex" 1790880160 7456 bf0b37a947cdbef4cdc9901cf599dbfe ""
   "unir.sty" 1789398011 3307 973812dd598bc2ac37eacd7563e5de40 ""
   (generated)
   "build/plantilla.aux"

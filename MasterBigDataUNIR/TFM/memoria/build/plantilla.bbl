@@ -1,75 +1,171 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
-da S.~Bessa%
-, da Silva%
-, Frederico%
-\BCBL {}\ \BBA {} Ricarte%
+Contreras%
 }{%
-da S.~Bessa%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2023}}%
+Contreras%
+}{%
+{\protect \APACyear {2026}}%
 }]{%
-da_S_Bessa_2023}
+aumento_lanzamientos_indie}
 \APACinsertmetastar {%
-da_S_Bessa_2023}%
+aumento_lanzamientos_indie}%
 \begin{APACrefauthors}%
-da S.~Bessa, J.%
-, da Silva, J\BPBI V.%
-, Frederico, M\BPBI N.%
-\BCBL {}\ \BBA {} Ricarte, G\BPBI C.%
+Contreras, U.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2023}{sep}{}.
+\APACrefYearMonthDay{2026}{Septiembre}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Sharp Hessian estimates for fully nonlinear elliptic
-  equations under relaxed convexity assumptions, oblique boundary conditions
-  and applications} {Sharp hessian estimates for fully nonlinear elliptic
-  equations under relaxed convexity assumptions, oblique boundary conditions
-  and applications}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Más de 700 nuevos juegos debutaron en Steam durante la
+  semana pasada, pero casi nadie los jugó} {Más de 700 nuevos juegos
+  debutaron en steam durante la semana pasada, pero casi nadie los
+  jugó}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Journal of Differential Equations}{367}{}{451--493}.
+\APACjournalVolNumPages{Revista}{}{}{}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.1016%2Fj.jde.2023.05.006}
+\begin{APACrefURL}
+  \url{https://www.levelup.com/noticias/mas-de-700-nuevos-juegos-debutaron-en-steam-durante-la-semana-pasada-pero-casi-nadie-los-jugo/}
   \end{APACrefURL}
-\newblock
-\begin{APACrefDOI} \doi{10.1016/j.jde.2023.05.006} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Pimentel%
-\ \BBA {} Teixeira%
+Crichton-Stuart%
 }{%
-Pimentel%
-\ \BBA {} Teixeira%
+Crichton-Stuart%
 }{%
-{\protect \APACyear {2016}}%
+{\protect \APACyear {2026}}%
 }]{%
-PIMENTEL2016744}
+inf_mercado_2026}
 \APACinsertmetastar {%
-PIMENTEL2016744}%
+inf_mercado_2026}%
 \begin{APACrefauthors}%
-Pimentel, E\BPBI A.%
-\BCBT {}\ \BBA {} Teixeira, E\BPBI V.%
+Crichton-Stuart, E.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2016}{}{}.
+\APACrefYearMonthDay{2026}{Abril}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Sharp Hessian integrability estimates for nonlinear
-  elliptic equations: An asymptotic approach} {Sharp hessian integrability
-  estimates for nonlinear elliptic equations: An asymptotic approach}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Informe del Mercado de Juegos Newzoo 2025} {Informe del
+  mercado de juegos newzoo 2025}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Journal de Mathématiques Pures et
-  Appliquées}{106}{4}{744-767}.
+\APACjournalVolNumPages{Informe}{}{}{}.
 \newblock
 \begin{APACrefURL}
-  \url{https://www.sciencedirect.com/science/article/pii/S0021782416300101}
+  \url{https://games.gg/es/news/informe-del-mercado-de-juegos-newzoo-2025/}
   \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Delgado%
+}{%
+Delgado%
+}{%
+{\protect \APACyear {2025}}%
+}]{%
+steam_monopolio}
+\APACinsertmetastar {%
+steam_monopolio}%
+\begin{APACrefauthors}%
+Delgado, M.%
+\end{APACrefauthors}%
+\unskip\
 \newblock
-\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.matpur.2016.03.010}
-  \end{APACrefDOI}
+\APACrefYearMonthDay{2025}{Noviembre}{}.
+\newblock
+{\BBOQ}\APACrefatitle {¿Es Steam un monopolio? Un informe destapa la 'extrema'
+  dependencia de los desarrolladores, pero hay esperanza} {¿es steam un
+  monopolio? un informe destapa la 'extrema' dependencia de los
+  desarrolladores, pero hay esperanza}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Revista}{}{}{}.
+\newblock
+\begin{APACrefURL}
+  \url{https://vandal.elespanol.com/noticia/1350785274/es-steam-un-monopolio-un-informe-destapa-la-extrema-dependencia-de-los-desarrolladores-pero-hay-esperanza/}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kontus%
+}{%
+Kontus%
+}{%
+{\protect \APACyear {2024}}%
+}]{%
+informe_mercado_2024}
+\APACinsertmetastar {%
+informe_mercado_2024}%
+\begin{APACrefauthors}%
+Kontus, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2024}{Enero}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Perspectivas sobre los juegos} {Perspectivas sobre los
+  juegos}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Informe}{}{}{}.
+\newblock
+\begin{APACrefURL}
+  \url{https://sensortower.com/blog/global-indie-games-market-report-2024}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Varela%
+}{%
+Varela%
+}{%
+{\protect \APACyear {2024}}%
+}]{%
+definicion_indie_jugon}
+\APACinsertmetastar {%
+definicion_indie_jugon}%
+\begin{APACrefauthors}%
+Varela, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2024}{Abril}{}.
+\newblock
+{\BBOQ}\APACrefatitle {¿Qué es un juego indie y qué no?} {¿qué es un juego
+  indie y qué no?}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Revista}{}{}{}.
+\newblock
+\begin{APACrefURL}
+  \url{https://vandal.elespanol.com/laopiniondeljugon/que-es-un-juego-indie-y-que-no}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Vivero~Avila%
+}{%
+Vivero~Avila%
+}{%
+{\protect \APACyear {2025}}%
+}]{%
+vivero2025}
+\APACinsertmetastar {%
+vivero2025}%
+\begin{APACrefauthors}%
+Vivero~Avila, M\BPBI G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2025}.
+\unskip\
+\newblock
+\APACrefbtitle {Aplicación de modelos de predicción para factores
+  determinantes del éxito comercial en videojuegos} {Aplicación de modelos de
+  predicción para factores determinantes del éxito comercial en videojuegos}\
+  \APACtypeAddressSchool {Tesis de maestría}{Quito, Ecuador}{Universidad de
+  las Américas}.
+\unskip\
+\newblock
+\begin{APACrefURL} \url{http://dspace.udla.edu.ec/handle/33000/18878}
+  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}
